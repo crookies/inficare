@@ -1,5 +1,5 @@
 .sencha/
-build/
-php/log/*.log
+/build/
+/php/log/*.log
 *~
 
