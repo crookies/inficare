@@ -6,22 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "controllers": [
-            "DayRoundController",
-            "MainController",
-            "PatientEditController",
-            "ReportController"
-        ],
         "models": [
             "NurseModel",
             "PatientModel",
             "VisitModel"
-        ],
-        "name": "inficare",
-        "requires": [
-            "Ext.direct.*",
-            "Ext.data.*",
-            "Ext.form.*"
         ],
         "stores": [
             "DayRoundTreeStore",
@@ -39,7 +27,20 @@
             "RoundSource",
             "ReportView",
             "EditMail"
-        ]
+        ],
+        "requires": [
+            "Ext.direct.*",
+            "Ext.data.*",
+            "Ext.form.*"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "DayRoundController",
+            "MainController",
+            "PatientEditController",
+            "ReportController"
+        ],
+        "name": "inficare"
     },
     "designerId": "application",
     "cn": [

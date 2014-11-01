@@ -7,10 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": false,
-        "designer|userAlias": null,
-        "designer|userClassName": "NurseStore",
         "model": "NurseModel",
-        "storeId": "nurseStoreId"
+        "storeId": "nurseStoreId",
+        "designer|userClassName": "NurseStore",
+        "designer|userAlias": null
     },
     "designerId": "23b8f5cf-6dd3-4961-92ab-dd49eb80341e",
     "cn": [

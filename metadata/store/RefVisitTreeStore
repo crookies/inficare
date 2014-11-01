@@ -7,9 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "defaultRootId": null,
-        "designer|userClassName": "RefVisitTreeStore",
         "model": "VisitModel",
+        "storeId": "RefVisitTreeStore",
+        "designer|userClassName": "RefVisitTreeStore",
+        "defaultRootId": null,
         "nodeParam": null,
         "root": [
             "{",
@@ -21,8 +22,7 @@
             "}",
             "",
             "    "
-        ],
-        "storeId": "RefVisitTreeStore"
+        ]
     },
     "designerId": "b7b7277f-eb11-47a2-8532-46c6f9126284",
     "cn": [
@@ -34,15 +34,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "RefQueryVisitDbProxy",
                 "api": [
                     "{",
                     "\tread: QueryVisitsDb.getResults",
                     "}",
                     ""
                 ],
-                "designer|displayName": "RefQueryVisitDbProxy",
-                "directFn": "QueryVisitsDb.getResults",
-                "idParam": "idv"
+                "idParam": "idv",
+                "directFn": "QueryVisitsDb.getResults"
             },
             "designerId": "14b052a9-1b25-48b3-8e27-51147c3f4f02"
         }

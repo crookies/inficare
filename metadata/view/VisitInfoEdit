@@ -6,14 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "closable": false,
-        "designer|userAlias": "visitinfoedit",
-        "designer|userClassName": "VisitInfoEdit",
         "height": 250,
+        "width": 616,
+        "designer|userClassName": "VisitInfoEdit",
+        "designer|userAlias": "visitinfoedit",
         "layout": "fit",
-        "modal": true,
+        "closable": false,
         "title": "Edition Info Visite",
-        "width": 616
+        "modal": true
     },
     "designerId": "8e3de934-df8c-45d2-af01-889497317067",
     "cn": [
@@ -25,11 +25,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 0,
-                "header": false,
                 "height": 161,
                 "itemId": "visitInfoFormId",
                 "layout": "fit",
+                "bodyPadding": 0,
+                "header": false,
                 "title": "My Form"
             },
             "designerId": "70aeb0a1-8eb7-48eb-847e-1c0e567d788f",
@@ -42,8 +42,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": null,
                         "height": 150,
+                        "fieldLabel": null,
                         "name": "visitinfo"
                     },
                     "designerId": "eb588a62-4196-4d6c-9f6d-e1a731e39f01"
@@ -56,8 +56,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "container|pack": "center",
-                        "dock": "bottom"
+                        "dock": "bottom",
+                        "container|pack": "center"
                     },
                     "designerId": "b08c4d0c-5c40-40cd-b36d-4526146f0950",
                     "cn": [
@@ -69,8 +69,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "saveId",
                                 "layout|flex": null,
+                                "itemId": "saveId",
                                 "text": "Modifier"
                             },
                             "designerId": "8ec2c431-898a-4254-a335-44669b70dfd1"
@@ -96,8 +96,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "cancelId",
                                 "layout|flex": null,
+                                "itemId": "cancelId",
                                 "text": "Annuler"
                             },
                             "designerId": "35f706b6-2cc2-491f-8e9e-5bb0df4196bf"

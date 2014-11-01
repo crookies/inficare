@@ -6,15 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "activeTab": 0,
-        "collapsible": false,
-        "designer|userAlias": "roundsource",
-        "designer|userClassName": "RoundSource",
-        "header": false,
         "height": 787,
         "itemId": "dayRoundSource",
+        "width": 1023,
+        "designer|userClassName": "RoundSource",
+        "designer|userAlias": "roundsource",
+        "collapsible": false,
+        "header": false,
         "title": "Elements de tournée",
-        "width": 1023
+        "activeTab": 0
     },
     "designerId": "697142e5-da89-4a48-acef-cfefff56ffa6",
     "cn": [
@@ -52,11 +52,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "forceFit": false,
-                        "header": false,
                         "itemId": "patientVisitGridId",
-                        "store": "VisitPatientStore",
-                        "title": "Patients List"
+                        "header": false,
+                        "title": "Patients List",
+                        "forceFit": false,
+                        "store": "VisitPatientStore"
                     },
                     "designerId": "9d8d2747-1c07-4c28-a3bf-6d10bdb78026",
                     "cn": [
@@ -81,10 +81,10 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "layout|flex": null,
+                                        "itemId": "refreshPatientVisitBtnId",
                                         "designer|displayName": "refresh",
                                         "glyph": "xe00a@fcrooks",
-                                        "itemId": "refreshPatientVisitBtnId",
-                                        "layout|flex": null,
                                         "text": "Raffraîchir"
                                     },
                                     "designerId": "0804a13a-6ccb-46d6-a02e-45ca42f9cdf9"
@@ -109,9 +109,9 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fieldLabel": "Recherche",
-                                        "itemId": "searchPatientFldId",
                                         "layout|flex": null,
+                                        "itemId": "searchPatientFldId",
+                                        "fieldLabel": "Recherche",
                                         "name": "searchPatient"
                                     },
                                     "designerId": "ff65f5cf-9914-4de1-8a6c-0a32231d7e06"
@@ -124,9 +124,9 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "layout|flex": null,
                                         "hidden": true,
                                         "itemId": "searchPatientBtnId",
-                                        "layout|flex": null,
                                         "text": "Go"
                                     },
                                     "designerId": "321e11bf-4c46-4bea-9fca-cd36dfa7b97e"
@@ -141,8 +141,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "autoScroll": null,
-                                "itemId": "patientVisitViewId"
+                                "itemId": "patientVisitViewId",
+                                "autoScroll": null
                             },
                             "designerId": "b21438c9-347c-4601-886f-37f447f82fd7",
                             "cn": [
@@ -171,9 +171,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "namev",
-                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Patient Name"
+                                "text": "Patient Name",
+                                "flex": 1
                             },
                             "designerId": "b9005667-79db-4536-91cb-3430a58bd7ec"
                         },
@@ -186,9 +186,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "patientcare",
-                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Soins"
+                                "text": "Soins",
+                                "flex": 1
                             },
                             "designerId": "39c8b318-0801-4bb4-be85-537b519a6bc2"
                         },
@@ -201,9 +201,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "patientinfo",
-                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Détail"
+                                "text": "Détail",
+                                "flex": 1
                             },
                             "designerId": "3de51ae2-8528-4157-b51f-486c22298c51"
                         },
@@ -267,9 +267,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe0014@fcrooks",
-                                "itemId": "copyAllRoundBtnId",
                                 "layout|flex": null,
+                                "itemId": "copyAllRoundBtnId",
+                                "glyph": "xe0014@fcrooks",
                                 "text": "Copier tout"
                             },
                             "designerId": "048ce8c2-f4bc-4b69-bbf1-3c8873378b60"
@@ -294,11 +294,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "editable": false,
-                                "fieldLabel": "Label",
-                                "format": "d/m/Y",
+                                "layout|flex": null,
                                 "itemId": "refVisitDateFildId",
-                                "layout|flex": null
+                                "fieldLabel": "Label",
+                                "editable": false,
+                                "format": "d/m/Y"
                             },
                             "designerId": "dfd24635-5f0b-4a56-9dc5-729f4956073c"
                         }
@@ -312,17 +312,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "animCollapse": false,
-                        "animate": false,
-                        "header": false,
-                        "height": 250,
-                        "hideHeaders": false,
-                        "itemId": "refDayVisitTree",
                         "layout|flex": 1,
-                        "rootVisible": false,
-                        "store": "RefVisitTreeStore",
+                        "height": 250,
+                        "itemId": "refDayVisitTree",
+                        "width": 400,
+                        "animCollapse": false,
+                        "header": false,
                         "title": "Ref Day Visit List",
-                        "width": 400
+                        "hideHeaders": false,
+                        "store": "RefVisitTreeStore",
+                        "animate": false,
+                        "rootVisible": false
                     },
                     "designerId": "fdcbbff7-897e-42bc-9f7b-bd8291291cc2",
                     "isBuiltIn": true,
@@ -365,13 +365,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "namev",
-                                "flex": null,
-                                "menuDisabled": true,
                                 "minWidth": 200,
+                                "width": 200,
                                 "sortable": false,
+                                "dataIndex": "namev",
+                                "menuDisabled": true,
                                 "text": "Visite",
-                                "width": 200
+                                "flex": null
                             },
                             "designerId": "4dc6d32f-ee44-4e75-a618-aa36a463d1b6"
                         },
@@ -383,12 +383,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "nurseid",
-                                "flex": null,
-                                "menuDisabled": true,
+                                "width": 100,
                                 "sortable": false,
+                                "dataIndex": "nurseid",
+                                "menuDisabled": true,
                                 "text": "Soignant",
-                                "width": 100
+                                "flex": null
                             },
                             "designerId": "fe24429f-3a39-45fb-9fe0-186fc7f747c1",
                             "cn": [
@@ -400,6 +400,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "fn": "renderer",
                                         "designer|params": [
                                             "value",
                                             "metaData",
@@ -409,7 +410,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "fn": "renderer",
                                         "implHandler": [
                                             "var cstore = Ext.getStore(\"NurseStore\");",
                                             "var idx;",
@@ -443,11 +443,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "patientinfo",
-                                "flex": 1,
-                                "menuDisabled": true,
                                 "sortable": false,
-                                "text": "Détail"
+                                "dataIndex": "patientinfo",
+                                "menuDisabled": true,
+                                "text": "Détail",
+                                "flex": 1
                             },
                             "designerId": "836b46c1-23bc-4ba5-aa70-bd12094a0288"
                         },
@@ -459,11 +459,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "patientcare",
-                                "flex": 1,
-                                "menuDisabled": true,
                                 "sortable": false,
-                                "text": "Soins"
+                                "dataIndex": "patientcare",
+                                "menuDisabled": true,
+                                "text": "Soins",
+                                "flex": 1
                             },
                             "designerId": "0f895ab1-e932-44e4-8621-47b99888fdbf"
                         },
@@ -475,11 +475,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "visitinfo",
-                                "flex": 2,
-                                "menuDisabled": true,
                                 "sortable": false,
-                                "text": "Info visite"
+                                "dataIndex": "visitinfo",
+                                "menuDisabled": true,
+                                "text": "Info visite",
+                                "flex": 2
                             },
                             "designerId": "0532b970-3c90-4427-9063-b87567ceb42e",
                             "cn": [
@@ -491,6 +491,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "fn": "renderer",
                                         "designer|params": [
                                             "value",
                                             "metaData",
@@ -500,7 +501,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "fn": "renderer",
                                         "implHandler": [
                                             "return value.replace(/<\\/?[^>]+(>|$)/g, \" \");",
                                             ""

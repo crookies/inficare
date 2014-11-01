@@ -6,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DayRoundController",
         "models": [
             "VisitModel"
         ],
@@ -17,7 +16,8 @@
         "views": [
             "InfiMainView",
             "VisitInfoEdit"
-        ]
+        ],
+        "designer|userClassName": "DayRoundController"
     },
     "designerId": "87160d45-efef-45e0-a4f2-3e6c1fbf7f38",
     "cn": [
@@ -29,11 +29,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "editVisitInfo",
                 "designer|params": [
                     "editor",
                     "e"
                 ],
-                "fn": "editVisitInfo",
                 "implHandler": [
                     "",
                     "var dialog = this.dayEditView.visitInfoEdit || (this.dayEditView.visitInfoEdit = Ext.create('widget.visitinfoedit')),",
@@ -55,14 +55,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#visitCommentEdit #saveId",
-                "designer|targetType": "Ext.panel.Tool",
                 "fn": "saveVisitComment",
                 "implHandler": [
                     "alert('save it');"
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Tool",
+                "designer|controlQuery": "#visitCommentEdit #saveId"
             },
             "designerId": "cd93332c-557c-44b4-92e3-d459ba774751"
         },
@@ -74,10 +74,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "displayVisitInfo",
                 "designer|params": [
                     "record"
                 ],
-                "fn": "displayVisitInfo",
                 "implHandler": [
                     "var vComment = this.dayEditView.down('#visitinfocard');",
                     "var editBox = vComment.down('#visitinfodisplay');",
@@ -99,14 +99,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#visitCommentEdit #cancelId",
-                "designer|targetType": "Ext.panel.Tool",
                 "fn": "cancelDayComment",
                 "implHandler": [
                     "alert('cancel');"
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Tool",
+                "designer|controlQuery": "#visitCommentEdit #cancelId"
             },
             "designerId": "3cdb4e8f-0dd5-4cd3-9a17-a99d4cb73299"
         },
@@ -118,8 +118,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayTreeViewId",
-                "designer|targetType": "Ext.tree.plugin.TreeViewDragDrop",
                 "fn": "onDayVisitTreeViewBeforeDrop",
                 "implHandler": [
                     "console.log('BeforDrop:',data);",
@@ -139,7 +137,9 @@
                     ""
                 ],
                 "name": "beforedrop",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.tree.plugin.TreeViewDragDrop",
+                "designer|controlQuery": "#dayTreeViewId"
             },
             "designerId": "7f2ceead-fb4f-4340-8aa9-8b447bfca621"
         },
@@ -151,8 +151,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayTreeViewId",
-                "designer|targetType": "Ext.tree.plugin.TreeViewDragDrop",
                 "fn": "onDayVisitTreeViewDrop",
                 "implHandler": [
                     "console.log('drop',data);",
@@ -177,7 +175,9 @@
                     ""
                 ],
                 "name": "drop",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.tree.plugin.TreeViewDragDrop",
+                "designer|controlQuery": "#dayTreeViewId"
             },
             "designerId": "f5ed8ade-6a09-48ec-a8e8-2d132e89f439"
         },
@@ -189,8 +189,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayVisitTree",
-                "designer|targetType": "Ext.grid.plugin.CellEditing",
                 "fn": "onCellEditingBeforeEdit",
                 "implHandler": [
                     "if (e.field == 'visitinfo')",
@@ -200,7 +198,9 @@
                     "}"
                 ],
                 "name": "beforeedit",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.grid.plugin.CellEditing",
+                "designer|controlQuery": "#dayVisitTree"
             },
             "designerId": "9e93c780-3733-449b-85ed-28342c7a84fd"
         },
@@ -232,8 +232,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayVisitTree",
-                "designer|targetType": "Ext.tree.Panel",
                 "fn": "onDayVisitTreeSelectionChange",
                 "implHandler": [
                     "if (selected[0])",
@@ -241,7 +239,9 @@
                     ""
                 ],
                 "name": "selectionchange",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.tree.Panel",
+                "designer|controlQuery": "#dayVisitTree"
             },
             "designerId": "ba1d6aeb-d5af-4244-8ff6-8a374f527b3f"
         },
@@ -253,8 +253,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "visitinfoedit button#saveId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onVisitInfoEditSaveButtonClick",
                 "implHandler": [
                     "var dialog = this.dayEditView.visitInfoEdit,",
@@ -266,7 +264,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "visitinfoedit button#saveId"
             },
             "designerId": "6087bef9-bf5b-4c6e-ae27-90ff97b2a602"
         },
@@ -278,8 +278,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "visitinfoedit button#cancelId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onVisitInfoEditCancelButtonClick",
                 "implHandler": [
                     "var dialog = this.dayEditView.visitInfoEdit;",
@@ -288,7 +286,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "visitinfoedit button#cancelId"
             },
             "designerId": "d2c6b06f-54cb-428f-ad44-9b5b9e1023e0"
         },
@@ -300,8 +300,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayVisitTree",
-                "designer|targetType": "Ext.tree.Panel",
                 "fn": "onTreepanelLoad",
                 "implHandler": [
                     "console.log('data loaded:', successful);",
@@ -345,7 +343,9 @@
                     ""
                 ],
                 "name": "load",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.tree.Panel",
+                "designer|controlQuery": "#dayVisitTree"
             },
             "designerId": "8c5a11d1-421e-457b-8103-5028c913d10a"
         },
@@ -357,8 +357,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayEditToolbarId #saveId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onSaveVisitClick",
                 "implHandler": [
                     "var tree = this.dayEditView.down('#dayVisitTree');",
@@ -375,7 +373,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#dayEditToolbarId #saveId"
             },
             "designerId": "408d9170-989a-4f38-b962-8d8154c17924"
         },
@@ -387,8 +387,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayEditViewId #visitDateFieldId",
-                "designer|targetType": "Ext.form.field.Date",
                 "fn": "onVisitDateFieldChanged",
                 "implHandler": [
                     "var tree = this.dayEditView.down('#dayVisitTree');",
@@ -406,7 +404,9 @@
                     ""
                 ],
                 "name": "change",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Date",
+                "designer|controlQuery": "#dayEditViewId #visitDateFieldId"
             },
             "designerId": "e78e61d5-3144-4617-ad31-bf1c46d5a076"
         },
@@ -418,10 +418,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "createDateRound",
                 "designer|params": [
                     "btn"
                 ],
-                "fn": "createDateRound",
                 "implHandler": [
                     "//The user has accepted to create a new round",
                     "console.log(btn);",
@@ -445,8 +445,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#searchPatientBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onSearchPatientBtnIdClick",
                 "implHandler": [
                     "",
@@ -454,7 +452,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#searchPatientBtnId"
             },
             "designerId": "b496893b-022e-4172-b0f6-9cdcec9efc10"
         },
@@ -466,15 +466,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#searchPatientFldId",
-                "designer|targetType": "Ext.form.field.Text",
                 "fn": "onSearchPatientFldIdChange",
                 "implHandler": [
                     "this.searchPatient();",
                     ""
                 ],
                 "name": "change",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "#searchPatientFldId"
             },
             "designerId": "a4b00796-b825-41d0-978e-9a1bd6f45e22"
         },
@@ -511,8 +511,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#refreshPatientVisitBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onRefreshPatientVisitBtnIdClick",
                 "implHandler": [
                     "var grid = button.up('#patientVisitGridId');",
@@ -522,7 +520,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#refreshPatientVisitBtnId"
             },
             "designerId": "83caa547-0f60-4ddb-97f9-22ca1580ab05"
         },
@@ -534,8 +534,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#delVisitBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onDelVisitBtnIdClick",
                 "implHandler": [
                     "var ctx = this;",
@@ -556,7 +554,9 @@
                     "}    "
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#delVisitBtnId"
             },
             "designerId": "1a6e70cf-7903-4b91-a288-18186235d7fd"
         },
@@ -568,11 +568,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "eraseSelectedVisit",
                 "designer|params": [
                     "record",
                     "store"
                 ],
-                "fn": "eraseSelectedVisit",
                 "implHandler": [
                     "//var ndx=store.indexOf(records[0]);",
                     "",
@@ -594,8 +594,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#refVisitDateFildId",
-                "designer|targetType": "Ext.form.field.Date",
                 "fn": "onRefVisitDateFildIdChange",
                 "implHandler": [
                     "var tree = this.roundSource.down('#refDayVisitTree');",
@@ -608,7 +606,9 @@
                     ""
                 ],
                 "name": "change",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Date",
+                "designer|controlQuery": "#refVisitDateFildId"
             },
             "designerId": "8bdf87a1-0a93-48bc-9d14-34a19aaa92bf"
         },
@@ -620,8 +620,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#refDayVisitTree",
-                "designer|targetType": "Ext.tree.Panel",
                 "fn": "onRefDayVisitTreeLoad",
                 "implHandler": [
                     "console.log('ref data loaded:', successful);",
@@ -640,7 +638,9 @@
                     ""
                 ],
                 "name": "load",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.tree.Panel",
+                "designer|controlQuery": "#refDayVisitTree"
             },
             "designerId": "3ad7e4a1-24c8-49b5-8994-d8b8c2bec563"
         },
@@ -652,8 +652,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#copyAllRoundBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onCopyAllRoundBtnIdClick",
                 "implHandler": [
                     "var sourceStore = this.roundSource.down('#refDayVisitTree').getStore();",
@@ -705,7 +703,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#copyAllRoundBtnId"
             },
             "designerId": "45d0c927-b856-4ee4-94c7-791a99be8719"
         }

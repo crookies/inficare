@@ -6,14 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": null,
-        "designer|userClassName": "PatientEditController",
         "models": [
             "PatientModel"
         ],
         "views": [
             "EditPatientListView"
-        ]
+        ],
+        "designer|userClassName": "PatientEditController",
+        "designer|userAlias": null
     },
     "designerId": "54ce25c0-dfee-4617-abe1-eec199f63bea",
     "cn": [
@@ -42,14 +42,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#searchFullPatientFldId",
-                "designer|targetType": "Ext.form.field.Text",
                 "fn": "onSearchFullPatientFldIdChange",
                 "implHandler": [
                     "this.searchFullPatient();"
                 ],
                 "name": "change",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "#searchFullPatientFldId"
             },
             "designerId": "b18f79f7-cc8b-4a9d-8ddd-902d01e50938"
         },
@@ -83,8 +83,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#delFullPatientBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onDelFullPatientBtnIdClick",
                 "implHandler": [
                     "var ctx = this;",
@@ -97,7 +95,9 @@
                     "});"
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#delFullPatientBtnId"
             },
             "designerId": "a8e5cdfd-ae68-40f9-863a-bed03c101abd"
         },
@@ -109,8 +109,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#addFullPatientBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onAddFullPatientBtnIdClick",
                 "implHandler": [
                     "var grid = this.editPatientListView.down('#patientGridId');",
@@ -133,7 +131,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#addFullPatientBtnId"
             },
             "designerId": "5478cb53-df0a-48e7-9177-46f93dfe1589"
         },
@@ -145,8 +145,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#saveFullPatientBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onSaveFullPatientBtnIdClick",
                 "implHandler": [
                     "var store = Ext.getStore('PatientStore');",
@@ -155,7 +153,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#saveFullPatientBtnId"
             },
             "designerId": "c28bbf1a-6f72-4d90-a184-311e45a9f978"
         },

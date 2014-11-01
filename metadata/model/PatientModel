@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "patientmodel",
+        "idProperty": "idp",
         "designer|userClassName": "PatientModel",
-        "idProperty": "idp"
+        "designer|userAlias": "patientmodel"
     },
     "designerId": "0252f97f-8e39-4831-9899-a8882c429380",
     "cn": [

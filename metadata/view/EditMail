@@ -6,13 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "bodyPadding": null,
-        "designer|userAlias": "editmail",
-        "designer|userClassName": "EditMail",
         "height": 296,
+        "width": 582,
+        "designer|userClassName": "EditMail",
+        "designer|userAlias": "editmail",
         "layout": "fit",
-        "title": "Edition mail",
-        "width": 582
+        "bodyPadding": null,
+        "title": "Edition mail"
     },
     "designerId": "b01da3fe-7591-4f65-810a-e3c10715521d",
     "cn": [
@@ -38,8 +38,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "container|pack": "center",
-                        "dock": "bottom"
+                        "dock": "bottom",
+                        "container|pack": "center"
                     },
                     "designerId": "9a67ae23-3421-42a8-a20e-c440dcacf51c",
                     "cn": [
@@ -51,9 +51,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe011@fcrooks",
-                                "itemId": "sendMailBtnId",
                                 "layout|flex": null,
+                                "itemId": "sendMailBtnId",
+                                "glyph": "xe011@fcrooks",
                                 "text": "Envoyer"
                             },
                             "designerId": "4e7b508c-6aec-49d6-bf27-92bd62d797ee"
@@ -79,9 +79,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe015@fcrooks",
-                                "itemId": "cancelEditMailBtnId",
                                 "layout|flex": null,
+                                "itemId": "cancelEditMailBtnId",
+                                "glyph": "xe015@fcrooks",
                                 "text": "Abandonner"
                             },
                             "designerId": "e997c4a0-6028-4262-8d50-4ccb84f95fbf"
@@ -96,13 +96,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|anchor": "100%",
                         "designer|displayName": "namen",
-                        "displayField": "namen",
                         "fieldLabel": "Destinatiares Supplémentaires",
                         "labelWidth": 200,
-                        "layout|anchor": "100%",
-                        "multiSelect": true,
                         "name": "nurselist",
+                        "displayField": "namen",
+                        "multiSelect": true,
                         "store": "NurseStore",
                         "valueField": "idn"
                     },
@@ -116,9 +116,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Message",
-                        "height": 170,
                         "layout|anchor": "100%",
+                        "height": 170,
+                        "fieldLabel": "Message",
                         "name": "message"
                     },
                     "designerId": "02e95ca2-b2f9-4874-aa38-dae408bc57ef"

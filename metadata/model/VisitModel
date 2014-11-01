@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "visitmodel",
+        "idProperty": "idv",
         "designer|userClassName": "VisitModel",
-        "idProperty": "idv"
+        "designer|userAlias": "visitmodel"
     },
     "designerId": "67d66cd3-452e-4f9e-8777-98d6b3b74421",
     "cn": [
@@ -151,10 +151,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "hasOneNurseModel",
-                "foreignKey": "nurseid",
                 "model": "NurseModel",
-                "primaryKey": "idn"
+                "primaryKey": "idn",
+                "designer|displayName": "hasOneNurseModel",
+                "foreignKey": "nurseid"
             },
             "designerId": "a4516569-cd91-4d47-8a1a-8824c7f4fa0d"
         },
@@ -166,10 +166,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "hasOnePatientModel",
-                "foreignKey": "patientid",
                 "model": "PatientModel",
-                "primaryKey": "idp"
+                "primaryKey": "idp",
+                "designer|displayName": "hasOnePatientModel",
+                "foreignKey": "patientid"
             },
             "designerId": "aa141331-8d9e-45da-b6cd-da01e9978c16"
         },

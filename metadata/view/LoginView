@@ -6,14 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "closable": false,
-        "defaultFocus": null,
-        "designer|userAlias": "loginview",
-        "designer|userClassName": "LoginView",
         "height": 140,
+        "width": 400,
+        "designer|userClassName": "LoginView",
+        "designer|userAlias": "loginview",
         "layout": "fit",
+        "closable": false,
         "title": "Connexion",
-        "width": 400
+        "defaultFocus": null
     },
     "designerId": "8d5c35ce-eb5c-4e24-b83d-823876311cf8",
     "cn": [
@@ -25,10 +25,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
-                "designer|displayName": "Login Form",
-                "header": false,
                 "itemId": "loginFormId",
+                "designer|displayName": "Login Form",
+                "bodyPadding": 10,
+                "header": false,
                 "title": "My Form"
             },
             "designerId": "6b907a74-49cd-4728-b9ec-5795cedaa4d2",
@@ -41,8 +41,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "container|pack": "center",
-                        "dock": "bottom"
+                        "dock": "bottom",
+                        "container|pack": "center"
                     },
                     "designerId": "063ecbcb-368d-4260-852d-ad850397b9b8",
                     "cn": [
@@ -54,9 +54,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe00b@fcrooks",
-                                "itemId": "loginButtonId",
                                 "layout|flex": null,
+                                "itemId": "loginButtonId",
+                                "glyph": "xe00b@fcrooks",
                                 "text": "Connexion"
                             },
                             "designerId": "82c01203-828d-4fd0-b4ba-615654313e17"
@@ -82,8 +82,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "cancelLoginButtonId",
                                 "layout|flex": null,
+                                "itemId": "cancelLoginButtonId",
                                 "text": "Annuler"
                             },
                             "designerId": "a159a3b6-b685-4dd5-9a0d-36098020581f"
@@ -98,9 +98,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Nom d'utilisateur",
-                        "itemId": "userFldId",
                         "layout|anchor": "100%",
+                        "itemId": "userFldId",
+                        "fieldLabel": "Nom d'utilisateur",
                         "name": "user"
                     },
                     "designerId": "7fd96cfc-e6b9-40e0-be83-df13a9e3fb15"
@@ -113,11 +113,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Mot de passe",
-                        "inputType": "password",
-                        "itemId": "passwordFldId",
                         "layout|anchor": "100%",
-                        "name": "password"
+                        "itemId": "passwordFldId",
+                        "fieldLabel": "Mot de passe",
+                        "name": "password",
+                        "inputType": "password"
                     },
                     "designerId": "bc499a23-c89c-4a9a-af60-6c98550642af"
                 }

@@ -7,13 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "container|align": "stretch",
-        "designer|userAlias": "editpatientlistview",
-        "designer|userClassName": "EditPatientListView",
-        "header": false,
         "height": 520,
+        "width": 880,
+        "designer|userClassName": "EditPatientListView",
+        "designer|userAlias": "editpatientlistview",
         "layout": "vbox",
-        "title": "Edit Patients List",
-        "width": 880
+        "header": false,
+        "title": "Edit Patients List"
     },
     "designerId": "d8c9e516-4c3d-49a4-8013-8ae05997c74c",
     "cn": [
@@ -25,12 +25,12 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": 1,
+                "itemId": "patientGridId",
                 "designer|displayName": "Patients Grid",
                 "header": false,
-                "itemId": "patientGridId",
-                "layout|flex": 1,
-                "store": "PatientStore",
-                "title": "My Grid Panel"
+                "title": "My Grid Panel",
+                "store": "PatientStore"
             },
             "designerId": "8e0ddd9a-b879-42f5-85c4-549c62a2540f",
             "cn": [
@@ -55,9 +55,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe00d@fcrooks",
-                                "itemId": "saveFullPatientBtnId",
                                 "layout|flex": null,
+                                "itemId": "saveFullPatientBtnId",
+                                "glyph": "xe00d@fcrooks",
                                 "text": "Sauver"
                             },
                             "designerId": "83c29bcc-88ba-4a10-bb3c-dd0dd5fe4798"
@@ -83,9 +83,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe012@fcrooks",
-                                "itemId": "addFullPatientBtnId",
                                 "layout|flex": null,
+                                "itemId": "addFullPatientBtnId",
+                                "glyph": "xe012@fcrooks",
                                 "text": "Nouveau patient"
                             },
                             "designerId": "6d2dc78e-f1f4-4bf6-8247-789844c215aa"
@@ -111,9 +111,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe00e@fcrooks",
-                                "itemId": "delFullPatientBtnId",
                                 "layout|flex": null,
+                                "itemId": "delFullPatientBtnId",
+                                "glyph": "xe00e@fcrooks",
                                 "text": "Effacer patient"
                             },
                             "designerId": "1da2fc2b-3939-4bf1-b8aa-e6e001a4373e"
@@ -138,9 +138,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fieldLabel": "Recherche",
+                                "layout|flex": null,
                                 "itemId": "searchFullPatientFldId",
-                                "layout|flex": null
+                                "fieldLabel": "Recherche"
                             },
                             "designerId": "956dc089-44c7-4aaa-8b75-6a8ee7e46019"
                         }
@@ -163,10 +163,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "namep",
                         "designer|displayName": "Nom",
-                        "flex": 1,
-                        "text": "Nom"
+                        "dataIndex": "namep",
+                        "text": "Nom",
+                        "flex": 1
                     },
                     "designerId": "42290555-f521-499b-82df-2302af13d23b",
                     "cn": [
@@ -190,8 +190,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "address",
-                        "flex": 2,
-                        "text": "Adresse"
+                        "text": "Adresse",
+                        "flex": 2
                     },
                     "designerId": "1b29bc89-8ac3-4718-a5f9-27d0e5fc5f25",
                     "cn": [
@@ -215,8 +215,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "tel",
-                        "flex": 1,
-                        "text": "Tél"
+                        "text": "Tél",
+                        "flex": 1
                     },
                     "designerId": "72c349cc-1863-416e-8c29-df3cced42e6d",
                     "cn": [
@@ -240,8 +240,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "care",
-                        "flex": 3,
-                        "text": "Soin"
+                        "text": "Soin",
+                        "flex": 3
                     },
                     "designerId": "6ccc6a17-97e6-4947-85ad-30b510759c09",
                     "cn": [
@@ -265,8 +265,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "infop",
-                        "flex": 3,
-                        "text": "Détail"
+                        "text": "Détail",
+                        "flex": 3
                     },
                     "designerId": "d9b94546-e543-4d8f-91ca-40eddc6bcd33",
                     "cn": [
@@ -289,11 +289,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "width": 40,
                         "dataIndex": "activep",
                         "hideable": false,
                         "menuDisabled": true,
-                        "text": "Actif",
-                        "width": 40
+                        "text": "Actif"
                     },
                     "designerId": "00c0eb5a-0570-448b-a814-ef322e4fe5dc",
                     "cn": [
@@ -316,9 +316,9 @@
                     },
                     "codeClass": "Ext.grid.plugin.RowEditing",
                     "userConfig": {
-                        "autoCancel": false,
+                        "pluginId": "rowEditFullPatientId",
                         "designer|displayName": "RowEditFullPatient",
-                        "pluginId": "rowEditFullPatientId"
+                        "autoCancel": false
                     },
                     "designerId": "7d0b2957-f712-4117-91af-9927eb32a0a9"
                 },

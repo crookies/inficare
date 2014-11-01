@@ -18,8 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#dayRoundExecuteBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onDayReportBtnClick",
                 "implHandler": [
                     "",
@@ -56,7 +54,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#dayRoundExecuteBtnId"
             },
             "designerId": "2c8544dc-2b74-4af3-8b7d-20d30ea144b5"
         },
@@ -68,10 +68,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "downloadFile",
                 "designer|params": [
                     "sUrl"
                 ],
-                "fn": "downloadFile",
                 "implHandler": [
                     "//If in Chrome or Safari - download via virtual link click",
                     "if (Ext.isChrome || Ext.isSafari) ",
@@ -114,8 +114,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#mainDateId",
-                "designer|targetType": "Ext.form.field.Date",
                 "fn": "onMainDateIdChange",
                 "implHandler": [
                     "var reportView = Ext.ComponentQuery.query('reportview')[0]",
@@ -127,7 +125,9 @@
                     "tarifDateFld.setValue(Ext.Date.format(dt,'m/Y'));"
                 ],
                 "name": "change",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Date",
+                "designer|controlQuery": "#mainDateId"
             },
             "designerId": "ba3860c4-f17a-4199-9e46-836738e3e8e7"
         },
@@ -139,10 +139,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "setReportDate",
                 "designer|params": [
                     "date"
                 ],
-                "fn": "setReportDate",
                 "implHandler": [
                     "var reportView = Ext.ComponentQuery.query('reportview')[0]",
                     "var dayRoundDateFld = reportView.down('#mainDateId');",
@@ -159,8 +159,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#sendMailBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onSendMailBtnIdClick",
                 "implHandler": [
                     "var editMail = this.editMail;",
@@ -201,7 +199,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#sendMailBtnId"
             },
             "designerId": "2acdd457-e122-4291-b4e0-370e11ffa7ff"
         },
@@ -213,8 +213,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#cancelEditMailBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onCancelEditMailBtnIdClick",
                 "implHandler": [
                     "var editMail = this.editMail;",
@@ -223,7 +221,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#cancelEditMailBtnId"
             },
             "designerId": "cca65d74-8ff4-4d17-b1a6-2f12802a1dae"
         },
@@ -235,8 +235,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#tarifExecuteBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onTarifExecuteBtnIdClick",
                 "implHandler": [
                     "var reportView = Ext.ComponentQuery.query('reportview')[0]",
@@ -255,7 +253,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#tarifExecuteBtnId"
             },
             "designerId": "597d8383-56ae-4f1f-a092-1cf8553a98bc"
         }

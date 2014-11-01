@@ -6,11 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "MainController",
         "views": [
             "InfiMainView",
             "LoginView"
-        ]
+        ],
+        "designer|userClassName": "MainController"
     },
     "designerId": "8968b191-eab3-4a7a-8834-212b6608dda4",
     "cn": [
@@ -22,15 +22,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "infimainview #loginMenuId",
-                "designer|targetType": "Ext.menu.Item",
                 "fn": "onLoginMenuIdClick",
                 "implHandler": [
                     "this.startLogin();",
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "infimainview #loginMenuId"
             },
             "designerId": "0db0c9cd-d7e9-4807-8564-ac4c188f5ca5"
         },
@@ -42,8 +42,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "infimainview #logoffMenuId",
-                "designer|targetType": "Ext.menu.Item",
                 "fn": "onLogoffMenuIdClick",
                 "implHandler": [
                     "var ctx = this;",
@@ -62,7 +60,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "infimainview #logoffMenuId"
             },
             "designerId": "2c5fbdd0-5150-4975-9870-a9aa61721b1a"
         },
@@ -98,8 +98,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#cancelLoginButtonId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onCancelLoginButtonIdClick",
                 "implHandler": [
                     "//We will need to check if the login information is correct, but after that, we can go to the main view",
@@ -109,7 +107,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#cancelLoginButtonId"
             },
             "designerId": "2d35d993-b3a3-4aca-b12d-75a67e6e59c6"
         },
@@ -121,8 +121,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#loginButtonId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onLoginButtonIdClick",
                 "implHandler": [
                     "var ctx = this;",
@@ -155,7 +153,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#loginButtonId"
             },
             "designerId": "1e34b1e9-ded0-4a9f-b0dc-67e966badfd7"
         },
@@ -261,8 +261,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "infimainview #editRoundMenuId",
-                "designer|targetType": "Ext.menu.Item",
                 "fn": "onEditRoundMenuIdClick",
                 "implHandler": [
                     "this.editRound();",
@@ -270,7 +268,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "infimainview #editRoundMenuId"
             },
             "designerId": "dd0814a8-3696-43ed-a6fa-ea11b11b0eda",
             "customConfigs": [
@@ -289,15 +289,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "infimainview #editPatientMenuId",
-                "designer|targetType": "Ext.menu.Item",
                 "fn": "onEditPatientMenuIdClick",
                 "implHandler": [
                     "this.editPatients();",
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "infimainview #editPatientMenuId"
             },
             "designerId": "f6d34fee-72fa-49e8-bb6c-7f762ca7fa11"
         },
@@ -309,15 +309,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "infimainview #reportMenuId",
-                "designer|targetType": "Ext.menu.Item",
                 "fn": "onReportMenuIdClick",
                 "implHandler": [
                     "this.editReports();",
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "infimainview #reportMenuId"
             },
             "designerId": "8238e346-8f95-4db3-be59-d774abd89b64"
         },
@@ -396,15 +396,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#editRoundBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onEditRoundBtnIdClick",
                 "implHandler": [
                     "this.editRound();",
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#editRoundBtnId"
             },
             "designerId": "60a5fd93-ccaa-4d79-88f5-8e102fbce6a7"
         },
@@ -416,15 +416,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#editPatientBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onEditPatientBtnIdClick",
                 "implHandler": [
                     "this.editPatients();",
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#editPatientBtnId"
             },
             "designerId": "871bb10d-c467-41eb-a0a5-be22ba46d2a0"
         },
@@ -436,15 +436,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#reportBtnId",
-                "designer|targetType": "Ext.button.Button",
                 "fn": "onReportBtnIdClick",
                 "implHandler": [
                     "this.editReports();",
                     ""
                 ],
                 "name": "click",
-                "scope": "me"
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#reportBtnId"
             },
             "designerId": "7642aab2-c643-44fa-8de5-3e08a89073eb"
         }

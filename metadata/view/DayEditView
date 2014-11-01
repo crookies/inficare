@@ -6,6 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "container|align": "stretch",
+        "id": "dayEditViewId",
+        "itemId": null,
+        "designer|userClassName": "DayEditView",
+        "designer|userAlias": "dayeditview",
+        "layout": "vbox",
         "bodyBorder": false,
         "bodyCls": [
             "inficare-splitbg",
@@ -13,13 +19,7 @@
             "x-box-layout-ct"
         ],
         "bodyStyle": null,
-        "container|align": "stretch",
-        "designer|userAlias": "dayeditview",
-        "designer|userClassName": "DayEditView",
         "header": false,
-        "id": "dayEditViewId",
-        "itemId": null,
-        "layout": "vbox",
         "title": "My Panel"
     },
     "configAlternates": {
@@ -35,9 +35,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": 1,
                 "dock": "top",
-                "itemId": "dayEditToolbarId",
-                "layout|flex": 1
+                "itemId": "dayEditToolbarId"
             },
             "designerId": "4999697b-e29f-4278-8bc1-4c44bd206422",
             "cn": [
@@ -49,10 +49,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": null,
+                        "itemId": "saveId",
                         "destroyMenu": null,
                         "glyph": "xe00d@fcrooks",
-                        "itemId": "saveId",
-                        "layout|flex": null,
                         "text": "Sauver"
                     },
                     "designerId": "5c1023d2-b41b-4af2-8b8c-4a1dc5147fc4"
@@ -78,9 +78,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "glyph": "xe00e@fcrooks",
-                        "itemId": "delVisitBtnId",
                         "layout|flex": null,
+                        "itemId": "delVisitBtnId",
+                        "glyph": "xe00e@fcrooks",
                         "text": "Effacer"
                     },
                     "designerId": "c1658907-2df0-49f9-b3aa-88c3ceb56e35"
@@ -105,12 +105,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "editable": false,
-                        "fieldLabel": "Date tournée",
-                        "format": "d/m/Y",
-                        "itemId": "visitDateFieldId",
                         "layout|flex": null,
-                        "width": null
+                        "itemId": "visitDateFieldId",
+                        "width": null,
+                        "fieldLabel": "Date tournée",
+                        "editable": false,
+                        "format": "d/m/Y"
                     },
                     "designerId": "99239a2f-862f-494d-bb03-82924b4b50c7"
                 }
@@ -124,21 +124,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "animCollapse": false,
-                "animate": false,
-                "dock": null,
-                "forceFit": null,
-                "header": false,
-                "height": null,
-                "hideHeaders": false,
-                "itemId": "dayVisitTree",
                 "layout|flex": 1,
+                "dock": null,
+                "height": null,
+                "itemId": "dayVisitTree",
+                "width": null,
                 "resizable": null,
                 "resizeHandles": "s",
-                "rootVisible": false,
-                "store": "VisitEditTreeStore",
+                "animCollapse": false,
+                "header": false,
                 "title": "Day Visit List",
-                "width": null
+                "forceFit": null,
+                "hideHeaders": false,
+                "store": "VisitEditTreeStore",
+                "animate": false,
+                "rootVisible": false
             },
             "designerId": "b0eda9ca-ed38-44d7-af8e-506dbb7a94ec",
             "isBuiltIn": true,
@@ -154,8 +154,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "dayTreeViewId",
-                        "rootVisible": false,
-                        "width": null
+                        "width": null,
+                        "rootVisible": false
                     },
                     "designerId": "617e45ac-5576-4148-8fd7-f92f3d5aa2bd",
                     "cn": [
@@ -167,10 +167,10 @@
                             },
                             "codeClass": "Ext.tree.plugin.TreeViewDragDrop",
                             "userConfig": {
+                                "pluginId": null,
                                 "ddGroup": "dayVisitDd",
                                 "dragText": "Drag & drop pour réorganiser",
-                                "dropGroup": null,
-                                "pluginId": null
+                                "dropGroup": null
                             },
                             "designerId": "cb09b2ee-c829-43a8-bb03-cce8ecf9c6e9"
                         }
@@ -184,13 +184,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "namev",
+                        "width": 200,
                         "defaultWidth": null,
-                        "flex": null,
-                        "menuDisabled": true,
                         "sortable": false,
+                        "dataIndex": "namev",
+                        "menuDisabled": true,
                         "text": "Visite",
-                        "width": 200
+                        "flex": null
                     },
                     "designerId": "093db05e-6b87-4eed-9699-be99cd7b366f"
                 },
@@ -202,12 +202,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "nurseid",
-                        "flex": null,
-                        "menuDisabled": true,
+                        "width": 100,
                         "sortable": false,
+                        "dataIndex": "nurseid",
+                        "menuDisabled": true,
                         "text": "Soignant",
-                        "width": 100
+                        "flex": null
                     },
                     "designerId": "77efc759-32bc-4b2d-a3cb-411c118def6b",
                     "cn": [
@@ -219,8 +219,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "displayField": "namen",
                                 "editable": false,
+                                "displayField": "namen",
                                 "forceSelection": true,
                                 "store": "NurseStore",
                                 "typeAhead": true,
@@ -236,6 +236,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "fn": "renderer",
                                 "designer|params": [
                                     "value",
                                     "metaData",
@@ -245,7 +246,6 @@
                                     "store",
                                     "view"
                                 ],
-                                "fn": "renderer",
                                 "implHandler": [
                                     "var cstore = Ext.getStore(\"NurseStore\");",
                                     "var idx;",
@@ -280,11 +280,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "patientcare",
-                        "flex": 1,
-                        "menuDisabled": true,
                         "sortable": false,
-                        "text": "Soins"
+                        "dataIndex": "patientcare",
+                        "menuDisabled": true,
+                        "text": "Soins",
+                        "flex": 1
                     },
                     "designerId": "0cce80b9-a47e-4dea-a67a-be54e09c4678"
                 },
@@ -296,11 +296,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "patientinfo",
-                        "flex": 1,
-                        "menuDisabled": true,
                         "sortable": false,
-                        "text": "Détail"
+                        "dataIndex": "patientinfo",
+                        "menuDisabled": true,
+                        "text": "Détail",
+                        "flex": 1
                     },
                     "designerId": "575fe2d7-a154-400a-bc7f-aa9bdb6c4a72"
                 },
@@ -312,11 +312,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "visitinfo",
-                        "flex": 2,
-                        "menuDisabled": true,
                         "sortable": false,
-                        "text": "Visit Info"
+                        "dataIndex": "visitinfo",
+                        "menuDisabled": true,
+                        "text": "Visit Info",
+                        "flex": 2
                     },
                     "designerId": "c7b51158-0a08-484e-9c48-636366b5649b",
                     "cn": [
@@ -337,6 +337,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "fn": "renderer",
                                 "designer|params": [
                                     "value",
                                     "metaData",
@@ -346,7 +347,6 @@
                                     "store",
                                     "view"
                                 ],
-                                "fn": "renderer",
                                 "implHandler": [
                                     "return value.replace(/<\\/?[^>]+(>|$)/g, \" \");",
                                     ""
@@ -384,8 +384,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "collapseOnDblClick": false,
-                "componentCls": null
+                "componentCls": null,
+                "collapseOnDblClick": false
             },
             "designerId": "e413341b-c4ef-4e85-ae9e-d92dc3c4dbdd"
         },
@@ -397,11 +397,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
                 "height": 50,
                 "itemId": "visitinfocard",
-                "layout": "card",
-                "layout|flex": null,
-                "minHeight": null
+                "minHeight": null,
+                "layout": "card"
             },
             "designerId": "c5785b0e-bd7a-4b40-bd17-951b3a74b4a8",
             "cn": [
@@ -413,9 +413,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "visitinfodisplay",
                         "fieldLabel": "Label",
                         "hideLabel": true,
-                        "itemId": "visitinfodisplay",
                         "readOnly": true
                     },
                     "designerId": "2d1bf011-1e4a-4c50-8cbc-98bc54fd4828"
@@ -430,10 +430,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "collapsible": true,
                 "dock": null,
-                "performCollapse": true,
-                "width": null
+                "width": null,
+                "collapsible": true,
+                "performCollapse": true
             },
             "designerId": "48bb1ec7-ea49-4265-b9fe-7550c7277cdf"
         },
@@ -445,25 +445,25 @@
             },
             "codeClass": null,
             "userConfig": {
+                "dock": null,
+                "height": 160,
+                "itemId": "dayCommentId",
+                "width": null,
+                "layout": "fit",
+                "collapseDirection": "bottom",
+                "collapsible": true,
+                "header": false,
+                "title": "Day Comment",
                 "api": [
                     "{",
                     "    load: QueryVisitsDb.getDayComment,",
                     "\tsubmit: QueryVisitsDb.saveDayComment",
                     "}"
                 ],
-                "collapseDirection": "bottom",
-                "collapsible": true,
-                "dock": null,
-                "header": false,
-                "height": 160,
-                "itemId": "dayCommentId",
-                "layout": "fit",
                 "paramOrder": [
                     "visitDate"
                 ],
-                "title": "Day Comment",
-                "trackResetOnLoad": true,
-                "width": null
+                "trackResetOnLoad": true
             },
             "designerId": "9a2814d6-9d7e-4076-b69c-feba127dfe87",
             "cn": [
@@ -475,15 +475,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "enableColors": false,
-                        "enableLinks": false,
-                        "enableSourceEdit": false,
-                        "fieldLabel": null,
                         "height": 150,
-                        "name": "daycomment",
                         "overflowX": "auto",
                         "overflowY": "auto",
-                        "validateOnChange": false
+                        "fieldLabel": null,
+                        "name": "daycomment",
+                        "validateOnChange": false,
+                        "enableColors": false,
+                        "enableLinks": false,
+                        "enableSourceEdit": false
                     },
                     "designerId": "9cbe828a-cafb-4192-b5e2-f9a9dab17c2f"
                 },
@@ -510,10 +510,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "processDayEditView",
                 "designer|params": [
                     "config"
                 ],
-                "fn": "processDayEditView",
                 "implHandler": [
                     ""
                 ]

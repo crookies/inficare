@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "nursemodel",
+        "idProperty": "idn",
         "designer|userClassName": "NurseModel",
-        "idProperty": "idn"
+        "designer|userAlias": "nursemodel"
     },
     "designerId": "51502670-0d52-464a-b0a6-ade46cc2c474",
     "cn": [

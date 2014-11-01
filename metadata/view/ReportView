@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "reportview",
         "designer|userClassName": "ReportView",
+        "designer|userAlias": "reportview",
         "header": false,
         "title": "My Panel"
     },
@@ -34,10 +34,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "editable": false,
+                        "itemId": "mainDateId",
                         "fieldLabel": "Date:",
-                        "format": "d/m/Y",
-                        "itemId": "mainDateId"
+                        "editable": false,
+                        "format": "d/m/Y"
                     },
                     "designerId": "ee438f04-81b8-454e-8c4f-f8e0dbc85ad6"
                 }
@@ -51,9 +51,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
                 "height": 133,
                 "itemId": "dayRoundFormId",
+                "bodyPadding": 10,
                 "title": "Tournée du jour"
             },
             "designerId": "501068d6-87cf-4031-9268-3edf751532c1",
@@ -66,10 +66,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Label",
                         "height": 69,
-                        "hideLabel": true,
-                        "width": 398
+                        "width": 398,
+                        "fieldLabel": "Label",
+                        "hideLabel": true
                     },
                     "designerId": "5a746469-aa8e-480a-884f-8e06165fb8cd",
                     "cn": [
@@ -81,11 +81,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fieldLabel": "Date configurée",
                                 "itemId": "dayRoundDateFldId",
+                                "width": null,
+                                "fieldLabel": "Date configurée",
                                 "name": "visitDate",
-                                "readOnly": true,
-                                "width": null
+                                "readOnly": true
                             },
                             "designerId": "d0f92e75-b12e-4aa3-a953-e1d4d3aa1c9a"
                         },
@@ -97,10 +97,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fieldLabel": "Opération",
                                 "itemId": "operationGroupId",
                                 "margin": "0 10 10 0",
-                                "width": 398
+                                "width": 398,
+                                "fieldLabel": "Opération"
                             },
                             "designerId": "9c576ea5-3284-4ea9-9753-54e8babd9f7d",
                             "cn": [
@@ -112,11 +112,11 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "fieldLabel": null,
+                                        "name": "operation",
                                         "boxLabel": "Télécharger",
                                         "checked": true,
-                                        "fieldLabel": null,
-                                        "inputValue": "download",
-                                        "name": "operation"
+                                        "inputValue": "download"
                                     },
                                     "designerId": "50fd3446-dbf7-45de-a19a-f9958f11f93f"
                                 },
@@ -128,10 +128,10 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "boxLabel": "Email",
                                         "fieldLabel": null,
-                                        "inputValue": "email",
-                                        "name": "operation"
+                                        "name": "operation",
+                                        "boxLabel": "Email",
+                                        "inputValue": "email"
                                     },
                                     "designerId": "ed20c8c3-6597-455b-80c2-d0c29f465a19"
                                 }
@@ -145,12 +145,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe013@fcrooks",
-                                "href": null,
                                 "itemId": "dayRoundExecuteBtnId",
                                 "minWidth": null,
-                                "text": "Exécuter",
-                                "width": 108
+                                "width": 108,
+                                "glyph": "xe013@fcrooks",
+                                "href": null,
+                                "text": "Exécuter"
                             },
                             "designerId": "c45d0d18-a1c9-4298-8253-d219d05e4622"
                         }
@@ -166,10 +166,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "downloadFile",
                 "designer|params": [
                     "sUrl"
                 ],
-                "fn": "downloadFile",
                 "implHandler": [
                     "//If in Chrome or Safari - download via virtual link click",
                     "if (Ext.isChrome || Ext.isSafari) ",
@@ -211,8 +211,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bodyPadding": 10,
                 "itemId": "tarifFormId",
+                "bodyPadding": 10,
                 "title": "Tarification"
             },
             "designerId": "b8ef18b6-d88f-435b-a9dc-59adf67cc83f",
@@ -225,10 +225,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Label",
                         "height": 54,
-                        "hideLabel": true,
-                        "width": 366
+                        "width": 366,
+                        "fieldLabel": "Label",
+                        "hideLabel": true
                     },
                     "designerId": "c7cf382f-24ff-4955-8e62-cd097551f542",
                     "cn": [
@@ -240,8 +240,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fieldLabel": "Mois configuré",
-                                "itemId": "tarifDateFldId"
+                                "itemId": "tarifDateFldId",
+                                "fieldLabel": "Mois configuré"
                             },
                             "designerId": "e2c97b56-4955-48d2-9579-bce959beb774"
                         }
@@ -255,10 +255,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "glyph": "xe013@fcrooks",
                         "itemId": "tarifExecuteBtnId",
-                        "text": "Exécuter",
-                        "width": 109
+                        "width": 109,
+                        "glyph": "xe013@fcrooks",
+                        "text": "Exécuter"
                     },
                     "designerId": "1c36a337-afd6-482f-b9f1-85bff5761c85"
                 }
