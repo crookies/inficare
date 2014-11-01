@@ -1,0 +1,452 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainController",
+        "views": [
+            "InfiMainView",
+            "LoginView"
+        ]
+    },
+    "designerId": "8968b191-eab3-4a7a-8834-212b6608dda4",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "infimainview #loginMenuId",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onLoginMenuIdClick",
+                "implHandler": [
+                    "this.startLogin();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "0db0c9cd-d7e9-4807-8564-ac4c188f5ca5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "infimainview #logoffMenuId",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onLogoffMenuIdClick",
+                "implHandler": [
+                    "var ctx = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: 'php/login.php',",
+                    "    method: 'GET',",
+                    "    params: {",
+                    "        logoff:true",
+                    "    },",
+                    "\tsuccess: function(response){",
+                    "\t\t//we must call login with the valid 'this' context.",
+                    "\t\tctx.logoff.call(ctx);        ",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "2c5fbdd0-5150-4975-9870-a9aa61721b1a"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "//add 'infimainview' field to the controller to access the infiMainView quickly",
+                    "Ext.applyIf(this, {infiMainView: Ext.ComponentQuery.query('infimainview')[0],",
+                    "    inficareCardWs:Ext.ComponentQuery.query('infimainview #inficareCardWsId')[0],",
+                    "    mainMenu:Ext.ComponentQuery.query('infimainview toolbar')[0]",
+                    "});",
+                    "",
+                    "",
+                    "this.startLogin();",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "2994557c-6d9d-4727-9498-94f1316e416c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#cancelLoginButtonId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCancelLoginButtonIdClick",
+                "implHandler": [
+                    "//We will need to check if the login information is correct, but after that, we can go to the main view",
+                    "var dialog = this.infiMainView.LoginView;",
+                    "",
+                    "dialog.hide();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "2d35d993-b3a3-4aca-b12d-75a67e6e59c6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#loginButtonId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onLoginButtonIdClick",
+                "implHandler": [
+                    "var ctx = this;",
+                    "var form = button.up('#loginFormId').getForm();;",
+                    "",
+                    "var userVal = form.findField('user').getValue();",
+                    "var passwordVal = form.findField('password').getValue();",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: 'php/login.php',",
+                    "    method: 'GET',",
+                    "    params: {",
+                    "        user: userVal,",
+                    "        password: passwordVal",
+                    "    },",
+                    "    success: function(response){",
+                    "        var res = Ext.JSON.decode(response.responseText, true);",
+                    "",
+                    "        if (res && res.success)",
+                    "        {",
+                    "            //we must call login with the valid 'this' context.",
+                    "            ctx.login.call(ctx);        ",
+                    "        }",
+                    "        else",
+                    "        {",
+                    "            res=Ext.Msg.alert('Erreur', 'Echec d\\'authentification');",
+                    "        }",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "1e34b1e9-ded0-4a9f-b0dc-67e966badfd7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "login",
+                "implHandler": [
+                    "//We will need to check if the login information is correct, but after that, we can go to the main view",
+                    "var cardLayout = this.inficareCardWs.getLayout(),",
+                    "    dialog = this.infiMainView.LoginView,",
+                    "    store;",
+                    "",
+                    "dialog.hide();",
+                    "",
+                    "var treepanel = Ext.ComponentQuery.query('dayeditview #dayVisitTree')[0];",
+                    "store = Ext.getStore('VisitEditTreeStore');",
+                    "store.getRootNode().removeAll();",
+                    "store.load();",
+                    "",
+                    "store = Ext.getStore('VisitPatientStore');",
+                    "store.load();",
+                    "store = Ext.getStore('NurseStore');",
+                    "store.load();",
+                    "store = Ext.getStore('PatientStore');",
+                    "store.load();",
+                    "",
+                    "",
+                    "cardLayout.setActiveItem('editRoundViewId');",
+                    "",
+                    "//this works but bellow is faster: item.up('menu').down('#loginMenuId').disable();",
+                    "this.mainMenu.down('#loginMenuId').disable();",
+                    "this.mainMenu.down('#logoffMenuId').enable();",
+                    "this.mainMenu.down('#editionMenuId').enable();",
+                    "",
+                    "this.mainMenu.down('#editRoundBtnId').enable();",
+                    "this.mainMenu.down('#editPatientBtnId').enable();",
+                    "this.mainMenu.down('#reportBtnId').enable();",
+                    ""
+                ]
+            },
+            "designerId": "9b050432-f646-40b1-9127-e940f8cdf8e2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "logoff",
+                "implHandler": [
+                    "//We will need to actually logout from the application",
+                    "var cardLayout = this.inficareCardWs.getLayout();",
+                    "",
+                    "cardLayout.setActiveItem('logoffViewId');",
+                    "",
+                    "//this works but bellow is faster: item.up('menu').down('#loginMenuId').disable();",
+                    "this.mainMenu.down('#loginMenuId').enable();",
+                    "this.mainMenu.down('#logoffMenuId').disable();",
+                    "this.mainMenu.down('#editionMenuId').disable();",
+                    "",
+                    "this.mainMenu.down('#editRoundBtnId').disable();",
+                    "this.mainMenu.down('#editPatientBtnId').disable();",
+                    "this.mainMenu.down('#reportBtnId').disable();",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "5bedbd3f-58de-4bbb-a223-147c20a01ce1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "startLogin",
+                "implHandler": [
+                    "var dialog = this.infiMainView.LoginView || (this.infiMainView.LoginView = Ext.create('widget.loginview')),",
+                    "    form = dialog.down('form');",
+                    "",
+                    "",
+                    "form.getForm().reset();",
+                    "dialog.show();"
+                ]
+            },
+            "designerId": "14bf15b2-182b-4128-b055-6e6e42215bdc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "infimainview #editRoundMenuId",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onEditRoundMenuIdClick",
+                "implHandler": [
+                    "this.editRound();",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "dd0814a8-3696-43ed-a6fa-ea11b11b0eda",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "itemid",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "infimainview #editPatientMenuId",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onEditPatientMenuIdClick",
+                "implHandler": [
+                    "this.editPatients();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "f6d34fee-72fa-49e8-bb6c-7f762ca7fa11"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "infimainview #reportMenuId",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onReportMenuIdClick",
+                "implHandler": [
+                    "this.editReports();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "8238e346-8f95-4db3-be59-d774abd89b64"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "report",
+                "selector": "reportview"
+            },
+            "designerId": "a0055501-366e-4b93-a4c8-fdc4bacb7445"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "editRound",
+                "implHandler": [
+                    "var cardLayout = this.inficareCardWs.getLayout();",
+                    "",
+                    "cardLayout.setActiveItem('editRoundViewId');",
+                    ""
+                ]
+            },
+            "designerId": "9fc3e98e-d328-4f9e-b18b-f67ba2ad41a8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "editPatients",
+                "implHandler": [
+                    "var cardLayout = this.inficareCardWs.getLayout();",
+                    "",
+                    "cardLayout.setActiveItem('editPatientsListId');",
+                    ""
+                ]
+            },
+            "designerId": "e5e52eee-e130-4359-be33-4709aeae22aa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "editReports",
+                "implHandler": [
+                    "var cardLayout = this.inficareCardWs.getLayout();",
+                    "",
+                    "cardLayout.setActiveItem('reportViewId');",
+                    ""
+                ]
+            },
+            "designerId": "98443dd1-6249-4f86-a212-f9f3f388cd11"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editRoundBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEditRoundBtnIdClick",
+                "implHandler": [
+                    "this.editRound();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "60a5fd93-ccaa-4d79-88f5-8e102fbce6a7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEditPatientBtnIdClick",
+                "implHandler": [
+                    "this.editPatients();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "871bb10d-c467-41eb-a0a5-be22ba46d2a0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#reportBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onReportBtnIdClick",
+                "implHandler": [
+                    "this.editReports();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "7642aab2-c643-44fa-8de5-3e08a89073eb"
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": false,
+        "defaultFocus": null,
+        "designer|userAlias": "loginview",
+        "designer|userClassName": "LoginView",
+        "height": 140,
+        "layout": "fit",
+        "title": "Connexion",
+        "width": 400
+    },
+    "designerId": "8d5c35ce-eb5c-4e24-b83d-823876311cf8",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|displayName": "Login Form",
+                "header": false,
+                "itemId": "loginFormId",
+                "title": "My Form"
+            },
+            "designerId": "6b907a74-49cd-4728-b9ec-5795cedaa4d2",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "dock": "bottom"
+                    },
+                    "designerId": "063ecbcb-368d-4260-852d-ad850397b9b8",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": "xe00b@fcrooks",
+                                "itemId": "loginButtonId",
+                                "layout|flex": null,
+                                "text": "Connexion"
+                            },
+                            "designerId": "82c01203-828d-4fd0-b4ba-615654313e17"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 50
+                            },
+                            "designerId": "a113f6eb-50cc-4968-815b-79e0ec606ccd"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "cancelLoginButtonId",
+                                "layout|flex": null,
+                                "text": "Annuler"
+                            },
+                            "designerId": "a159a3b6-b685-4dd5-9a0d-36098020581f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Nom d'utilisateur",
+                        "itemId": "userFldId",
+                        "layout|anchor": "100%",
+                        "name": "user"
+                    },
+                    "designerId": "7fd96cfc-e6b9-40e0-be83-df13a9e3fb15"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Mot de passe",
+                        "inputType": "password",
+                        "itemId": "passwordFldId",
+                        "layout|anchor": "100%",
+                        "name": "password"
+                    },
+                    "designerId": "bc499a23-c89c-4a9a-af60-6c98550642af"
+                }
+            ]
+        }
+    ]
+}

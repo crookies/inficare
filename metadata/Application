@@ -1,0 +1,78 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "DayRoundController",
+            "MainController",
+            "PatientEditController",
+            "ReportController"
+        ],
+        "models": [
+            "NurseModel",
+            "PatientModel",
+            "VisitModel"
+        ],
+        "name": "inficare",
+        "requires": [
+            "Ext.direct.*",
+            "Ext.data.*",
+            "Ext.form.*"
+        ],
+        "stores": [
+            "DayRoundTreeStore",
+            "VisitEditTreeStore",
+            "VisitPatientStore",
+            "NurseStore",
+            "PatientStore",
+            "RefVisitTreeStore"
+        ],
+        "views": [
+            "InfiMainView",
+            "EditDayRoundView",
+            "DayEditView",
+            "EditPatientListView",
+            "RoundSource",
+            "ReportView",
+            "EditMail"
+        ]
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableCaching": false,
+                "enabled": true
+            },
+            "designerId": "eb213278-19f6-4f63-806d-77ac1bec30fb"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "//The Ext.app.REMOTING_API variable is defined by the inclusion of the php/api.php script from the application",
+                    "//main html page.",
+                    "Ext.direct.Manager.addProvider(Ext.app.REMOTING_API);",
+                    ""
+                ]
+            },
+            "designerId": "c9c5626f-5f04-4912-8f83-b1fa6724f39a"
+        }
+    ]
+}

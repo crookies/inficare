@@ -1,0 +1,524 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": false,
+        "bodyCls": [
+            "inficare-splitbg",
+            "x-panel-body-default",
+            "x-box-layout-ct"
+        ],
+        "bodyStyle": null,
+        "container|align": "stretch",
+        "designer|userAlias": "dayeditview",
+        "designer|userClassName": "DayEditView",
+        "header": false,
+        "id": "dayEditViewId",
+        "itemId": null,
+        "layout": "vbox",
+        "title": "My Panel"
+    },
+    "configAlternates": {
+        "bodyStyle": "string"
+    },
+    "designerId": "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "itemId": "dayEditToolbarId",
+                "layout|flex": 1
+            },
+            "designerId": "4999697b-e29f-4278-8bc1-4c44bd206422",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "destroyMenu": null,
+                        "glyph": "xe00d@fcrooks",
+                        "itemId": "saveId",
+                        "layout|flex": null,
+                        "text": "Sauver"
+                    },
+                    "designerId": "5c1023d2-b41b-4af2-8b8c-4a1dc5147fc4"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "width": 30
+                    },
+                    "designerId": "21d5c08d-ad7e-4d98-93cb-28f2bc56bd99"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": "xe00e@fcrooks",
+                        "itemId": "delVisitBtnId",
+                        "layout|flex": null,
+                        "text": "Effacer"
+                    },
+                    "designerId": "c1658907-2df0-49f9-b3aa-88c3ceb56e35"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "designerId": "ccc556a7-dff0-4634-8014-9943f26b4ae2"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Date tournée",
+                        "format": "d/m/Y",
+                        "itemId": "visitDateFieldId",
+                        "layout|flex": null,
+                        "width": null
+                    },
+                    "designerId": "99239a2f-862f-494d-bb03-82924b4b50c7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animCollapse": false,
+                "animate": false,
+                "dock": null,
+                "forceFit": null,
+                "header": false,
+                "height": null,
+                "hideHeaders": false,
+                "itemId": "dayVisitTree",
+                "layout|flex": 1,
+                "resizable": null,
+                "resizeHandles": "s",
+                "rootVisible": false,
+                "store": "VisitEditTreeStore",
+                "title": "Day Visit List",
+                "width": null
+            },
+            "designerId": "b0eda9ca-ed38-44d7-af8e-506dbb7a94ec",
+            "isBuiltIn": true,
+            "iconCls": "icon-treegridpanel",
+            "autoName": "TreeGrid",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "dayTreeViewId",
+                        "rootVisible": false,
+                        "width": null
+                    },
+                    "designerId": "617e45ac-5576-4148-8fd7-f92f3d5aa2bd",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.plugin.TreeViewDragDrop",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": "Ext.tree.plugin.TreeViewDragDrop",
+                            "userConfig": {
+                                "ddGroup": "dayVisitDd",
+                                "dragText": "Drag & drop pour réorganiser",
+                                "dropGroup": null,
+                                "pluginId": null
+                            },
+                            "designerId": "cb09b2ee-c829-43a8-bb03-cce8ecf9c6e9"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "namev",
+                        "defaultWidth": null,
+                        "flex": null,
+                        "menuDisabled": true,
+                        "sortable": false,
+                        "text": "Visite",
+                        "width": 200
+                    },
+                    "designerId": "093db05e-6b87-4eed-9699-be99cd7b366f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nurseid",
+                        "flex": null,
+                        "menuDisabled": true,
+                        "sortable": false,
+                        "text": "Soignant",
+                        "width": 100
+                    },
+                    "designerId": "77efc759-32bc-4b2d-a3cb-411c118def6b",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "namen",
+                                "editable": false,
+                                "forceSelection": true,
+                                "store": "NurseStore",
+                                "typeAhead": true,
+                                "valueField": "idn"
+                            },
+                            "designerId": "a4501e01-9092-409c-926a-ae817661bc00"
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "var cstore = Ext.getStore(\"NurseStore\");",
+                                    "var idx;",
+                                    "",
+                                    "if (value<=0)",
+                                    "return \"\";",
+                                    "else",
+                                    "{",
+                                    "    idx = cstore.findExact('idn',value);",
+                                    "",
+                                    "    if(idx<0)",
+                                    "    return \"\";",
+                                    "    else",
+                                    "    {",
+                                    "        var rec = cstore.getAt(idx);",
+                                    "        return rec.get('namen');",
+                                    "    }",
+                                    "}",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "adb33977-4f48-4676-87f9-78d701a05e9f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "patientcare",
+                        "flex": 1,
+                        "menuDisabled": true,
+                        "sortable": false,
+                        "text": "Soins"
+                    },
+                    "designerId": "0cce80b9-a47e-4dea-a67a-be54e09c4678"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "patientinfo",
+                        "flex": 1,
+                        "menuDisabled": true,
+                        "sortable": false,
+                        "text": "Détail"
+                    },
+                    "designerId": "575fe2d7-a154-400a-bc7f-aa9bdb6c4a72"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "visitinfo",
+                        "flex": 2,
+                        "menuDisabled": true,
+                        "sortable": false,
+                        "text": "Visit Info"
+                    },
+                    "designerId": "c7b51158-0a08-484e-9c48-636366b5649b",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "4996bb24-1ab4-4bfb-b5d1-aacc08b73750"
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "return value.replace(/<\\/?[^>]+(>|$)/g, \" \");",
+                                    ""
+                                ]
+                            },
+                            "designerId": "ce9b6c8d-4da5-417c-a845-fcd121673d75"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.CellEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.CellEditing",
+                    "designerId": "05f01960-baf2-4e24-aeac-70371a74f681"
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.RowModel",
+                    "designerId": "7a3213a3-cadd-4346-b17b-5e53cc3dd8be"
+                }
+            ]
+        },
+        {
+            "type": "Ext.resizer.Splitter",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapseOnDblClick": false,
+                "componentCls": null
+            },
+            "designerId": "e413341b-c4ef-4e85-ae9e-d92dc3c4dbdd"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 50,
+                "itemId": "visitinfocard",
+                "layout": "card",
+                "layout|flex": null,
+                "minHeight": null
+            },
+            "designerId": "c5785b0e-bd7a-4b40-bd17-951b3a74b4a8",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "hideLabel": true,
+                        "itemId": "visitinfodisplay",
+                        "readOnly": true
+                    },
+                    "designerId": "2d1bf011-1e4a-4c50-8cbc-98bc54fd4828"
+                }
+            ]
+        },
+        {
+            "type": "Ext.resizer.Splitter",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "dock": null,
+                "performCollapse": true,
+                "width": null
+            },
+            "designerId": "48bb1ec7-ea49-4265-b9fe-7550c7277cdf"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    load: QueryVisitsDb.getDayComment,",
+                    "\tsubmit: QueryVisitsDb.saveDayComment",
+                    "}"
+                ],
+                "collapseDirection": "bottom",
+                "collapsible": true,
+                "dock": null,
+                "header": false,
+                "height": 160,
+                "itemId": "dayCommentId",
+                "layout": "fit",
+                "paramOrder": [
+                    "visitDate"
+                ],
+                "title": "Day Comment",
+                "trackResetOnLoad": true,
+                "width": null
+            },
+            "designerId": "9a2814d6-9d7e-4076-b69c-feba127dfe87",
+            "cn": [
+                {
+                    "type": "Ext.form.field.HtmlEditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "enableColors": false,
+                        "enableLinks": false,
+                        "enableSourceEdit": false,
+                        "fieldLabel": null,
+                        "height": 150,
+                        "name": "daycomment",
+                        "overflowX": "auto",
+                        "overflowY": "auto",
+                        "validateOnChange": false
+                    },
+                    "designerId": "9cbe828a-cafb-4192-b5e2-f9a9dab17c2f"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "name": "idv"
+                    },
+                    "designerId": "037fe046-f750-4d17-b9b4-b2781fe594be"
+                }
+            ]
+        },
+        {
+            "type": "processcfgfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "config"
+                ],
+                "fn": "processDayEditView",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "7a2327b1-bfc0-40f4-bd39-fc257525417e"
+        }
+    ]
+}

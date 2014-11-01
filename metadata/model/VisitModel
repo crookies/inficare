@@ -1,0 +1,216 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "visitmodel",
+        "designer|userClassName": "VisitModel",
+        "idProperty": "idv"
+    },
+    "designerId": "67d66cd3-452e-4f9e-8777-98d6b3b74421",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "idv",
+                "type": "int"
+            },
+            "designerId": "16c2cc2c-3fd9-48a3-8452-f74278cac696"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "datev",
+                "type": "date"
+            },
+            "designerId": "5f1ffe71-04ad-4f2a-ae69-a07a272c5bc0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rectype",
+                "type": "int"
+            },
+            "designerId": "33fc28fa-4402-4a7c-a748-8d73fabfb1c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "namev",
+                "type": "string"
+            },
+            "designerId": "f9439a0d-445c-45eb-82e1-4de9195d0133"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "patientid",
+                "type": "int"
+            },
+            "designerId": "eb81def3-2458-417e-bd2e-94423a86f311"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ap",
+                "sortType": null,
+                "type": "int"
+            },
+            "designerId": "b27a2d76-665f-440b-8f94-e425c9794e14"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nurseid",
+                "type": "int"
+            },
+            "designerId": "53904cd4-fbcb-4b63-aebb-83c2fa50a90c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "patientinfo",
+                "type": "string"
+            },
+            "designerId": "fe1694b0-daf3-4976-af47-3633289ad165"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "patientcare",
+                "type": "string"
+            },
+            "designerId": "65de967e-a0dd-48f5-99da-b1b53fb14be1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "visitinfo",
+                "type": "string"
+            },
+            "designerId": "0fd355b4-cb3c-42dc-bf29-30998301181d"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "hasOneNurseModel",
+                "foreignKey": "nurseid",
+                "model": "NurseModel",
+                "primaryKey": "idn"
+            },
+            "designerId": "a4516569-cd91-4d47-8a1a-8824c7f4fa0d"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "hasOnePatientModel",
+                "foreignKey": "patientid",
+                "model": "PatientModel",
+                "primaryKey": "idp"
+            },
+            "designerId": "aa141331-8d9e-45da-b6cd-da01e9978c16"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "index",
+                "type": "auto"
+            },
+            "designerId": "ec7cb5ea-9af0-46d9-b915-89658a0fb2e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "roundid",
+                "type": "int"
+            },
+            "designerId": "db07be09-c580-4f85-abdf-57e89bc8ec90"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "parentidv",
+                "type": "int"
+            },
+            "designerId": "1959b6fd-727b-4132-99dd-58b6b215679a"
+        }
+    ]
+}

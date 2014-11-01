@@ -1,0 +1,110 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": false,
+        "designer|userAlias": "visitinfoedit",
+        "designer|userClassName": "VisitInfoEdit",
+        "height": 250,
+        "layout": "fit",
+        "modal": true,
+        "title": "Edition Info Visite",
+        "width": 616
+    },
+    "designerId": "8e3de934-df8c-45d2-af01-889497317067",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 0,
+                "header": false,
+                "height": 161,
+                "itemId": "visitInfoFormId",
+                "layout": "fit",
+                "title": "My Form"
+            },
+            "designerId": "70aeb0a1-8eb7-48eb-847e-1c0e567d788f",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "height": 150,
+                        "name": "visitinfo"
+                    },
+                    "designerId": "eb588a62-4196-4d6c-9f6d-e1a731e39f01"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "dock": "bottom"
+                    },
+                    "designerId": "b08c4d0c-5c40-40cd-b36d-4526146f0950",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "saveId",
+                                "layout|flex": null,
+                                "text": "Modifier"
+                            },
+                            "designerId": "8ec2c431-898a-4254-a335-44669b70dfd1"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 20
+                            },
+                            "designerId": "dfbdc63c-f633-4c62-a0c1-f6681745d4ea"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "cancelId",
+                                "layout|flex": null,
+                                "text": "Annuler"
+                            },
+                            "designerId": "35f706b6-2cc2-491f-8e9e-5bb0df4196bf"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

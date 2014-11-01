@@ -1,0 +1,67 @@
+<?php
+
+$router_url='php/router.php';
+
+$API = array(
+    'QueryPatientsDb'=>array(
+        'methods'=>array(
+            'getResults'=>array(
+                'len'=>1
+            ),
+            'createRecord'=>array(
+            	'len'=>1
+            ),
+            'updateRecords'=>array(
+            	'len'=>1
+            ),
+            'destroyRecord'=>array(
+            	'len'=>1
+            )
+        )
+    ),
+    'QueryNursesDb'=>array(
+        'methods'=>array(
+            'getResults'=>array(
+                'len'=>1
+            ),
+            'createRecord'=>array(
+            	'len'=>1
+            ),
+            'updateRecords'=>array(
+            	'len'=>1
+            ),
+            'destroyRecord'=>array(
+            	'len'=>1
+            )
+        )
+    ),
+    'QueryVisitsDb'=>array(
+        'methods'=>array(
+        		'saveDayComment'=>array(
+        				'len'=>0,
+        				'formHandler'=>true
+        		),        		        		
+            'getDayComment'=>array(
+                'len'=>1
+            ),
+        		'getVisitPatientsList'=>array(
+                'len'=>1
+            ),
+        		'getResults'=>array(
+                'len'=>1
+            ),
+            'createRecord'=>array(
+            	'len'=>1
+            ),
+            'updateRecords'=>array(
+            	'len'=>1
+            ),
+            'destroyRecord'=>array(
+            	'len'=>1
+            ),
+            'createRound'=>array(
+            	'len'=>1
+            ),
+        )
+    )
+);

@@ -1,0 +1,55 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoRender": null,
+        "autoShow": null,
+        "collapsible": false,
+        "designer|userAlias": "editdayroundview",
+        "designer|userClassName": "EditDayRoundView",
+        "header": false,
+        "id": null,
+        "itemId": null,
+        "layout": "border",
+        "title": "My Panel"
+    },
+    "designerId": "20a4d98f-cb1a-4914-80f0-56b935efeb2c",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2,
+                "layout|region": "center",
+                "layout|split": true
+            },
+            "designerId": "5125c6a1-1243-451c-9a1f-af7750641eb5",
+            "masterInstanceId": "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "dayRoundSourceId",
+                "layout|collapseMode": null,
+                "layout|flex": 1,
+                "layout|region": "west",
+                "layout|split": true
+            },
+            "designerId": "e2ee2ad0-0816-4160-97e9-f349ffdb9a01",
+            "masterInstanceId": "697142e5-da89-4a48-acef-cfefff56ffa6"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="myAppender" class="LoggerAppenderFile">
+        <param name="file" value="log/myLog.log" />
+    </appender>
+    <appender name="debugAppender" class="LoggerAppenderFile">
+		<layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date %message%newline" />
+        </layout>
+        <param name="file" value="log/debugLog.log" />
+    </appender>
+    <logger name="dev">
+        <level value="FATAL" />
+        <appender_ref ref="debugAppender" />
+    </logger>
+    <root>
+        <level value="FATAL" />
+        <appender_ref ref="myAppender" />
+    </root>
+</configuration>
+

@@ -1,0 +1,268 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "reportview",
+        "designer|userClassName": "ReportView",
+        "header": false,
+        "title": "My Panel"
+    },
+    "designerId": "38f78fe1-9db0-43f9-b2ed-05414303e82e",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "title": "Paramètres généraux"
+            },
+            "designerId": "62a35f9a-2fee-4f6b-bb9b-4fc056752050",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Date:",
+                        "format": "d/m/Y",
+                        "itemId": "mainDateId"
+                    },
+                    "designerId": "ee438f04-81b8-454e-8c4f-f8e0dbc85ad6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "height": 133,
+                "itemId": "dayRoundFormId",
+                "title": "Tournée du jour"
+            },
+            "designerId": "501068d6-87cf-4031-9268-3edf751532c1",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "height": 69,
+                        "hideLabel": true,
+                        "width": 398
+                    },
+                    "designerId": "5a746469-aa8e-480a-884f-8e06165fb8cd",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Date configurée",
+                                "itemId": "dayRoundDateFldId",
+                                "name": "visitDate",
+                                "readOnly": true,
+                                "width": null
+                            },
+                            "designerId": "d0f92e75-b12e-4aa3-a953-e1d4d3aa1c9a"
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Opération",
+                                "itemId": "operationGroupId",
+                                "margin": "0 10 10 0",
+                                "width": 398
+                            },
+                            "designerId": "9c576ea5-3284-4ea9-9753-54e8babd9f7d",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Télécharger",
+                                        "checked": true,
+                                        "fieldLabel": null,
+                                        "inputValue": "download",
+                                        "name": "operation"
+                                    },
+                                    "designerId": "50fd3446-dbf7-45de-a19a-f9958f11f93f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Email",
+                                        "fieldLabel": null,
+                                        "inputValue": "email",
+                                        "name": "operation"
+                                    },
+                                    "designerId": "ed20c8c3-6597-455b-80c2-d0c29f465a19"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": "xe013@fcrooks",
+                                "href": null,
+                                "itemId": "dayRoundExecuteBtnId",
+                                "minWidth": null,
+                                "text": "Exécuter",
+                                "width": 108
+                            },
+                            "designerId": "c45d0d18-a1c9-4298-8253-d219d05e4622"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "sUrl"
+                ],
+                "fn": "downloadFile",
+                "implHandler": [
+                    "//If in Chrome or Safari - download via virtual link click",
+                    "if (Ext.isChrome || Ext.isSafari) ",
+                    "{",
+                    "    //Creating new link node.",
+                    "    var link = document.createElement('a');",
+                    "    link.href = sUrl;",
+                    "",
+                    "    if (link.download !== undefined)",
+                    "    {",
+                    "        //Set HTML5 download attribute. This will prevent file from opening if supported.",
+                    "        var fileName = sUrl.substring(sUrl.lastIndexOf('/') + 1, sUrl.length);",
+                    "        link.download = fileName;",
+                    "    }",
+                    "",
+                    "    //Dispatching click event.",
+                    "    if (document.createEvent) ",
+                    "    {",
+                    "        var e = document.createEvent('MouseEvents');",
+                    "        e.initEvent('click' ,true ,true);",
+                    "        link.dispatchEvent(e);",
+                    "        return true;",
+                    "    }",
+                    "}",
+                    "",
+                    "// Force file download (whether supported by server).",
+                    "var query = '?download';",
+                    "",
+                    "window.open(sUrl + query);"
+                ]
+            },
+            "designerId": "9edc93aa-0484-42f3-908e-1cff9fb82648"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "itemId": "tarifFormId",
+                "title": "Tarification"
+            },
+            "designerId": "b8ef18b6-d88f-435b-a9dc-59adf67cc83f",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "height": 54,
+                        "hideLabel": true,
+                        "width": 366
+                    },
+                    "designerId": "c7cf382f-24ff-4955-8e62-cd097551f542",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Mois configuré",
+                                "itemId": "tarifDateFldId"
+                            },
+                            "designerId": "e2c97b56-4955-48d2-9579-bce959beb774"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": "xe013@fcrooks",
+                        "itemId": "tarifExecuteBtnId",
+                        "text": "Exécuter",
+                        "width": 109
+                    },
+                    "designerId": "1c36a337-afd6-482f-b9f1-85bff5761c85"
+                }
+            ]
+        }
+    ]
+}

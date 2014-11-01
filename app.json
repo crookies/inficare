@@ -1,0 +1,15 @@
+{
+   "name": "test5",
+   "requires": [],
+   "id": "8724359d-2c2b-4aa3-bf92-630d34a845dd",
+   "resources": [
+      "resources/test5.css"
+   ],
+   "_architect": {
+      "_comment": "Please don't edit. This is Architect data.",
+      "resources": [
+         "resources/test5.css"
+      ],
+      "requires": []
+   }
+}

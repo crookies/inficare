@@ -1,0 +1,263 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ReportController"
+    },
+    "designerId": "0d93f7f8-a8ab-44c2-ad7a-448d1470db22",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#dayRoundExecuteBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDayReportBtnClick",
+                "implHandler": [
+                    "",
+                    "var formPanel = button.up('#dayRoundFormId');",
+                    "var form = formPanel.getForm();",
+                    "var operationGroup = formPanel.down('#operationGroupId');",
+                    "",
+                    "var visitDate = form.findField('visitDate').getValue();",
+                    "var operation = operationGroup.getValue();",
+                    "var dt = new Date();",
+                    "",
+                    "dt = Ext.Date.parse(visitDate, \"d/m/Y\");",
+                    "var visitDateReq = Ext.Date.format(dt,\"Y-m-d\");",
+                    "",
+                    "if (operation.operation == \"email\")",
+                    "{",
+                    "    var editMail = this.editMail || (this.editMail = Ext.create('widget.editmail'));",
+                    "    form = editMail.down('form');",
+                    "    editMail.visitDateReq = visitDateReq;",
+                    "",
+                    "    //    form.getForm().reset();",
+                    "    //form.loadRecord(e.record);",
+                    "    editMail.show();        ",
+                    "",
+                    "}",
+                    "else",
+                    "{",
+                    "    var request = 'php/dayReport.php?'+Ext.Object.toQueryString({visitDate:visitDateReq, email:false});",
+                    "",
+                    "    console.log('request:',request);   ",
+                    "",
+                    "    this.downloadFile(request);",
+                    "}",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "2c8544dc-2b74-4af3-8b7d-20d30ea144b5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "sUrl"
+                ],
+                "fn": "downloadFile",
+                "implHandler": [
+                    "//If in Chrome or Safari - download via virtual link click",
+                    "if (Ext.isChrome || Ext.isSafari) ",
+                    "{",
+                    "    //Creating new link node.",
+                    "    var link = document.createElement('a');",
+                    "    link.href = sUrl;",
+                    "",
+                    "    if (link.download !== undefined)",
+                    "    {",
+                    "        //Set HTML5 download attribute. This will prevent file from opening if supported.",
+                    "        var fileName = sUrl.substring(sUrl.lastIndexOf('/') + 1, sUrl.length);",
+                    "        link.download = fileName;",
+                    "    }",
+                    "",
+                    "    //Dispatching click event.",
+                    "    if (document.createEvent) ",
+                    "    {",
+                    "        var e = document.createEvent('MouseEvents');",
+                    "        e.initEvent('click' ,true ,true);",
+                    "        link.dispatchEvent(e);",
+                    "        return true;",
+                    "    }",
+                    "}",
+                    "",
+                    "// Force file download (whether supported by server).",
+                    "var query = '?download';",
+                    "",
+                    "window.open(sUrl + query);",
+                    ""
+                ]
+            },
+            "designerId": "27a58178-c54c-4356-88ab-9b3d8a0f53e3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#mainDateId",
+                "designer|targetType": "Ext.form.field.Date",
+                "fn": "onMainDateIdChange",
+                "implHandler": [
+                    "var reportView = Ext.ComponentQuery.query('reportview')[0]",
+                    "var dt = field.getValue();",
+                    "var dayRoundDateFld = reportView.down('#dayRoundDateFldId');",
+                    "var tarifDateFld    = reportView.down('#tarifDateFldId');",
+                    "",
+                    "dayRoundDateFld.setValue(Ext.Date.format(dt,'d/m/Y'));",
+                    "tarifDateFld.setValue(Ext.Date.format(dt,'m/Y'));"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "designerId": "ba3860c4-f17a-4199-9e46-836738e3e8e7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "date"
+                ],
+                "fn": "setReportDate",
+                "implHandler": [
+                    "var reportView = Ext.ComponentQuery.query('reportview')[0]",
+                    "var dayRoundDateFld = reportView.down('#mainDateId');",
+                    "dayRoundDateFld.setValue(date);"
+                ]
+            },
+            "designerId": "ab5ec81a-4ea1-4567-a0a2-e9d852f08d3d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#sendMailBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSendMailBtnIdClick",
+                "implHandler": [
+                    "var editMail = this.editMail;",
+                    "var form = editMail.down('form').getForm();",
+                    "var nurseList = form.findField('nurselist').getValue();",
+                    "var message = form.findField('message').getValue();",
+                    "",
+                    "",
+                    "editMail.hide();",
+                    "",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: 'php/dayReport.php',",
+                    "    method: 'GET',",
+                    "    params: {",
+                    "        visitDate:editMail.visitDateReq, ",
+                    "        email:true,",
+                    "        mailMessage: message,",
+                    "        mailNurseList: nurseList.toString()",
+                    "    },",
+                    "    success: function(response){",
+                    "        var res = Ext.JSON.decode(response.responseText, true);",
+                    "        ",
+                    "        if (res)",
+                    "        {",
+                    "            if (res.success)",
+                    "                Ext.Msg.alert('Exécuté', Ext.String.htmlEncode(res.message));",
+                    "            else",
+                    "                Ext.Msg.alert('ERREUR', Ext.String.htmlEncode(res.message));",
+                    "        }",
+                    "        else",
+                    "        {",
+                    "            Ext.Msg.alert('Erreur', 'Echec d\\'execution');",
+                    "        }",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "2acdd457-e122-4291-b4e0-370e11ffa7ff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#cancelEditMailBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCancelEditMailBtnIdClick",
+                "implHandler": [
+                    "var editMail = this.editMail;",
+                    "",
+                    "editMail.hide();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "cca65d74-8ff4-4d17-b1a6-2f12802a1dae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#tarifExecuteBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onTarifExecuteBtnIdClick",
+                "implHandler": [
+                    "var reportView = Ext.ComponentQuery.query('reportview')[0]",
+                    "var formPanel = reportView.down('#tarifFormId');",
+                    "var form = formPanel.getForm();",
+                    "var tarifDateFld = reportView.down('#mainDateId');",
+                    "",
+                    "var visitDate = tarifDateFld.getValue();",
+                    "var visitDateReq = Ext.Date.format(visitDate,\"Y-m-d\");",
+                    "",
+                    "var request = 'php/zeTarifReport.php?'+Ext.Object.toQueryString({visitDate:visitDateReq});",
+                    "",
+                    "console.log('request:',request);   ",
+                    "",
+                    "this.downloadFile(request);",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "597d8383-56ae-4f1f-a092-1cf8553a98bc"
+        }
+    ]
+}

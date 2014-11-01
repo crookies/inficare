@@ -1,0 +1,317 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "infimainview",
+        "designer|userClassName": "InfiMainView",
+        "destr": null,
+        "layout": "fit"
+    },
+    "designerId": "83456f2d-fb58-45e5-94ed-9c582501feec",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "destr",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Inficare Main Workspace",
+                "itemId": "inficareCardWsId",
+                "layout": "card"
+            },
+            "designerId": "842cb133-e6da-4e32-9128-31f89d12f424",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "inficare Main Toolbar",
+                        "dock": "top"
+                    },
+                    "designerId": "e40d0765-1139-4b37-9ae4-590b8b75f186",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Compte"
+                            },
+                            "designerId": "5ff99bee-9008-4b65-baa0-6dcf3f38aa36",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "Connection Menu",
+                                        "width": 120
+                                    },
+                                    "designerId": "36948824-26d5-4589-ad64-4ae435367642",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "glyph": "xe00b@fcrooks",
+                                                "itemId": "loginMenuId",
+                                                "text": "Connexion"
+                                            },
+                                            "designerId": "bb5e2c0b-ea99-4b3b-a098-fcc79bc63642"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "itemId": "logoffMenuId",
+                                                "text": "Deconnexion"
+                                            },
+                                            "designerId": "09799bc1-6fd2-4f4c-9d02-42f90011f871"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "itemId": "editionMenuId",
+                                "layout|flex": null,
+                                "text": "Edition"
+                            },
+                            "designerId": "cff26017-4136-4fe3-abef-70e8dd8e7298",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "Edition Menu",
+                                        "width": 120
+                                    },
+                                    "designerId": "f3cbeca4-b284-4e5e-a7a6-2496e9022bcc",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "editRoundMenuId",
+                                                "text": "Tournée"
+                                            },
+                                            "designerId": "e2c07350-4501-4704-a4ef-6f34d1400a6b"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "editPatientMenuId",
+                                                "text": "Patients"
+                                            },
+                                            "designerId": "5cb229f6-3357-4f3c-b19d-88c61c9ea7f7"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "reportMenuId",
+                                                "text": "Rapports"
+                                            },
+                                            "designerId": "dd5dbbaa-7af8-4312-a812-c1a23d4647ab"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "glyph": "xe018@fcrooks",
+                                "itemId": "editRoundBtnId",
+                                "layout|flex": null,
+                                "text": "Tournée"
+                            },
+                            "designerId": "d2a08386-5521-41cd-a40a-8f5bdfc1efc5"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "glyph": "xe016@fcrooks",
+                                "itemId": "editPatientBtnId",
+                                "layout|flex": null,
+                                "text": "Patients"
+                            },
+                            "designerId": "c856a777-15ff-4515-805e-48e14ec90b70"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "glyph": "xe017@fcrooks",
+                                "itemId": "reportBtnId",
+                                "layout|flex": null,
+                                "text": "Rapports"
+                            },
+                            "designerId": "a7d2209c-5aa8-440c-b706-1f3c737d0b87"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "e2063f3e-7319-40ec-af82-51aae36e9f3a"
+                        },
+                        {
+                            "type": "Ext.toolbar.TextItem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "style": "font-size:8pt;color:#A0A0A0;",
+                                "text": "v. 1.4"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "9c0f6e15-b32a-4011-9fbb-645cf2dfd2b1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Logoff view",
+                        "itemId": "logoffViewId"
+                    },
+                    "designerId": "aeb7c88f-3827-40a1-a821-3ea260f02913"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Edit Round View",
+                        "itemId": "editRoundViewId",
+                        "title": "Edit Round View"
+                    },
+                    "designerId": "d440cfbc-580f-4d6a-8254-8c3016a53983",
+                    "masterInstanceId": "20a4d98f-cb1a-4914-80f0-56b935efeb2c"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "editPatientsListId"
+                    },
+                    "designerId": "e4b1cd95-9f4d-468d-a5cd-ad73b7ffc488",
+                    "masterInstanceId": "d8c9e516-4c3d-49a4-8013-8ae05997c74c"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Report View",
+                        "itemId": "reportViewId"
+                    },
+                    "designerId": "25daa0a3-3e65-4fad-b328-91498ab29b1e",
+                    "masterInstanceId": "38f78fe1-9db0-43f9-b2ed-05414303e82e"
+                }
+            ]
+        }
+    ]
+}

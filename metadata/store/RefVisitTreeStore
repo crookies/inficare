@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "defaultRootId": null,
+        "designer|userClassName": "RefVisitTreeStore",
+        "model": "VisitModel",
+        "nodeParam": null,
+        "root": [
+            "{",
+            "    root:true,",
+            "    text:'visitRoot',",
+            "    loaded:true,",
+            "    expandable:true,",
+            "    expanded: true",
+            "}",
+            "",
+            "    "
+        ],
+        "storeId": "RefVisitTreeStore"
+    },
+    "designerId": "b7b7277f-eb11-47a2-8532-46c6f9126284",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "\tread: QueryVisitsDb.getResults",
+                    "}",
+                    ""
+                ],
+                "designer|displayName": "RefQueryVisitDbProxy",
+                "directFn": "QueryVisitsDb.getResults",
+                "idParam": "idv"
+            },
+            "designerId": "14b052a9-1b25-48b3-8e27-51147c3f4f02"
+        }
+    ]
+}

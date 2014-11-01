@@ -1,0 +1,42 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "RoundEntryEditModel"
+        ],
+        "stores": [
+            "DayRoundTreeStore"
+        ],
+        "views": [
+            "DayEditView",
+            "EditDayRoundView",
+            "InfiMainView"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "MyController"
+        ],
+        "name": "inficare"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableCaching": false,
+                "enabled": true
+            },
+            "designerId": "eb213278-19f6-4f63-806d-77ac1bec30fb"
+        }
+    ]
+}

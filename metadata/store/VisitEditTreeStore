@@ -1,0 +1,82 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "defaultRootId": null,
+        "designer|userClassName": "VisitEditTreeStore",
+        "model": "VisitModel",
+        "nodeParam": null,
+        "root": [
+            "{",
+            "    root:true,",
+            "    text:'visitRoot',",
+            "    loaded:true,",
+            "    expandable:true,",
+            "    expanded: true",
+            "}",
+            "",
+            "    "
+        ],
+        "storeId": "MyTreeStore"
+    },
+    "designerId": "47afbcf3-1550-44be-b802-f40b699262f3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "\tcreate: QueryVisitsDb.createRecord,",
+                    "\tread: QueryVisitsDb.getResults,",
+                    "\tupdate: QueryVisitsDb.updateRecords,",
+                    "\tdestroy: QueryVisitsDb.destroyRecord",
+                    "}",
+                    ""
+                ],
+                "designer|displayName": "QueryVisitDbProxy",
+                "directFn": "QueryVisitsDb.getResults",
+                "idParam": "idv"
+            },
+            "designerId": "b46f15d5-f053-4540-9459-a5005a95aaf5"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreUpdate",
+                "implHandler": [
+                    "if ((operation=='edit') && modifiedFieldNames[0]=='nurseid')",
+                    "{",
+                    "    //If a round header is changed, we change all the childs",
+                    "    if (record.get('rectype') == 20)",
+                    "    {",
+                    "    var value = record.get('nurseid');",
+                    "",
+                    "        record.eachChild(function(childNode){",
+                    "            childNode.set('nurseid', value);",
+                    "        });",
+                    "    }",
+                    "}",
+                    ""
+                ],
+                "name": "update",
+                "scope": "me"
+            },
+            "designerId": "d56e49eb-5a65-4f0c-83a6-1085bc1fc076"
+        }
+    ]
+}

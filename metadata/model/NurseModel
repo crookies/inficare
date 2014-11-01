@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "nursemodel",
+        "designer|userClassName": "NurseModel",
+        "idProperty": "idn"
+    },
+    "designerId": "51502670-0d52-464a-b0a6-ade46cc2c474",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "idn",
+                "type": "int"
+            },
+            "designerId": "9990cd83-d574-4a50-ad16-19fdac304461"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "activen",
+                "type": "boolean"
+            },
+            "designerId": "1baa5a17-e237-47e0-a62f-ca9a1e3e72f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "namen",
+                "type": "string"
+            },
+            "designerId": "0ea268f8-2159-4662-9a66-dcdaf9dace25"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "email",
+                "type": "string"
+            },
+            "designerId": "885bd503-cb48-40c7-848b-f720f4e88f53"
+        }
+    ]
+}

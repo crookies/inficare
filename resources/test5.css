@@ -1,0 +1,19 @@
+.inficare-visitinfobg {
+    background-color: #FFFFFF;
+}
+
+.inficare-splitbg {
+    background-color: #E0E0E0;
+}
+
+@font-face {
+	font-family: 'fcrooks';
+	src:url('fonts/fcrooks.eot');
+	src:url('fonts/fcrooks.eot?#iefix') format('embedded-opentype'),
+		url('fonts/fcrooks.woff') format('woff'),
+		url('fonts/fcrooks.ttf') format('truetype'),
+		url('fonts/fcrooks.svg#fcrooks') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

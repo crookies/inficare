@@ -1,0 +1,340 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "editpatientlistview",
+        "designer|userClassName": "EditPatientListView",
+        "header": false,
+        "height": 520,
+        "layout": "vbox",
+        "title": "Edit Patients List",
+        "width": 880
+    },
+    "designerId": "d8c9e516-4c3d-49a4-8013-8ae05997c74c",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Patients Grid",
+                "header": false,
+                "itemId": "patientGridId",
+                "layout|flex": 1,
+                "store": "PatientStore",
+                "title": "My Grid Panel"
+            },
+            "designerId": "8e0ddd9a-b879-42f5-85c4-549c62a2540f",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "itemId": "fulPatientSearchTbId"
+                    },
+                    "designerId": "b6e46adc-3e3d-4543-81cc-eb839d5f6d00",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": "xe00d@fcrooks",
+                                "itemId": "saveFullPatientBtnId",
+                                "layout|flex": null,
+                                "text": "Sauver"
+                            },
+                            "designerId": "83c29bcc-88ba-4a10-bb3c-dd0dd5fe4798"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 20
+                            },
+                            "designerId": "46be0e15-6e48-4ca5-8413-c183622871f2"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": "xe012@fcrooks",
+                                "itemId": "addFullPatientBtnId",
+                                "layout|flex": null,
+                                "text": "Nouveau patient"
+                            },
+                            "designerId": "6d2dc78e-f1f4-4bf6-8247-789844c215aa"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 10
+                            },
+                            "designerId": "80a51912-a9b9-412f-b5c8-be80af61c9b2"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": "xe00e@fcrooks",
+                                "itemId": "delFullPatientBtnId",
+                                "layout|flex": null,
+                                "text": "Effacer patient"
+                            },
+                            "designerId": "1da2fc2b-3939-4bf1-b8aa-e6e001a4373e"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "0e018ca5-78ec-4548-882b-d59fe561982b"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Recherche",
+                                "itemId": "searchFullPatientFldId",
+                                "layout|flex": null
+                            },
+                            "designerId": "956dc089-44c7-4aaa-8b75-6a8ee7e46019"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "a1a8257c-7502-4346-9fce-5828e002c66f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "namep",
+                        "designer|displayName": "Nom",
+                        "flex": 1,
+                        "text": "Nom"
+                    },
+                    "designerId": "42290555-f521-499b-82df-2302af13d23b",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "705d2c00-044f-405b-8b9d-ca9791267a06"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "address",
+                        "flex": 2,
+                        "text": "Adresse"
+                    },
+                    "designerId": "1b29bc89-8ac3-4718-a5f9-27d0e5fc5f25",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "f263d0f3-ad6c-4dda-ab2e-fbc24c6c4cf7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "tel",
+                        "flex": 1,
+                        "text": "Tél"
+                    },
+                    "designerId": "72c349cc-1863-416e-8c29-df3cced42e6d",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "f6f36e90-1b2f-461a-9ae6-51d8ab2809ab"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "care",
+                        "flex": 3,
+                        "text": "Soin"
+                    },
+                    "designerId": "6ccc6a17-97e6-4947-85ad-30b510759c09",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "de99203a-f4e4-42e0-80cd-8cfacede3fe5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "infop",
+                        "flex": 3,
+                        "text": "Détail"
+                    },
+                    "designerId": "d9b94546-e543-4d8f-91ca-40eddc6bcd33",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "525ac128-7a9e-41e1-866d-1a95e59f5f16"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.CheckColumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "activep",
+                        "hideable": false,
+                        "menuDisabled": true,
+                        "text": "Actif",
+                        "width": 40
+                    },
+                    "designerId": "00c0eb5a-0570-448b-a814-ef322e4fe5dc",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "2c265a08-a655-4e75-8182-e70e996e564b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "userConfig": {
+                        "autoCancel": false,
+                        "designer|displayName": "RowEditFullPatient",
+                        "pluginId": "rowEditFullPatientId"
+                    },
+                    "designerId": "7d0b2957-f712-4117-91af-9927eb32a0a9"
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.RowModel",
+                    "userConfig": {
+                        "designer|displayName": "RowSelectFullPatient"
+                    },
+                    "designerId": "6a683888-d1c6-4fbe-ae9d-475eb2eb21ce"
+                }
+            ]
+        }
+    ]
+}

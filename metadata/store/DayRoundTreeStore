@@ -1,0 +1,51 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "DayRoundTreeStore",
+        "folderSort": true,
+        "model": "VisitModel",
+        "storeId": "DayRoundStore"
+    },
+    "designerId": "14ec701b-0941-438d-a214-6813e69f8ca0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "designer|displayName": null,
+                "url": "resources/data/tree/treegrid2.json"
+            },
+            "designerId": "a1cf34f6-d546-4eb0-907f-2df2449a603f",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAjaxException",
+                        "implHandler": [
+                            "console.log(response,operation);"
+                        ],
+                        "name": "exception",
+                        "scope": "me"
+                    },
+                    "designerId": "5e6b29a9-1725-4def-92f1-779f1eb6370a"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userClassName": "PatientStore",
+        "model": "PatientModel",
+        "storeId": "patientStoreId"
+    },
+    "designerId": "a30455bf-b47b-40a6-aa35-486f532252ec",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "\tcreate: QueryPatientsDb.createRecord,",
+                    "\tread: QueryPatientsDb.getResults,",
+                    "\tupdate: QueryPatientsDb.updateRecords,",
+                    "\tdestroy: QueryPatientsDb.destroyRecord",
+                    "}",
+                    ""
+                ],
+                "designer|displayName": "QueryPatientsDbProxy",
+                "directFn": null,
+                "idParam": "idp"
+            },
+            "designerId": "4d39b4e9-a0ce-485f-bb37-e3d7a67f5169"
+        }
+    ]
+}

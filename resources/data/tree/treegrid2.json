@@ -1,0 +1,59 @@
+{
+    "text": ".",
+    "children": [
+        {
+            "visitname": "Matin",
+            "iconCls": "task-folder",
+            "expanded": true,
+	    "allowDrag" : false,
+	    "allowDrop" : false,
+            "children": [
+                {
+                    "visitname": "Tournée AM_A",
+                    "expanded": true,
+		    "allowDrag" : false,
+		    "allowDrop" : true,
+                    "iconCls": "task-folder",
+                    "nursename" : "Sarah",
+                    "children": [
+                        {
+                            "visitname": "Crooks",
+                            "visitinfo": "raser",
+                            "patientinfo": "monsieur champignon",
+                            "leaf": true,
+                            "iconCls": "task",
+		    "allowDrop" : true,
+                        },{
+                            "visitname": "Michael Jackson",
+                            "visitinfo": "éclairsir",
+                            "patientinfo": "A les cheveux crâmés",
+                            "leaf": true,
+                            "iconCls": "task",
+		    "allowDrop" : true,
+                        }]
+                },{
+                    "visitname": "Tournée AM_B",
+                    "expanded": true,
+		    "allowDrag" : false,
+		    "allowDrop" : true,
+                    "iconCls": "task-folder",
+                    "nursename" : "Pierre",
+                    "children": [
+                        {
+                            "visitname": "Crooks",
+                            "visitinfo": "raser",
+                            "patientinfo": "monsieur champignon",
+                            "leaf": true,
+                            "iconCls": "task",
+		    "allowDrop" : true,
+                        },{
+                            "visitname": "Michael Jackson",
+                            "visitinfo": "éclairsir",
+                            "patientinfo": "A les cheveux crâmés",
+                            "leaf": true,
+                            "iconCls": "task",
+		    "allowDrop" : true,
+                        }]
+                }]
+          }]
+}

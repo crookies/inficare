@@ -1,0 +1,190 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": null,
+        "designer|userClassName": "PatientEditController",
+        "models": [
+            "PatientModel"
+        ],
+        "views": [
+            "EditPatientListView"
+        ]
+    },
+    "designerId": "54ce25c0-dfee-4617-abe1-eec199f63bea",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "Ext.applyIf(this, {editPatientListView: Ext.ComponentQuery.query('editpatientlistview')[0]});",
+                    "Ext.applyIf(this, {searchFullPatientFld: Ext.ComponentQuery.query('editpatientlistview #searchFullPatientFldId')[0]});",
+                    ""
+                ]
+            },
+            "designerId": "57e06660-4352-48fa-a21a-2cbd16efb504"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#searchFullPatientFldId",
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onSearchFullPatientFldIdChange",
+                "implHandler": [
+                    "this.searchFullPatient();"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "designerId": "b18f79f7-cc8b-4a9d-8ddd-902d01e50938"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "searchFullPatient",
+                "implHandler": [
+                    "var searchFld = this.searchFullPatientFld;",
+                    "var store = Ext.getStore('PatientStore');",
+                    "",
+                    "store.clearFilter(true);",
+                    "store.filter([",
+                    "    Ext.create('Ext.util.Filter', {property: \"namep\", value: searchFld.getValue(), anyMatch:true, root: 'data'})",
+                    "    ]);",
+                    ""
+                ]
+            },
+            "designerId": "ead4b7d2-328c-4cd2-916d-8528f9f2ff57"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#delFullPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDelFullPatientBtnIdClick",
+                "implHandler": [
+                    "var ctx = this;",
+                    "res=Ext.MessageBox.confirm('Confirmez', 'Voulez vous vraiment effacer ce patient?', function(btn){",
+                    "    if (btn=='yes')",
+                    "    {",
+                    "        //we must call eraseSelectedPatient with the valid 'this' context.",
+                    "        ctx.eraseSelectedPatient.call(ctx);",
+                    "    }",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "a8e5cdfd-ae68-40f9-863a-bed03c101abd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#addFullPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddFullPatientBtnIdClick",
+                "implHandler": [
+                    "var grid = this.editPatientListView.down('#patientGridId');",
+                    "var rowEdit=grid.getPlugin('rowEditFullPatientId');",
+                    "var store=grid.getStore();",
+                    "",
+                    "rowEdit.cancelEdit();",
+                    "// Create a model instance",
+                    "var r = Ext.create('inficare.model.PatientModel', {",
+                    "    namep: '',",
+                    "    address: '',",
+                    "    tel:'',",
+                    "    infop:'',",
+                    "    care:'',",
+                    "    activep: true",
+                    "});",
+                    "",
+                    "store.insert(0, r);",
+                    "rowEdit.startEdit(0, 0);",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "5478cb53-df0a-48e7-9177-46f93dfe1589"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#saveFullPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSaveFullPatientBtnIdClick",
+                "implHandler": [
+                    "var store = Ext.getStore('PatientStore');",
+                    "",
+                    "store.sync();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "c28bbf1a-6f72-4d90-a184-311e45a9f978"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "eraseSelectedPatient",
+                "implHandler": [
+                    "var grid = this.editPatientListView.down('#patientGridId');",
+                    "var sm=grid.getSelectionModel();",
+                    "var rowEdit=grid.getPlugin('rowEditFullPatientId');",
+                    "var store=grid.getStore();",
+                    "var records=sm.getSelection();",
+                    "var ndx=store.indexOf(records[0]);",
+                    "",
+                    "rowEdit.cancelEdit();",
+                    "store.remove(records);",
+                    "if (ndx <store.getCount()) ",
+                    "sm.select(ndx);",
+                    "else",
+                    "sm.select(store.getCount()-1);"
+                ]
+            },
+            "designerId": "6209b625-c61a-4194-b953-2ec9a55ccfa9"
+        }
+    ]
+}

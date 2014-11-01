@@ -1,0 +1,70 @@
+{
+    "name": "inficare",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://127.0.0.1/extst/inficare",
+        "exportPath": "/opt/ewondev/extjs/inficare_published",
+        "buildShouldOverwriteIndex": true,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "sdkPath": "",
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 1337,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000003,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "83456f2d-fb58-45e5-94ed-9c582501feec",
+            "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b",
+            "8e3de934-df8c-45d2-af01-889497317067",
+            "20a4d98f-cb1a-4914-80f0-56b935efeb2c",
+            "d8c9e516-4c3d-49a4-8013-8ae05997c74c",
+            "8d5c35ce-eb5c-4e24-b83d-823876311cf8",
+            "697142e5-da89-4a48-acef-cfefff56ffa6",
+            "38f78fe1-9db0-43f9-b2ed-05414303e82e",
+            "b01da3fe-7591-4f65-810a-e3c10715521d"
+        ],
+        "store": [
+            "14ec701b-0941-438d-a214-6813e69f8ca0",
+            "47afbcf3-1550-44be-b802-f40b699262f3",
+            "b7b7277f-eb11-47a2-8532-46c6f9126284",
+            "55c0d87c-c5c8-49aa-a2fb-e48605701ab2",
+            "23b8f5cf-6dd3-4961-92ab-dd49eb80341e",
+            "a30455bf-b47b-40a6-aa35-486f532252ec"
+        ],
+        "controller": [
+            "87160d45-efef-45e0-a4f2-3e6c1fbf7f38",
+            "8968b191-eab3-4a7a-8834-212b6608dda4",
+            "54ce25c0-dfee-4617-abe1-eec199f63bea",
+            "0d93f7f8-a8ab-44c2-ad7a-448d1470db22"
+        ],
+        "model": [
+            "67d66cd3-452e-4f9e-8777-98d6b3b74421",
+            "51502670-0d52-464a-b0a6-ade46cc2c474",
+            "0252f97f-8e39-4831-9899-a8882c429380"
+        ],
+        "resource": [
+            "5767f3fe-8d6c-4947-b55d-25cbda35b5ec",
+            "1ce4fa4a-41fc-442a-87b8-ca227bd5dbc3",
+            "7c531683-3ff4-43b6-ad11-6a4585b94e09"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
