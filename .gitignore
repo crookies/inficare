@@ -1,3 +1,4 @@
 /build/
 /php/log/*.log
 *~
+/ext/
