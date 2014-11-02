@@ -1,0 +1,6 @@
+{
+    "webBuild": {
+        "environment": "production",
+        "publishPath": "/opt/crookiesdev/inficare_published"
+    }
+}

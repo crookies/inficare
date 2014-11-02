@@ -1,216 +1,42 @@
 {
     "name": "inficare",
     "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
         "spacesToIndent": 4,
         "lineEnding": "LF",
         "genTimestamps": false,
         "cacheBust": false,
         "urlPrefix": "http://127.0.0.1/extst/inficare",
-        "exportPath": "/opt/ewondev/extjs/inficare_published",
-        "buildShouldOverwriteIndex": true
+        "exportPath": "/opt/crookiesdev/",
+        "buildShouldOverwriteIndex": true,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "generateArchitectVersion": true,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1109-inputEl": "a new version of the framework is available",
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        },
+        "displayfield-ExtBox1-1174-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1229-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1284-inputEl": "a new version of the framework is available"
     },
-    "xdsVersion": "2.2.2",
-    "xdsBuild": 991,
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1934,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000503,
+    "upgradeVersion": 300000000007,
     "framework": "ext42",
-    "topInstanceFileMap": {
-        "5767f3fe-8d6c-4947-b55d-25cbda35b5ec": {
-            "paths": [
-                "metadata/resource/Library"
-            ],
-            "className": "Library"
-        },
-        "83456f2d-fb58-45e5-94ed-9c582501feec": {
-            "paths": [
-                "metadata/view/InfiMainView",
-                "app/view/override/InfiMainView.js",
-                "app/view/InfiMainView.js",
-                "app/view/Viewport.js"
-            ],
-            "className": "InfiMainView"
-        },
-        "87160d45-efef-45e0-a4f2-3e6c1fbf7f38": {
-            "paths": [
-                "metadata/controller/DayRoundController",
-                "app/controller/override/DayRoundController.js",
-                "app/controller/DayRoundController.js"
-            ],
-            "className": "DayRoundController"
-        },
-        "1ce4fa4a-41fc-442a-87b8-ca227bd5dbc3": {
-            "paths": [
-                "metadata/resource/css"
-            ],
-            "className": "css"
-        },
-        "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b": {
-            "paths": [
-                "metadata/view/DayEditView",
-                "app/view/override/DayEditView.js",
-                "app/view/DayEditView.js"
-            ],
-            "className": "DayEditView"
-        },
-        "14ec701b-0941-438d-a214-6813e69f8ca0": {
-            "paths": [
-                "metadata/store/DayRoundTreeStore",
-                "app/store/override/DayRoundTreeStore.js",
-                "app/store/DayRoundTreeStore.js"
-            ],
-            "className": "DayRoundTreeStore"
-        },
-        "8e3de934-df8c-45d2-af01-889497317067": {
-            "paths": [
-                "metadata/view/VisitInfoEdit",
-                "app/view/override/VisitInfoEdit.js",
-                "app/view/VisitInfoEdit.js"
-            ],
-            "className": "VisitInfoEdit"
-        },
-        "20a4d98f-cb1a-4914-80f0-56b935efeb2c": {
-            "paths": [
-                "metadata/view/EditDayRoundView",
-                "app/view/override/EditDayRoundView.js",
-                "app/view/EditDayRoundView.js"
-            ],
-            "className": "EditDayRoundView"
-        },
-        "d8c9e516-4c3d-49a4-8013-8ae05997c74c": {
-            "paths": [
-                "metadata/view/EditPatientListView",
-                "app/view/override/EditPatientListView.js",
-                "app/view/EditPatientListView.js"
-            ],
-            "className": "EditPatientListView"
-        },
-        "8d5c35ce-eb5c-4e24-b83d-823876311cf8": {
-            "paths": [
-                "metadata/view/LoginView",
-                "app/view/override/LoginView.js",
-                "app/view/LoginView.js"
-            ],
-            "className": "LoginView"
-        },
-        "8968b191-eab3-4a7a-8834-212b6608dda4": {
-            "paths": [
-                "metadata/controller/MainController",
-                "app/controller/override/MainController.js",
-                "app/controller/MainController.js"
-            ],
-            "className": "MainController"
-        },
-        "51502670-0d52-464a-b0a6-ade46cc2c474": {
-            "paths": [
-                "metadata/model/NurseModel",
-                "app/model/override/NurseModel.js",
-                "app/model/NurseModel.js"
-            ],
-            "className": "NurseModel"
-        },
-        "0252f97f-8e39-4831-9899-a8882c429380": {
-            "paths": [
-                "metadata/model/PatientModel",
-                "app/model/override/PatientModel.js",
-                "app/model/PatientModel.js"
-            ],
-            "className": "PatientModel"
-        },
-        "67d66cd3-452e-4f9e-8777-98d6b3b74421": {
-            "paths": [
-                "metadata/model/VisitModel",
-                "app/model/override/VisitModel.js",
-                "app/model/VisitModel.js"
-            ],
-            "className": "VisitModel"
-        },
-        "47afbcf3-1550-44be-b802-f40b699262f3": {
-            "paths": [
-                "metadata/store/VisitEditTreeStore",
-                "app/store/override/VisitEditTreeStore.js",
-                "app/store/VisitEditTreeStore.js"
-            ],
-            "className": "VisitEditTreeStore"
-        },
-        "7c531683-3ff4-43b6-ad11-6a4585b94e09": {
-            "paths": [
-                "metadata/resource/direct"
-            ],
-            "className": "direct"
-        },
-        "697142e5-da89-4a48-acef-cfefff56ffa6": {
-            "paths": [
-                "metadata/view/RoundSource",
-                "app/view/override/RoundSource.js",
-                "app/view/RoundSource.js"
-            ],
-            "className": "RoundSource"
-        },
-        "55c0d87c-c5c8-49aa-a2fb-e48605701ab2": {
-            "paths": [
-                "metadata/store/VisitPatientStore",
-                "app/store/override/VisitPatientStore.js",
-                "app/store/VisitPatientStore.js"
-            ],
-            "className": "VisitPatientStore"
-        },
-        "23b8f5cf-6dd3-4961-92ab-dd49eb80341e": {
-            "paths": [
-                "metadata/store/NurseStore",
-                "app/store/override/NurseStore.js",
-                "app/store/NurseStore.js"
-            ],
-            "className": "NurseStore"
-        },
-        "a30455bf-b47b-40a6-aa35-486f532252ec": {
-            "paths": [
-                "metadata/store/PatientStore",
-                "app/store/override/PatientStore.js",
-                "app/store/PatientStore.js"
-            ],
-            "className": "PatientStore"
-        },
-        "54ce25c0-dfee-4617-abe1-eec199f63bea": {
-            "paths": [
-                "metadata/controller/PatientEditController",
-                "app/controller/override/PatientEditController.js",
-                "app/controller/PatientEditController.js"
-            ],
-            "className": "PatientEditController"
-        },
-        "38f78fe1-9db0-43f9-b2ed-05414303e82e": {
-            "paths": [
-                "metadata/view/ReportView",
-                "app/view/override/ReportView.js",
-                "app/view/ReportView.js"
-            ],
-            "className": "ReportView"
-        },
-        "0d93f7f8-a8ab-44c2-ad7a-448d1470db22": {
-            "paths": [
-                "metadata/controller/ReportController",
-                "app/controller/override/ReportController.js",
-                "app/controller/ReportController.js"
-            ],
-            "className": "ReportController"
-        },
-        "b7b7277f-eb11-47a2-8532-46c6f9126284": {
-            "paths": [
-                "metadata/store/RefVisitTreeStore",
-                "app/store/override/RefVisitTreeStore.js",
-                "app/store/RefVisitTreeStore.js"
-            ],
-            "className": "RefVisitTreeStore"
-        },
-        "b01da3fe-7591-4f65-810a-e3c10715521d": {
-            "paths": [
-                "metadata/view/EditMail",
-                "app/view/override/EditMail.js",
-                "app/view/EditMail.js"
-            ],
-            "className": "EditMail"
-        }
-    },
     "viewOrderMap": {
         "view": [
             "83456f2d-fb58-45e5-94ed-9c582501feec",

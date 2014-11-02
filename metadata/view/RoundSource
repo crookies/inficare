@@ -6,15 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
+        "activeTab": 0,
+        "collapsible": false,
+        "designer|userAlias": "roundsource",
+        "designer|userClassName": "RoundSource",
+        "header": false,
         "height": 787,
         "itemId": "dayRoundSource",
-        "width": 1023,
-        "designer|userClassName": "RoundSource",
-        "designer|userAlias": "roundsource",
-        "collapsible": false,
-        "header": false,
         "title": "Elements de tournée",
-        "activeTab": 0
+        "width": 1023
     },
     "designerId": "697142e5-da89-4a48-acef-cfefff56ffa6",
     "cn": [
@@ -30,6 +30,7 @@
                 "layout": "fit",
                 "title": "Liste patients"
             },
+            "name": "MyPanel",
             "designerId": "130c8350-1031-4064-8708-3396a3bd31c5",
             "cn": [
                 {
@@ -42,6 +43,7 @@
                     "userConfig": {
                         "handleMouseEvents": false
                     },
+                    "name": "TabConfig",
                     "designerId": "057afb18-6c18-4234-8b80-a21a8648440f"
                 },
                 {
@@ -52,12 +54,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "patientVisitGridId",
-                        "header": false,
-                        "title": "Patients List",
                         "forceFit": false,
-                        "store": "VisitPatientStore"
+                        "header": false,
+                        "itemId": "patientVisitGridId",
+                        "store": "VisitPatientStore",
+                        "title": "Patients List"
                     },
+                    "name": "MyGridPanel",
                     "designerId": "9d8d2747-1c07-4c28-a3bf-6d10bdb78026",
                     "cn": [
                         {
@@ -71,6 +74,7 @@
                                 "dock": "top",
                                 "itemId": "patientSearchTbId"
                             },
+                            "name": "MyToolbar1",
                             "designerId": "e95fd478-30f7-45db-9519-b2fda06d8c7b",
                             "cn": [
                                 {
@@ -81,12 +85,13 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "layout|flex": null,
-                                        "itemId": "refreshPatientVisitBtnId",
                                         "designer|displayName": "refresh",
                                         "glyph": "xe00a@fcrooks",
+                                        "itemId": "refreshPatientVisitBtnId",
+                                        "layout|flex": null,
                                         "text": "Raffraîchir"
                                     },
+                                    "name": "MyButton2",
                                     "designerId": "0804a13a-6ccb-46d6-a02e-45ca42f9cdf9"
                                 },
                                 {
@@ -99,6 +104,7 @@
                                     "userConfig": {
                                         "layout|flex": null
                                     },
+                                    "name": "MyFill1",
                                     "designerId": "0b75730c-c6ab-4505-aae6-c3d951689700"
                                 },
                                 {
@@ -109,11 +115,12 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "layout|flex": null,
-                                        "itemId": "searchPatientFldId",
                                         "fieldLabel": "Recherche",
+                                        "itemId": "searchPatientFldId",
+                                        "layout|flex": null,
                                         "name": "searchPatient"
                                     },
+                                    "name": "MyTextField1",
                                     "designerId": "ff65f5cf-9914-4de1-8a6c-0a32231d7e06"
                                 },
                                 {
@@ -124,11 +131,12 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "layout|flex": null,
                                         "hidden": true,
                                         "itemId": "searchPatientBtnId",
+                                        "layout|flex": null,
                                         "text": "Go"
                                     },
+                                    "name": "MyButton3",
                                     "designerId": "321e11bf-4c46-4bea-9fca-cd36dfa7b97e"
                                 }
                             ]
@@ -141,9 +149,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "patientVisitViewId",
-                                "autoScroll": null
+                                "autoScroll": null,
+                                "itemId": "patientVisitViewId"
                             },
+                            "name": "MyGridView",
                             "designerId": "b21438c9-347c-4601-886f-37f447f82fd7",
                             "cn": [
                                 {
@@ -158,6 +167,7 @@
                                         "dragText": "Drag & drop vers tournée",
                                         "enableDrop": false
                                     },
+                                    "name": "MyGridDragDropPlugin",
                                     "designerId": "96305e9e-790f-4635-9cff-c2d975a8fca1"
                                 }
                             ]
@@ -171,10 +181,11 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "namev",
+                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Patient Name",
-                                "flex": 1
+                                "text": "Patient Name"
                             },
+                            "name": "MyColumn4",
                             "designerId": "b9005667-79db-4536-91cb-3430a58bd7ec"
                         },
                         {
@@ -186,10 +197,11 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "patientcare",
+                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Soins",
-                                "flex": 1
+                                "text": "Soins"
                             },
+                            "name": "MyColumn5",
                             "designerId": "39c8b318-0801-4bb4-be85-537b519a6bc2"
                         },
                         {
@@ -201,10 +213,11 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "patientinfo",
+                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Détail",
-                                "flex": 1
+                                "text": "Détail"
                             },
+                            "name": "MyColumn6",
                             "designerId": "3de51ae2-8528-4157-b51f-486c22298c51"
                         },
                         {
@@ -217,6 +230,7 @@
                             "userConfig": {
                                 "mode": "SINGLE"
                             },
+                            "name": "MyRowSelectionModel1",
                             "designerId": "2653d6ea-aee4-4024-b3af-6aaba1175959"
                         }
                     ]
@@ -236,6 +250,7 @@
                 "layout": "vbox",
                 "title": "Tournée de référence"
             },
+            "name": "MyPanel1",
             "designerId": "36363f2c-9e2d-4eb2-b37f-c11fb651d1ad",
             "cn": [
                 {
@@ -245,6 +260,7 @@
                         "type": "object"
                     },
                     "codeClass": null,
+                    "name": "TabConfig1",
                     "designerId": "acf36b45-8b8b-41d9-972b-590c5f50e889"
                 },
                 {
@@ -257,6 +273,7 @@
                     "userConfig": {
                         "dock": "top"
                     },
+                    "name": "MyToolbar2",
                     "designerId": "98044a93-39df-4c3d-aed8-a4d56482ad82",
                     "cn": [
                         {
@@ -267,11 +284,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "copyAllRoundBtnId",
                                 "glyph": "xe0014@fcrooks",
+                                "itemId": "copyAllRoundBtnId",
+                                "layout|flex": null,
                                 "text": "Copier tout"
                             },
+                            "name": "MyButton4",
                             "designerId": "048ce8c2-f4bc-4b69-bbf1-3c8873378b60"
                         },
                         {
@@ -284,6 +302,7 @@
                             "userConfig": {
                                 "layout|flex": null
                             },
+                            "name": "MyFill2",
                             "designerId": "1ac6f248-00d0-49d3-9a76-3f40ccfef290"
                         },
                         {
@@ -294,12 +313,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "refVisitDateFildId",
-                                "fieldLabel": "Label",
                                 "editable": false,
-                                "format": "d/m/Y"
+                                "fieldLabel": "Label",
+                                "format": "d/m/Y",
+                                "itemId": "refVisitDateFildId",
+                                "layout|flex": null
                             },
+                            "name": "MyDateField1",
                             "designerId": "dfd24635-5f0b-4a56-9dc5-729f4956073c"
                         }
                     ]
@@ -312,18 +332,19 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1,
-                        "height": 250,
-                        "itemId": "refDayVisitTree",
-                        "width": 400,
                         "animCollapse": false,
-                        "header": false,
-                        "title": "Ref Day Visit List",
-                        "hideHeaders": false,
-                        "store": "RefVisitTreeStore",
                         "animate": false,
-                        "rootVisible": false
+                        "header": false,
+                        "height": 250,
+                        "hideHeaders": false,
+                        "itemId": "refDayVisitTree",
+                        "layout|flex": 1,
+                        "rootVisible": false,
+                        "store": "RefVisitTreeStore",
+                        "title": "Ref Day Visit List",
+                        "width": 400
                     },
+                    "name": "TreeGrid1",
                     "designerId": "fdcbbff7-897e-42bc-9f7b-bd8291291cc2",
                     "isBuiltIn": true,
                     "iconCls": "icon-treegridpanel",
@@ -340,6 +361,7 @@
                                 "itemId": "refDayTreeViewId",
                                 "rootVisible": false
                             },
+                            "name": "MyTreeView1",
                             "designerId": "41d82fbf-6da1-40d4-8d44-022a15286710",
                             "cn": [
                                 {
@@ -353,6 +375,7 @@
                                         "ddGroup": "dayVisitDd",
                                         "dragText": "Drag & drop pour réorganiser"
                                     },
+                                    "name": "MyTreeDragDropPlugin1",
                                     "designerId": "31c6b692-4990-4f8b-8f67-a8863ece2f92"
                                 }
                             ]
@@ -365,14 +388,15 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "minWidth": 200,
-                                "width": 200,
-                                "sortable": false,
                                 "dataIndex": "namev",
+                                "flex": null,
                                 "menuDisabled": true,
+                                "minWidth": 200,
+                                "sortable": false,
                                 "text": "Visite",
-                                "flex": null
+                                "width": 200
                             },
+                            "name": "MyTreeColumn1",
                             "designerId": "4dc6d32f-ee44-4e75-a618-aa36a463d1b6"
                         },
                         {
@@ -383,13 +407,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "width": 100,
-                                "sortable": false,
                                 "dataIndex": "nurseid",
+                                "flex": null,
                                 "menuDisabled": true,
+                                "sortable": false,
                                 "text": "Soignant",
-                                "flex": null
+                                "width": 100
                             },
+                            "name": "MyColumn7",
                             "designerId": "fe24429f-3a39-45fb-9fe0-186fc7f747c1",
                             "cn": [
                                 {
@@ -400,7 +425,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fn": "renderer",
                                         "designer|params": [
                                             "value",
                                             "metaData",
@@ -410,6 +434,7 @@
                                             "store",
                                             "view"
                                         ],
+                                        "fn": "renderer",
                                         "implHandler": [
                                             "var cstore = Ext.getStore(\"NurseStore\");",
                                             "var idx;",
@@ -431,6 +456,7 @@
                                             ""
                                         ]
                                     },
+                                    "name": "renderer",
                                     "designerId": "e08c9bb5-afcb-4939-83e0-be5c5b1f6570"
                                 }
                             ]
@@ -443,12 +469,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "sortable": false,
                                 "dataIndex": "patientinfo",
+                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Détail",
-                                "flex": 1
+                                "sortable": false,
+                                "text": "Détail"
                             },
+                            "name": "MyColumn8",
                             "designerId": "836b46c1-23bc-4ba5-aa70-bd12094a0288"
                         },
                         {
@@ -459,12 +486,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "sortable": false,
                                 "dataIndex": "patientcare",
+                                "flex": 1,
                                 "menuDisabled": true,
-                                "text": "Soins",
-                                "flex": 1
+                                "sortable": false,
+                                "text": "Soins"
                             },
+                            "name": "MyColumn9",
                             "designerId": "0f895ab1-e932-44e4-8621-47b99888fdbf"
                         },
                         {
@@ -475,12 +503,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "sortable": false,
                                 "dataIndex": "visitinfo",
+                                "flex": 2,
                                 "menuDisabled": true,
-                                "text": "Info visite",
-                                "flex": 2
+                                "sortable": false,
+                                "text": "Info visite"
                             },
+                            "name": "MyColumn10",
                             "designerId": "0532b970-3c90-4427-9063-b87567ceb42e",
                             "cn": [
                                 {
@@ -491,7 +520,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fn": "renderer",
                                         "designer|params": [
                                             "value",
                                             "metaData",
@@ -501,11 +529,13 @@
                                             "store",
                                             "view"
                                         ],
+                                        "fn": "renderer",
                                         "implHandler": [
                                             "return value.replace(/<\\/?[^>]+(>|$)/g, \" \");",
                                             ""
                                         ]
                                     },
+                                    "name": "renderer",
                                     "designerId": "05455c2c-2509-4941-82c1-35d0bec3fde7"
                                 }
                             ]

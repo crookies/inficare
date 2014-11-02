@@ -6,12 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|align": "stretch",
-        "id": "dayEditViewId",
-        "itemId": null,
-        "designer|userClassName": "DayEditView",
-        "designer|userAlias": "dayeditview",
-        "layout": "vbox",
         "bodyBorder": false,
         "bodyCls": [
             "inficare-splitbg",
@@ -19,7 +13,13 @@
             "x-box-layout-ct"
         ],
         "bodyStyle": null,
+        "container|align": "stretch",
+        "designer|userAlias": "dayeditview",
+        "designer|userClassName": "DayEditView",
         "header": false,
+        "id": "dayEditViewId",
+        "itemId": null,
+        "layout": "vbox",
         "title": "My Panel"
     },
     "configAlternates": {
@@ -35,10 +35,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
                 "dock": "top",
-                "itemId": "dayEditToolbarId"
+                "itemId": "dayEditToolbarId",
+                "layout|flex": 1
             },
+            "name": "MyToolbar",
             "designerId": "4999697b-e29f-4278-8bc1-4c44bd206422",
             "cn": [
                 {
@@ -49,12 +50,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": null,
-                        "itemId": "saveId",
                         "destroyMenu": null,
                         "glyph": "xe00d@fcrooks",
+                        "itemId": "saveId",
+                        "layout|flex": null,
                         "text": "Sauver"
                     },
+                    "name": "MyButton",
                     "designerId": "5c1023d2-b41b-4af2-8b8c-4a1dc5147fc4"
                 },
                 {
@@ -68,6 +70,7 @@
                         "layout|flex": null,
                         "width": 30
                     },
+                    "name": "MySpacer",
                     "designerId": "21d5c08d-ad7e-4d98-93cb-28f2bc56bd99"
                 },
                 {
@@ -78,11 +81,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": null,
-                        "itemId": "delVisitBtnId",
                         "glyph": "xe00e@fcrooks",
+                        "itemId": "delVisitBtnId",
+                        "layout|flex": null,
                         "text": "Effacer"
                     },
+                    "name": "MyButton1",
                     "designerId": "c1658907-2df0-49f9-b3aa-88c3ceb56e35"
                 },
                 {
@@ -95,6 +99,7 @@
                     "userConfig": {
                         "layout|flex": null
                     },
+                    "name": "MyFill",
                     "designerId": "ccc556a7-dff0-4634-8014-9943f26b4ae2"
                 },
                 {
@@ -105,13 +110,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": null,
-                        "itemId": "visitDateFieldId",
-                        "width": null,
-                        "fieldLabel": "Date tournée",
                         "editable": false,
-                        "format": "d/m/Y"
+                        "fieldLabel": "Date tournée",
+                        "format": "d/m/Y",
+                        "itemId": "visitDateFieldId",
+                        "layout|flex": null,
+                        "width": null
                     },
+                    "name": "MyDateField",
                     "designerId": "99239a2f-862f-494d-bb03-82924b4b50c7"
                 }
             ]
@@ -124,22 +130,23 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
+                "animCollapse": false,
+                "animate": false,
                 "dock": null,
+                "forceFit": null,
+                "header": false,
                 "height": null,
+                "hideHeaders": false,
                 "itemId": "dayVisitTree",
-                "width": null,
+                "layout|flex": 1,
                 "resizable": null,
                 "resizeHandles": "s",
-                "animCollapse": false,
-                "header": false,
-                "title": "Day Visit List",
-                "forceFit": null,
-                "hideHeaders": false,
+                "rootVisible": false,
                 "store": "VisitEditTreeStore",
-                "animate": false,
-                "rootVisible": false
+                "title": "Day Visit List",
+                "width": null
             },
+            "name": "TreeGrid",
             "designerId": "b0eda9ca-ed38-44d7-af8e-506dbb7a94ec",
             "isBuiltIn": true,
             "iconCls": "icon-treegridpanel",
@@ -154,9 +161,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "dayTreeViewId",
-                        "width": null,
-                        "rootVisible": false
+                        "rootVisible": false,
+                        "width": null
                     },
+                    "name": "MyTreeView",
                     "designerId": "617e45ac-5576-4148-8fd7-f92f3d5aa2bd",
                     "cn": [
                         {
@@ -167,11 +175,12 @@
                             },
                             "codeClass": "Ext.tree.plugin.TreeViewDragDrop",
                             "userConfig": {
-                                "pluginId": null,
                                 "ddGroup": "dayVisitDd",
                                 "dragText": "Drag & drop pour réorganiser",
-                                "dropGroup": null
+                                "dropGroup": null,
+                                "pluginId": null
                             },
+                            "name": "MyTreeDragDropPlugin",
                             "designerId": "cb09b2ee-c829-43a8-bb03-cce8ecf9c6e9"
                         }
                     ]
@@ -184,14 +193,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 200,
-                        "defaultWidth": null,
-                        "sortable": false,
                         "dataIndex": "namev",
+                        "defaultWidth": null,
+                        "flex": null,
                         "menuDisabled": true,
+                        "sortable": false,
                         "text": "Visite",
-                        "flex": null
+                        "width": 200
                     },
+                    "name": "MyTreeColumn",
                     "designerId": "093db05e-6b87-4eed-9699-be99cd7b366f"
                 },
                 {
@@ -202,13 +212,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 100,
-                        "sortable": false,
                         "dataIndex": "nurseid",
+                        "flex": null,
                         "menuDisabled": true,
+                        "sortable": false,
                         "text": "Soignant",
-                        "flex": null
+                        "width": 100
                     },
+                    "name": "MyColumn",
                     "designerId": "77efc759-32bc-4b2d-a3cb-411c118def6b",
                     "cn": [
                         {
@@ -219,13 +230,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "editable": false,
                                 "displayField": "namen",
+                                "editable": false,
                                 "forceSelection": true,
                                 "store": "NurseStore",
                                 "typeAhead": true,
                                 "valueField": "idn"
                             },
+                            "name": "MyComboBox",
                             "designerId": "a4501e01-9092-409c-926a-ae817661bc00"
                         },
                         {
@@ -236,7 +248,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "renderer",
                                 "designer|params": [
                                     "value",
                                     "metaData",
@@ -246,6 +257,7 @@
                                     "store",
                                     "view"
                                 ],
+                                "fn": "renderer",
                                 "implHandler": [
                                     "var cstore = Ext.getStore(\"NurseStore\");",
                                     "var idx;",
@@ -268,6 +280,7 @@
                                     ""
                                 ]
                             },
+                            "name": "renderer",
                             "designerId": "adb33977-4f48-4676-87f9-78d701a05e9f"
                         }
                     ]
@@ -280,12 +293,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "sortable": false,
                         "dataIndex": "patientcare",
+                        "flex": 1,
                         "menuDisabled": true,
-                        "text": "Soins",
-                        "flex": 1
+                        "sortable": false,
+                        "text": "Soins"
                     },
+                    "name": "MyColumn1",
                     "designerId": "0cce80b9-a47e-4dea-a67a-be54e09c4678"
                 },
                 {
@@ -296,12 +310,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "sortable": false,
                         "dataIndex": "patientinfo",
+                        "flex": 1,
                         "menuDisabled": true,
-                        "text": "Détail",
-                        "flex": 1
+                        "sortable": false,
+                        "text": "Détail"
                     },
+                    "name": "MyColumn2",
                     "designerId": "575fe2d7-a154-400a-bc7f-aa9bdb6c4a72"
                 },
                 {
@@ -312,12 +327,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "sortable": false,
                         "dataIndex": "visitinfo",
+                        "flex": 2,
                         "menuDisabled": true,
-                        "text": "Visit Info",
-                        "flex": 2
+                        "sortable": false,
+                        "text": "Visit Info"
                     },
+                    "name": "MyColumn3",
                     "designerId": "c7b51158-0a08-484e-9c48-636366b5649b",
                     "cn": [
                         {
@@ -327,6 +343,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyTextField",
                             "designerId": "4996bb24-1ab4-4bfb-b5d1-aacc08b73750"
                         },
                         {
@@ -337,7 +354,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "renderer",
                                 "designer|params": [
                                     "value",
                                     "metaData",
@@ -347,11 +363,13 @@
                                     "store",
                                     "view"
                                 ],
+                                "fn": "renderer",
                                 "implHandler": [
                                     "return value.replace(/<\\/?[^>]+(>|$)/g, \" \");",
                                     ""
                                 ]
                             },
+                            "name": "renderer",
                             "designerId": "ce9b6c8d-4da5-417c-a845-fcd121673d75"
                         }
                     ]
@@ -363,6 +381,7 @@
                         "type": "array"
                     },
                     "codeClass": "Ext.grid.plugin.CellEditing",
+                    "name": "MyCellEditingPlugin",
                     "designerId": "05f01960-baf2-4e24-aeac-70371a74f681"
                 },
                 {
@@ -372,6 +391,7 @@
                         "type": "object"
                     },
                     "codeClass": "Ext.selection.RowModel",
+                    "name": "MyRowSelectionModel",
                     "designerId": "7a3213a3-cadd-4346-b17b-5e53cc3dd8be"
                 }
             ]
@@ -384,9 +404,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "componentCls": null,
-                "collapseOnDblClick": false
+                "collapseOnDblClick": false,
+                "componentCls": null
             },
+            "name": "MySplitter",
             "designerId": "e413341b-c4ef-4e85-ae9e-d92dc3c4dbdd"
         },
         {
@@ -397,12 +418,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": null,
                 "height": 50,
                 "itemId": "visitinfocard",
-                "minHeight": null,
-                "layout": "card"
+                "layout": "card",
+                "layout|flex": null,
+                "minHeight": null
             },
+            "name": "MyContainer",
             "designerId": "c5785b0e-bd7a-4b40-bd17-951b3a74b4a8",
             "cn": [
                 {
@@ -413,11 +435,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "visitinfodisplay",
                         "fieldLabel": "Label",
                         "hideLabel": true,
+                        "itemId": "visitinfodisplay",
                         "readOnly": true
                     },
+                    "name": "MyTextArea",
                     "designerId": "2d1bf011-1e4a-4c50-8cbc-98bc54fd4828"
                 }
             ]
@@ -430,11 +453,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dock": null,
-                "width": null,
                 "collapsible": true,
-                "performCollapse": true
+                "dock": null,
+                "performCollapse": true,
+                "width": null
             },
+            "name": "MySplitter1",
             "designerId": "48bb1ec7-ea49-4265-b9fe-7550c7277cdf"
         },
         {
@@ -445,26 +469,27 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dock": null,
-                "height": 160,
-                "itemId": "dayCommentId",
-                "width": null,
-                "layout": "fit",
-                "collapseDirection": "bottom",
-                "collapsible": true,
-                "header": false,
-                "title": "Day Comment",
                 "api": [
                     "{",
                     "    load: QueryVisitsDb.getDayComment,",
                     "\tsubmit: QueryVisitsDb.saveDayComment",
                     "}"
                 ],
+                "collapseDirection": "bottom",
+                "collapsible": true,
+                "dock": null,
+                "header": false,
+                "height": 160,
+                "itemId": "dayCommentId",
+                "layout": "fit",
                 "paramOrder": [
                     "visitDate"
                 ],
-                "trackResetOnLoad": true
+                "title": "Day Comment",
+                "trackResetOnLoad": true,
+                "width": null
             },
+            "name": "MyForm",
             "designerId": "9a2814d6-9d7e-4076-b69c-feba127dfe87",
             "cn": [
                 {
@@ -475,16 +500,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 150,
-                        "overflowX": "auto",
-                        "overflowY": "auto",
-                        "fieldLabel": null,
-                        "name": "daycomment",
-                        "validateOnChange": false,
                         "enableColors": false,
                         "enableLinks": false,
-                        "enableSourceEdit": false
+                        "enableSourceEdit": false,
+                        "fieldLabel": null,
+                        "height": 150,
+                        "name": "daycomment",
+                        "overflowX": "auto",
+                        "overflowY": "auto",
+                        "validateOnChange": false
                     },
+                    "name": "MyHtmlEditor",
                     "designerId": "9cbe828a-cafb-4192-b5e2-f9a9dab17c2f"
                 },
                 {
@@ -498,6 +524,7 @@
                         "fieldLabel": "Label",
                         "name": "idv"
                     },
+                    "name": "MyHiddenField",
                     "designerId": "037fe046-f750-4d17-b9b4-b2781fe594be"
                 }
             ]
@@ -510,14 +537,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "processDayEditView",
                 "designer|params": [
                     "config"
                 ],
+                "fn": "processDayEditView",
                 "implHandler": [
                     ""
                 ]
             },
+            "name": "processDayEditView",
             "designerId": "7a2327b1-bfc0-40f4-bd39-fc257525417e"
         }
     ]

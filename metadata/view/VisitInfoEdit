@@ -6,14 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "height": 250,
-        "width": 616,
-        "designer|userClassName": "VisitInfoEdit",
-        "designer|userAlias": "visitinfoedit",
-        "layout": "fit",
         "closable": false,
+        "designer|userAlias": "visitinfoedit",
+        "designer|userClassName": "VisitInfoEdit",
+        "height": 250,
+        "layout": "fit",
+        "modal": true,
         "title": "Edition Info Visite",
-        "modal": true
+        "width": 616
     },
     "designerId": "8e3de934-df8c-45d2-af01-889497317067",
     "cn": [
@@ -25,13 +25,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "bodyPadding": 0,
+                "header": false,
                 "height": 161,
                 "itemId": "visitInfoFormId",
                 "layout": "fit",
-                "bodyPadding": 0,
-                "header": false,
                 "title": "My Form"
             },
+            "name": "MyForm5",
             "designerId": "70aeb0a1-8eb7-48eb-847e-1c0e567d788f",
             "cn": [
                 {
@@ -42,10 +43,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 150,
                         "fieldLabel": null,
+                        "height": 150,
                         "name": "visitinfo"
                     },
+                    "name": "MyTextArea1",
                     "designerId": "eb588a62-4196-4d6c-9f6d-e1a731e39f01"
                 },
                 {
@@ -56,9 +58,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dock": "bottom",
-                        "container|pack": "center"
+                        "container|pack": "center",
+                        "dock": "bottom"
                     },
+                    "name": "MyToolbar5",
                     "designerId": "b08c4d0c-5c40-40cd-b36d-4526146f0950",
                     "cn": [
                         {
@@ -69,10 +72,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
                                 "itemId": "saveId",
+                                "layout|flex": null,
                                 "text": "Modifier"
                             },
+                            "name": "MyButton15",
                             "designerId": "8ec2c431-898a-4254-a335-44669b70dfd1"
                         },
                         {
@@ -86,6 +90,7 @@
                                 "layout|flex": null,
                                 "width": 20
                             },
+                            "name": "MySpacer3",
                             "designerId": "dfbdc63c-f633-4c62-a0c1-f6681745d4ea"
                         },
                         {
@@ -96,10 +101,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
                                 "itemId": "cancelId",
+                                "layout|flex": null,
                                 "text": "Annuler"
                             },
+                            "name": "MyButton16",
                             "designerId": "35f706b6-2cc2-491f-8e9e-5bb0df4196bf"
                         }
                     ]

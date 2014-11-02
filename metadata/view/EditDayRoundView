@@ -8,13 +8,13 @@
     "userConfig": {
         "autoRender": null,
         "autoShow": null,
+        "collapsible": false,
+        "designer|userAlias": "editdayroundview",
+        "designer|userClassName": "EditDayRoundView",
+        "header": false,
         "id": null,
         "itemId": null,
-        "designer|userClassName": "EditDayRoundView",
-        "designer|userAlias": "editdayroundview",
         "layout": "border",
-        "collapsible": false,
-        "header": false,
         "title": "My Panel"
     },
     "designerId": "20a4d98f-cb1a-4914-80f0-56b935efeb2c",
@@ -31,6 +31,7 @@
                 "layout|region": "center",
                 "layout|split": true
             },
+            "name": "dayeditview",
             "designerId": "5125c6a1-1243-451c-9a1f-af7750641eb5",
             "masterInstanceId": "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b"
         },
@@ -48,6 +49,7 @@
                 "layout|region": "west",
                 "layout|split": true
             },
+            "name": "roundsource",
             "designerId": "e2ee2ad0-0816-4160-97e9-f349ffdb9a01",
             "masterInstanceId": "697142e5-da89-4a48-acef-cfefff56ffa6"
         }

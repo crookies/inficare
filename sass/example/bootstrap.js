@@ -5,94 +5,274 @@
  * metadata-driven class system features 
  */
 Ext.Loader.addClassPathMappings({
-  " Ext.Msg": "../../ext/src/window/MessageBox.js",
   "Ext": "../../ext/src",
-  "test5.Application": "../../app/application.js",
-  "inficare": "../../app",
+  "Ext.DomHelper": "../../ext/src/dom/Helper.js",
+  "Ext.DomQuery": "../../ext/src/dom/Query.js",
+  "Ext.EventObjectImpl": "../../ext/src/EventObject.js",
+  "Ext.Msg": "../../ext/src/window/MessageBox.js",
+  "Ext.Supports": "../../ext/src/Support.js",
+  "Ext.core.DomHelper": "../../ext/src/dom/Helper.js",
+  "Ext.core.DomQuery": "../../ext/src/dom/Query.js",
   "Ext.rtl.EventObjectImpl": "../../ext/src/rtl/EventObject.js",
-  "test5": "../../app"
+  "inficare": "../../app",
+  "test5": "../../app",
+  "test5.Application": "../../app/application.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
-  "inficare.model.NurseModel": [],
-  "inficare.store.VisitEditTreeStore": [],
-  "inficare.store.NurseStore": [],
-  "inficare.store.RefVisitTreeStore": [],
-  "inficare.controller.ReportController": [],
-  "inficare.store.VisitPatientStore": [],
-  "inficare.controller.PatientEditController": [],
-  "inficare.view.VisitInfoEdit": [],
+  "Ext.ux.BoxReorderer": [],
+  "Ext.ux.CellDragDrop": [],
+  "Ext.ux.DataTip": [],
+  "Ext.ux.DataView.Animated": [],
+  "Ext.ux.DataView.DragSelector": [],
+  "Ext.ux.DataView.Draggable": [],
+  "Ext.ux.DataView.LabelEditor": [],
+  "Ext.ux.FieldReplicator": [],
+  "Ext.ux.GMapPanel": [],
+  "Ext.ux.GroupTabPanel": [],
+  "Ext.ux.GroupTabRenderer": [],
+  "Ext.ux.IFrame": [],
+  "Ext.ux.LiveSearchGridPanel": [],
+  "Ext.ux.PreviewPlugin": [],
+  "Ext.ux.ProgressBarPager": [],
+  "Ext.ux.RowExpander": [],
+  "Ext.ux.SlidingPager": [],
+  "Ext.ux.Spotlight": [],
+  "Ext.ux.TabCloseMenu": [],
+  "Ext.ux.TabReorderer": [],
+  "Ext.ux.TabScrollerMenu": [],
+  "Ext.ux.ToolbarDroppable": [],
+  "Ext.ux.TreePicker": [],
+  "Ext.ux.ajax.DataSimlet": [],
+  "Ext.ux.ajax.JsonSimlet": [],
+  "Ext.ux.ajax.SimManager": [],
+  "Ext.ux.ajax.SimXhr": [],
+  "Ext.ux.ajax.Simlet": [],
+  "Ext.ux.ajax.XmlSimlet": [],
+  "Ext.ux.data.PagingMemoryProxy": [
+    "Ext.data.PagingMemoryProxy"
+  ],
+  "Ext.ux.dd.CellFieldDropZone": [],
+  "Ext.ux.dd.PanelFieldDragZone": [],
+  "Ext.ux.event.Driver": [],
+  "Ext.ux.event.Maker": [],
+  "Ext.ux.event.Player": [],
+  "Ext.ux.event.Recorder": [],
+  "Ext.ux.event.RecorderManager": [],
+  "Ext.ux.form.ItemSelector": [
+    "Ext.ux.ItemSelector"
+  ],
+  "Ext.ux.form.MultiSelect": [
+    "Ext.ux.Multiselect"
+  ],
+  "Ext.ux.form.SearchField": [],
+  "Ext.ux.grid.FiltersFeature": [],
+  "Ext.ux.grid.TransformGrid": [],
+  "Ext.ux.grid.filter.BooleanFilter": [],
+  "Ext.ux.grid.filter.DateFilter": [],
+  "Ext.ux.grid.filter.DateTimeFilter": [],
+  "Ext.ux.grid.filter.Filter": [],
+  "Ext.ux.grid.filter.ListFilter": [],
+  "Ext.ux.grid.filter.NumericFilter": [],
+  "Ext.ux.grid.filter.StringFilter": [],
+  "Ext.ux.grid.menu.ListMenu": [],
+  "Ext.ux.grid.menu.RangeMenu": [],
+  "Ext.ux.layout.Center": [],
+  "Ext.ux.statusbar.StatusBar": [
+    "Ext.ux.StatusBar"
+  ],
+  "Ext.ux.statusbar.ValidationStatus": [],
   "inficare.controller.DayRoundController": [],
+  "inficare.controller.MainController": [],
+  "inficare.controller.PatientEditController": [],
+  "inficare.controller.ReportController": [],
+  "inficare.direct": [],
+  "inficare.model.NurseModel": [],
+  "inficare.model.PatientModel": [],
+  "inficare.model.VisitModel": [],
+  "inficare.override.window.Window": [],
+  "inficare.store.DayRoundTreeStore": [],
+  "inficare.store.NurseStore": [],
+  "inficare.store.PatientStore": [],
+  "inficare.store.RefVisitTreeStore": [],
+  "inficare.store.VisitEditTreeStore": [],
+  "inficare.store.VisitPatientStore": [],
+  "inficare.view.DayEditView": [],
+  "inficare.view.EditDayRoundView": [],
+  "inficare.view.EditMail": [],
+  "inficare.view.EditPatientListView": [],
+  "inficare.view.InfiMainView": [],
+  "inficare.view.LoginView": [],
   "inficare.view.ReportView": [],
   "inficare.view.RoundSource": [],
-  "test5.controller.Main": [],
-  "test5.Application": [],
-  "inficare.view.DayEditView": [],
-  "inficare.controller.MainController": [],
-  "inficare.view.EditMail": [],
-  "inficare.model.PatientModel": [],
-  "inficare.store.PatientStore": [],
-  "inficare.model.VisitModel": [],
-  "inficare.view.EditDayRoundView": [],
-  "test5.view.Main": [],
   "inficare.view.Viewport": [],
-  "inficare.view.InfiMainView": [],
-  "inficare.view.EditPatientListView": [],
-  "inficare.store.DayRoundTreeStore": [],
-  "inficare.override.window.Window": [],
-  "inficare.view.LoginView": []
+  "inficare.view.VisitInfoEdit": [],
+  "test5.Application": [],
+  "test5.controller.Main": [],
+  "test5.view.Main": []
 });
 Ext.ClassManager.addNameAliasMappings({
+  "Ext.ux.BoxReorderer": [],
+  "Ext.ux.CellDragDrop": [
+    "plugin.celldragdrop"
+  ],
+  "Ext.ux.DataTip": [
+    "plugin.datatip"
+  ],
+  "Ext.ux.DataView.Animated": [],
+  "Ext.ux.DataView.DragSelector": [],
+  "Ext.ux.DataView.Draggable": [],
+  "Ext.ux.DataView.LabelEditor": [],
+  "Ext.ux.FieldReplicator": [],
+  "Ext.ux.GMapPanel": [
+    "widget.gmappanel"
+  ],
+  "Ext.ux.GroupTabPanel": [
+    "widget.grouptabpanel"
+  ],
+  "Ext.ux.GroupTabRenderer": [
+    "plugin.grouptabrenderer"
+  ],
+  "Ext.ux.IFrame": [
+    "widget.uxiframe"
+  ],
+  "Ext.ux.LiveSearchGridPanel": [],
+  "Ext.ux.PreviewPlugin": [
+    "plugin.preview"
+  ],
+  "Ext.ux.ProgressBarPager": [],
+  "Ext.ux.RowExpander": [],
+  "Ext.ux.SlidingPager": [],
+  "Ext.ux.Spotlight": [],
+  "Ext.ux.TabCloseMenu": [
+    "plugin.tabclosemenu"
+  ],
+  "Ext.ux.TabReorderer": [],
+  "Ext.ux.TabScrollerMenu": [
+    "plugin.tabscrollermenu"
+  ],
+  "Ext.ux.ToolbarDroppable": [],
+  "Ext.ux.TreePicker": [
+    "widget.treepicker"
+  ],
+  "Ext.ux.ajax.DataSimlet": [],
+  "Ext.ux.ajax.JsonSimlet": [
+    "simlet.json"
+  ],
+  "Ext.ux.ajax.SimManager": [],
+  "Ext.ux.ajax.SimXhr": [],
+  "Ext.ux.ajax.Simlet": [
+    "simlet.basic"
+  ],
+  "Ext.ux.ajax.XmlSimlet": [
+    "simlet.xml"
+  ],
+  "Ext.ux.data.PagingMemoryProxy": [
+    "proxy.pagingmemory"
+  ],
+  "Ext.ux.dd.CellFieldDropZone": [],
+  "Ext.ux.dd.PanelFieldDragZone": [],
+  "Ext.ux.event.Driver": [],
+  "Ext.ux.event.Maker": [],
+  "Ext.ux.event.Player": [],
+  "Ext.ux.event.Recorder": [],
+  "Ext.ux.event.RecorderManager": [
+    "widget.eventrecordermanager"
+  ],
+  "Ext.ux.form.ItemSelector": [
+    "widget.itemselector",
+    "widget.itemselectorfield"
+  ],
+  "Ext.ux.form.MultiSelect": [
+    "widget.multiselect",
+    "widget.multiselectfield"
+  ],
+  "Ext.ux.form.SearchField": [
+    "widget.searchfield"
+  ],
+  "Ext.ux.grid.FiltersFeature": [
+    "feature.filters"
+  ],
+  "Ext.ux.grid.TransformGrid": [],
+  "Ext.ux.grid.filter.BooleanFilter": [
+    "gridfilter.boolean"
+  ],
+  "Ext.ux.grid.filter.DateFilter": [
+    "gridfilter.date"
+  ],
+  "Ext.ux.grid.filter.DateTimeFilter": [
+    "gridfilter.datetime"
+  ],
+  "Ext.ux.grid.filter.Filter": [],
+  "Ext.ux.grid.filter.ListFilter": [
+    "gridfilter.list"
+  ],
+  "Ext.ux.grid.filter.NumericFilter": [
+    "gridfilter.numeric"
+  ],
+  "Ext.ux.grid.filter.StringFilter": [
+    "gridfilter.string"
+  ],
+  "Ext.ux.grid.menu.ListMenu": [],
+  "Ext.ux.grid.menu.RangeMenu": [],
+  "Ext.ux.layout.Center": [
+    "layout.ux.center"
+  ],
+  "Ext.ux.statusbar.StatusBar": [
+    "widget.statusbar"
+  ],
+  "Ext.ux.statusbar.ValidationStatus": [],
+  "inficare.controller.DayRoundController": [],
+  "inficare.controller.MainController": [],
+  "inficare.controller.PatientEditController": [],
+  "inficare.controller.ReportController": [],
+  "inficare.direct": [],
   "inficare.model.NurseModel": [
     "model.nursemodel"
   ],
-  "inficare.store.VisitEditTreeStore": [],
-  "inficare.store.NurseStore": [],
-  "inficare.store.RefVisitTreeStore": [],
-  "inficare.controller.ReportController": [],
-  "inficare.store.VisitPatientStore": [],
-  "inficare.controller.PatientEditController": [],
-  "inficare.view.VisitInfoEdit": [
-    "widget.visitinfoedit"
+  "inficare.model.PatientModel": [
+    "model.patientmodel"
   ],
-  "inficare.controller.DayRoundController": [],
+  "inficare.model.VisitModel": [
+    "model.visitmodel"
+  ],
+  "inficare.override.window.Window": [],
+  "inficare.store.DayRoundTreeStore": [],
+  "inficare.store.NurseStore": [],
+  "inficare.store.PatientStore": [],
+  "inficare.store.RefVisitTreeStore": [],
+  "inficare.store.VisitEditTreeStore": [],
+  "inficare.store.VisitPatientStore": [],
+  "inficare.view.DayEditView": [
+    "widget.dayeditview"
+  ],
+  "inficare.view.EditDayRoundView": [
+    "widget.editdayroundview"
+  ],
+  "inficare.view.EditMail": [
+    "widget.editmail"
+  ],
+  "inficare.view.EditPatientListView": [
+    "widget.editpatientlistview"
+  ],
+  "inficare.view.InfiMainView": [
+    "widget.infimainview"
+  ],
+  "inficare.view.LoginView": [
+    "widget.loginview"
+  ],
   "inficare.view.ReportView": [
     "widget.reportview"
   ],
   "inficare.view.RoundSource": [
     "widget.roundsource"
   ],
-  "test5.controller.Main": [],
+  "inficare.view.Viewport": [],
+  "inficare.view.VisitInfoEdit": [
+    "widget.visitinfoedit"
+  ],
   "test5.Application": [],
-  "inficare.view.DayEditView": [
-    "widget.dayeditview"
-  ],
-  "inficare.controller.MainController": [],
-  "inficare.view.EditMail": [
-    "widget.editmail"
-  ],
-  "inficare.model.PatientModel": [
-    "model.patientmodel"
-  ],
-  "inficare.store.PatientStore": [],
-  "inficare.model.VisitModel": [
-    "model.visitmodel"
-  ],
-  "inficare.view.EditDayRoundView": [
-    "widget.editdayroundview"
-  ],
+  "test5.controller.Main": [],
   "test5.view.Main": [
     "widget.app-main"
-  ],
-  "inficare.view.Viewport": [],
-  "inficare.view.InfiMainView": [
-    "widget.infimainview"
-  ],
-  "inficare.view.EditPatientListView": [
-    "widget.editpatientlistview"
-  ],
-  "inficare.store.DayRoundTreeStore": [],
-  "inficare.override.window.Window": [],
-  "inficare.view.LoginView": [
-    "widget.loginview"
   ]
 });

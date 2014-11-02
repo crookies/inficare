@@ -6,14 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "height": 140,
-        "width": 400,
-        "designer|userClassName": "LoginView",
-        "designer|userAlias": "loginview",
-        "layout": "fit",
         "closable": false,
+        "defaultFocus": null,
+        "designer|userAlias": "loginview",
+        "designer|userClassName": "LoginView",
+        "height": 140,
+        "layout": "fit",
         "title": "Connexion",
-        "defaultFocus": null
+        "width": 400
     },
     "designerId": "8d5c35ce-eb5c-4e24-b83d-823876311cf8",
     "cn": [
@@ -25,12 +25,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "loginFormId",
-                "designer|displayName": "Login Form",
                 "bodyPadding": 10,
+                "designer|displayName": "Login Form",
                 "header": false,
+                "itemId": "loginFormId",
                 "title": "My Form"
             },
+            "name": "MyForm6",
             "designerId": "6b907a74-49cd-4728-b9ec-5795cedaa4d2",
             "cn": [
                 {
@@ -41,9 +42,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dock": "bottom",
-                        "container|pack": "center"
+                        "container|pack": "center",
+                        "dock": "bottom"
                     },
+                    "name": "MyToolbar6",
                     "designerId": "063ecbcb-368d-4260-852d-ad850397b9b8",
                     "cn": [
                         {
@@ -54,11 +56,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "loginButtonId",
                                 "glyph": "xe00b@fcrooks",
+                                "itemId": "loginButtonId",
+                                "layout|flex": null,
                                 "text": "Connexion"
                             },
+                            "name": "MyButton17",
                             "designerId": "82c01203-828d-4fd0-b4ba-615654313e17"
                         },
                         {
@@ -72,6 +75,7 @@
                                 "layout|flex": null,
                                 "width": 50
                             },
+                            "name": "MySpacer4",
                             "designerId": "a113f6eb-50cc-4968-815b-79e0ec606ccd"
                         },
                         {
@@ -82,10 +86,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
                                 "itemId": "cancelLoginButtonId",
+                                "layout|flex": null,
                                 "text": "Annuler"
                             },
+                            "name": "MyButton18",
                             "designerId": "a159a3b6-b685-4dd5-9a0d-36098020581f"
                         }
                     ]
@@ -98,11 +103,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|anchor": "100%",
-                        "itemId": "userFldId",
                         "fieldLabel": "Nom d'utilisateur",
+                        "itemId": "userFldId",
+                        "layout|anchor": "100%",
                         "name": "user"
                     },
+                    "name": "MyTextField10",
                     "designerId": "7fd96cfc-e6b9-40e0-be83-df13a9e3fb15"
                 },
                 {
@@ -113,12 +119,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|anchor": "100%",
-                        "itemId": "passwordFldId",
                         "fieldLabel": "Mot de passe",
-                        "name": "password",
-                        "inputType": "password"
+                        "inputType": "password",
+                        "itemId": "passwordFldId",
+                        "layout|anchor": "100%",
+                        "name": "password"
                     },
+                    "name": "MyTextField11",
                     "designerId": "bc499a23-c89c-4a9a-af60-6c98550642af"
                 }
             ]

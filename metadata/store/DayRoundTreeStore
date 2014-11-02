@@ -7,10 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "model": "VisitModel",
-        "storeId": "DayRoundStore",
         "designer|userClassName": "DayRoundTreeStore",
-        "folderSort": true
+        "folderSort": true,
+        "model": "VisitModel",
+        "storeId": "DayRoundStore"
     },
     "designerId": "14ec701b-0941-438d-a214-6813e69f8ca0",
     "cn": [
@@ -22,10 +22,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": null,
                 "designer|createAlias": null,
+                "designer|displayName": null,
                 "url": "resources/data/tree/treegrid2.json"
             },
+            "name": "MyAjaxProxy",
             "designerId": "a1cf34f6-d546-4eb0-907f-2df2449a603f",
             "cn": [
                 {
@@ -43,6 +44,7 @@
                         "name": "exception",
                         "scope": "me"
                     },
+                    "name": "onAjaxException",
                     "designerId": "5e6b29a9-1725-4def-92f1-779f1eb6370a"
                 }
             ]

@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "idv",
+        "designer|userAlias": "visitmodel",
         "designer|userClassName": "VisitModel",
-        "designer|userAlias": "visitmodel"
+        "idProperty": "idv"
     },
     "designerId": "67d66cd3-452e-4f9e-8777-98d6b3b74421",
     "cn": [
@@ -23,6 +23,7 @@
                 "name": "idv",
                 "type": "int"
             },
+            "name": "MyField11",
             "designerId": "16c2cc2c-3fd9-48a3-8452-f74278cac696"
         },
         {
@@ -36,6 +37,7 @@
                 "name": "datev",
                 "type": "date"
             },
+            "name": "MyField12",
             "designerId": "5f1ffe71-04ad-4f2a-ae69-a07a272c5bc0"
         },
         {
@@ -49,6 +51,7 @@
                 "name": "rectype",
                 "type": "int"
             },
+            "name": "MyField13",
             "designerId": "33fc28fa-4402-4a7c-a748-8d73fabfb1c1"
         },
         {
@@ -62,6 +65,7 @@
                 "name": "namev",
                 "type": "string"
             },
+            "name": "MyField14",
             "designerId": "f9439a0d-445c-45eb-82e1-4de9195d0133"
         },
         {
@@ -75,6 +79,7 @@
                 "name": "patientid",
                 "type": "int"
             },
+            "name": "MyField15",
             "designerId": "eb81def3-2458-417e-bd2e-94423a86f311"
         },
         {
@@ -89,6 +94,7 @@
                 "sortType": null,
                 "type": "int"
             },
+            "name": "MyField16",
             "designerId": "b27a2d76-665f-440b-8f94-e425c9794e14"
         },
         {
@@ -102,6 +108,7 @@
                 "name": "nurseid",
                 "type": "int"
             },
+            "name": "MyField17",
             "designerId": "53904cd4-fbcb-4b63-aebb-83c2fa50a90c"
         },
         {
@@ -115,6 +122,7 @@
                 "name": "patientinfo",
                 "type": "string"
             },
+            "name": "MyField18",
             "designerId": "fe1694b0-daf3-4976-af47-3633289ad165"
         },
         {
@@ -128,6 +136,7 @@
                 "name": "patientcare",
                 "type": "string"
             },
+            "name": "MyField19",
             "designerId": "65de967e-a0dd-48f5-99da-b1b53fb14be1"
         },
         {
@@ -141,6 +150,7 @@
                 "name": "visitinfo",
                 "type": "string"
             },
+            "name": "MyField20",
             "designerId": "0fd355b4-cb3c-42dc-bf29-30998301181d"
         },
         {
@@ -151,11 +161,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "model": "NurseModel",
-                "primaryKey": "idn",
                 "designer|displayName": "hasOneNurseModel",
-                "foreignKey": "nurseid"
+                "foreignKey": "nurseid",
+                "model": "NurseModel",
+                "primaryKey": "idn"
             },
+            "name": "MyHasOneAssociation",
             "designerId": "a4516569-cd91-4d47-8a1a-8824c7f4fa0d"
         },
         {
@@ -166,11 +177,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "model": "PatientModel",
-                "primaryKey": "idp",
                 "designer|displayName": "hasOnePatientModel",
-                "foreignKey": "patientid"
+                "foreignKey": "patientid",
+                "model": "PatientModel",
+                "primaryKey": "idp"
             },
+            "name": "MyHasOneAssociation1",
             "designerId": "aa141331-8d9e-45da-b6cd-da01e9978c16"
         },
         {
@@ -184,6 +196,7 @@
                 "name": "index",
                 "type": "auto"
             },
+            "name": "MyField21",
             "designerId": "ec7cb5ea-9af0-46d9-b915-89658a0fb2e0"
         },
         {
@@ -197,6 +210,7 @@
                 "name": "roundid",
                 "type": "int"
             },
+            "name": "MyField22",
             "designerId": "db07be09-c580-4f85-abdf-57e89bc8ec90"
         },
         {
@@ -210,6 +224,7 @@
                 "name": "parentidv",
                 "type": "int"
             },
+            "name": "MyField23",
             "designerId": "1959b6fd-727b-4132-99dd-58b6b215679a"
         }
     ]

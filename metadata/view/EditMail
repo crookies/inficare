@@ -6,13 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "height": 296,
-        "width": 582,
-        "designer|userClassName": "EditMail",
-        "designer|userAlias": "editmail",
-        "layout": "fit",
         "bodyPadding": null,
-        "title": "Edition mail"
+        "designer|userAlias": "editmail",
+        "designer|userClassName": "EditMail",
+        "height": 296,
+        "layout": "fit",
+        "title": "Edition mail",
+        "width": 582
     },
     "designerId": "b01da3fe-7591-4f65-810a-e3c10715521d",
     "cn": [
@@ -28,6 +28,7 @@
                 "header": false,
                 "title": "My Form"
             },
+            "name": "MyForm7",
             "designerId": "b020dd66-7077-4d3d-9b95-c7e5c64d259a",
             "cn": [
                 {
@@ -38,9 +39,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dock": "bottom",
-                        "container|pack": "center"
+                        "container|pack": "center",
+                        "dock": "bottom"
                     },
+                    "name": "MyToolbar7",
                     "designerId": "9a67ae23-3421-42a8-a20e-c440dcacf51c",
                     "cn": [
                         {
@@ -51,11 +53,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "sendMailBtnId",
                                 "glyph": "xe011@fcrooks",
+                                "itemId": "sendMailBtnId",
+                                "layout|flex": null,
                                 "text": "Envoyer"
                             },
+                            "name": "MyButton19",
                             "designerId": "4e7b508c-6aec-49d6-bf27-92bd62d797ee"
                         },
                         {
@@ -69,6 +72,7 @@
                                 "layout|flex": null,
                                 "width": 30
                             },
+                            "name": "MySpacer5",
                             "designerId": "9c3a3f93-fa0a-4974-ad2d-eb24a5f0a5fb"
                         },
                         {
@@ -79,11 +83,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "cancelEditMailBtnId",
                                 "glyph": "xe015@fcrooks",
+                                "itemId": "cancelEditMailBtnId",
+                                "layout|flex": null,
                                 "text": "Abandonner"
                             },
+                            "name": "MyButton20",
                             "designerId": "e997c4a0-6028-4262-8d50-4ccb84f95fbf"
                         }
                     ]
@@ -96,16 +101,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|anchor": "100%",
                         "designer|displayName": "namen",
+                        "displayField": "namen",
                         "fieldLabel": "Destinatiares Supplémentaires",
                         "labelWidth": 200,
-                        "name": "nurselist",
-                        "displayField": "namen",
+                        "layout|anchor": "100%",
                         "multiSelect": true,
+                        "name": "nurselist",
                         "store": "NurseStore",
                         "valueField": "idn"
                     },
+                    "name": "MyComboBox1",
                     "designerId": "6f530732-7e9f-490e-b73f-946bb742a9b3"
                 },
                 {
@@ -116,11 +122,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|anchor": "100%",
-                        "height": 170,
                         "fieldLabel": "Message",
+                        "height": 170,
+                        "layout|anchor": "100%",
                         "name": "message"
                     },
+                    "name": "MyTextArea2",
                     "designerId": "02e95ca2-b2f9-4874-aa38-dae408bc57ef"
                 }
             ]
