@@ -7,10 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "model": "VisitModel",
-        "storeId": "MyTreeStore",
-        "designer|userClassName": "VisitEditTreeStore",
         "defaultRootId": null,
+        "designer|userClassName": "VisitEditTreeStore",
+        "model": "VisitModel",
         "nodeParam": null,
         "root": [
             "{",
@@ -22,7 +21,8 @@
             "}",
             "",
             "    "
-        ]
+        ],
+        "storeId": "MyTreeStore"
     },
     "designerId": "47afbcf3-1550-44be-b802-f40b699262f3",
     "cn": [
@@ -34,7 +34,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "QueryVisitDbProxy",
                 "api": [
                     "{",
                     "\tcreate: QueryVisitsDb.createRecord,",
@@ -44,9 +43,11 @@
                     "}",
                     ""
                 ],
-                "idParam": "idv",
-                "directFn": "QueryVisitsDb.getResults"
+                "designer|displayName": "QueryVisitDbProxy",
+                "directFn": "QueryVisitsDb.getResults",
+                "idParam": "idv"
             },
+            "name": "MyDirectProxy",
             "designerId": "b46f15d5-f053-4540-9459-a5005a95aaf5"
         },
         {
@@ -76,6 +77,7 @@
                 "name": "update",
                 "scope": "me"
             },
+            "name": "onTreeStoreUpdate",
             "designerId": "d56e49eb-5a65-4f0c-83a6-1085bc1fc076"
         }
     ]

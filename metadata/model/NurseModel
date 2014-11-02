@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "idn",
+        "designer|userAlias": "nursemodel",
         "designer|userClassName": "NurseModel",
-        "designer|userAlias": "nursemodel"
+        "idProperty": "idn"
     },
     "designerId": "51502670-0d52-464a-b0a6-ade46cc2c474",
     "cn": [
@@ -23,6 +23,7 @@
                 "name": "idn",
                 "type": "int"
             },
+            "name": "MyField",
             "designerId": "9990cd83-d574-4a50-ad16-19fdac304461"
         },
         {
@@ -36,6 +37,7 @@
                 "name": "activen",
                 "type": "boolean"
             },
+            "name": "MyField1",
             "designerId": "1baa5a17-e237-47e0-a62f-ca9a1e3e72f7"
         },
         {
@@ -49,6 +51,7 @@
                 "name": "namen",
                 "type": "string"
             },
+            "name": "MyField2",
             "designerId": "0ea268f8-2159-4662-9a66-dcdaf9dace25"
         },
         {
@@ -62,6 +65,7 @@
                 "name": "email",
                 "type": "string"
             },
+            "name": "MyField3",
             "designerId": "885bd503-cb48-40c7-848b-f720f4e88f53"
         }
     ]

@@ -1,8 +1,21 @@
 {
-    "name": "test5",
-
-    "requires": [
-    ],
-
-    "id": "8724359d-2c2b-4aa3-bf92-630d34a845dd"
+   "name": "inficare",
+   "requires": [],
+   "id": "8724359d-2c2b-4aa3-bf92-630d34a845dd",
+   "theme": "ext-theme-gray",
+   "resources": [
+      "resources/test5.css"
+   ],
+   "js": [
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "bootstrap.css",
+         "bootstrap": true
+      }
+   ]
 }

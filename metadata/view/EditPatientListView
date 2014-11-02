@@ -7,13 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "container|align": "stretch",
-        "height": 520,
-        "width": 880,
-        "designer|userClassName": "EditPatientListView",
         "designer|userAlias": "editpatientlistview",
-        "layout": "vbox",
+        "designer|userClassName": "EditPatientListView",
         "header": false,
-        "title": "Edit Patients List"
+        "height": 520,
+        "layout": "vbox",
+        "title": "Edit Patients List",
+        "width": 880
     },
     "designerId": "d8c9e516-4c3d-49a4-8013-8ae05997c74c",
     "cn": [
@@ -25,13 +25,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
-                "itemId": "patientGridId",
                 "designer|displayName": "Patients Grid",
                 "header": false,
-                "title": "My Grid Panel",
-                "store": "PatientStore"
+                "itemId": "patientGridId",
+                "layout|flex": 1,
+                "store": "PatientStore",
+                "title": "My Grid Panel"
             },
+            "name": "MyGridPanel1",
             "designerId": "8e0ddd9a-b879-42f5-85c4-549c62a2540f",
             "cn": [
                 {
@@ -45,6 +46,7 @@
                         "dock": "top",
                         "itemId": "fulPatientSearchTbId"
                     },
+                    "name": "MyToolbar3",
                     "designerId": "b6e46adc-3e3d-4543-81cc-eb839d5f6d00",
                     "cn": [
                         {
@@ -55,11 +57,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "saveFullPatientBtnId",
                                 "glyph": "xe00d@fcrooks",
+                                "itemId": "saveFullPatientBtnId",
+                                "layout|flex": null,
                                 "text": "Sauver"
                             },
+                            "name": "MyButton5",
                             "designerId": "83c29bcc-88ba-4a10-bb3c-dd0dd5fe4798"
                         },
                         {
@@ -73,6 +76,7 @@
                                 "layout|flex": null,
                                 "width": 20
                             },
+                            "name": "MySpacer1",
                             "designerId": "46be0e15-6e48-4ca5-8413-c183622871f2"
                         },
                         {
@@ -83,11 +87,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "addFullPatientBtnId",
                                 "glyph": "xe012@fcrooks",
+                                "itemId": "addFullPatientBtnId",
+                                "layout|flex": null,
                                 "text": "Nouveau patient"
                             },
+                            "name": "MyButton6",
                             "designerId": "6d2dc78e-f1f4-4bf6-8247-789844c215aa"
                         },
                         {
@@ -101,6 +106,7 @@
                                 "layout|flex": null,
                                 "width": 10
                             },
+                            "name": "MySpacer2",
                             "designerId": "80a51912-a9b9-412f-b5c8-be80af61c9b2"
                         },
                         {
@@ -111,11 +117,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "itemId": "delFullPatientBtnId",
                                 "glyph": "xe00e@fcrooks",
+                                "itemId": "delFullPatientBtnId",
+                                "layout|flex": null,
                                 "text": "Effacer patient"
                             },
+                            "name": "MyButton7",
                             "designerId": "1da2fc2b-3939-4bf1-b8aa-e6e001a4373e"
                         },
                         {
@@ -128,6 +135,7 @@
                             "userConfig": {
                                 "layout|flex": null
                             },
+                            "name": "MyFill3",
                             "designerId": "0e018ca5-78ec-4548-882b-d59fe561982b"
                         },
                         {
@@ -138,10 +146,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
+                                "fieldLabel": "Recherche",
                                 "itemId": "searchFullPatientFldId",
-                                "fieldLabel": "Recherche"
+                                "layout|flex": null
                             },
+                            "name": "MyTextField2",
                             "designerId": "956dc089-44c7-4aaa-8b75-6a8ee7e46019"
                         }
                     ]
@@ -153,6 +162,7 @@
                         "type": "object"
                     },
                     "codeClass": null,
+                    "name": "MyGridView1",
                     "designerId": "a1a8257c-7502-4346-9fce-5828e002c66f"
                 },
                 {
@@ -163,11 +173,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "Nom",
                         "dataIndex": "namep",
-                        "text": "Nom",
-                        "flex": 1
+                        "designer|displayName": "Nom",
+                        "flex": 1,
+                        "text": "Nom"
                     },
+                    "name": "MyColumn11",
                     "designerId": "42290555-f521-499b-82df-2302af13d23b",
                     "cn": [
                         {
@@ -177,6 +188,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyTextField3",
                             "designerId": "705d2c00-044f-405b-8b9d-ca9791267a06"
                         }
                     ]
@@ -190,9 +202,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "address",
-                        "text": "Adresse",
-                        "flex": 2
+                        "flex": 2,
+                        "text": "Adresse"
                     },
+                    "name": "MyColumn12",
                     "designerId": "1b29bc89-8ac3-4718-a5f9-27d0e5fc5f25",
                     "cn": [
                         {
@@ -202,6 +215,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyTextField4",
                             "designerId": "f263d0f3-ad6c-4dda-ab2e-fbc24c6c4cf7"
                         }
                     ]
@@ -215,9 +229,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "tel",
-                        "text": "Tél",
-                        "flex": 1
+                        "flex": 1,
+                        "text": "Tél"
                     },
+                    "name": "MyColumn13",
                     "designerId": "72c349cc-1863-416e-8c29-df3cced42e6d",
                     "cn": [
                         {
@@ -227,6 +242,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyTextField5",
                             "designerId": "f6f36e90-1b2f-461a-9ae6-51d8ab2809ab"
                         }
                     ]
@@ -240,9 +256,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "care",
-                        "text": "Soin",
-                        "flex": 3
+                        "flex": 3,
+                        "text": "Soin"
                     },
+                    "name": "MyColumn14",
                     "designerId": "6ccc6a17-97e6-4947-85ad-30b510759c09",
                     "cn": [
                         {
@@ -252,6 +269,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyTextField6",
                             "designerId": "de99203a-f4e4-42e0-80cd-8cfacede3fe5"
                         }
                     ]
@@ -265,9 +283,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "infop",
-                        "text": "Détail",
-                        "flex": 3
+                        "flex": 3,
+                        "text": "Détail"
                     },
+                    "name": "MyColumn15",
                     "designerId": "d9b94546-e543-4d8f-91ca-40eddc6bcd33",
                     "cn": [
                         {
@@ -277,6 +296,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyTextField7",
                             "designerId": "525ac128-7a9e-41e1-866d-1a95e59f5f16"
                         }
                     ]
@@ -289,12 +309,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 40,
                         "dataIndex": "activep",
                         "hideable": false,
                         "menuDisabled": true,
-                        "text": "Actif"
+                        "text": "Actif",
+                        "width": 40
                     },
+                    "name": "MyCheckColumn",
                     "designerId": "00c0eb5a-0570-448b-a814-ef322e4fe5dc",
                     "cn": [
                         {
@@ -304,6 +325,7 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "name": "MyCheckbox",
                             "designerId": "2c265a08-a655-4e75-8182-e70e996e564b"
                         }
                     ]
@@ -316,10 +338,11 @@
                     },
                     "codeClass": "Ext.grid.plugin.RowEditing",
                     "userConfig": {
-                        "pluginId": "rowEditFullPatientId",
+                        "autoCancel": false,
                         "designer|displayName": "RowEditFullPatient",
-                        "autoCancel": false
+                        "pluginId": "rowEditFullPatientId"
                     },
+                    "name": "MyRowEditingPlugin",
                     "designerId": "7d0b2957-f712-4117-91af-9927eb32a0a9"
                 },
                 {
@@ -332,6 +355,7 @@
                     "userConfig": {
                         "designer|displayName": "RowSelectFullPatient"
                     },
+                    "name": "MyRowSelectionModel2",
                     "designerId": "6a683888-d1c6-4fbe-ae9d-475eb2eb21ce"
                 }
             ]

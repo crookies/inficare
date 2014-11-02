@@ -6,14 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userAlias": null,
+        "designer|userClassName": "PatientEditController",
         "models": [
             "PatientModel"
         ],
         "views": [
             "EditPatientListView"
-        ],
-        "designer|userClassName": "PatientEditController",
-        "designer|userAlias": null
+        ]
     },
     "designerId": "54ce25c0-dfee-4617-abe1-eec199f63bea",
     "cn": [
@@ -32,6 +32,7 @@
                     ""
                 ]
             },
+            "name": "onLaunch",
             "designerId": "57e06660-4352-48fa-a21a-2cbd16efb504"
         },
         {
@@ -42,15 +43,16 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "#searchFullPatientFldId",
+                "designer|targetType": "Ext.form.field.Text",
                 "fn": "onSearchFullPatientFldIdChange",
                 "implHandler": [
                     "this.searchFullPatient();"
                 ],
                 "name": "change",
-                "scope": "me",
-                "designer|targetType": "Ext.form.field.Text",
-                "designer|controlQuery": "#searchFullPatientFldId"
+                "scope": "me"
             },
+            "name": "onSearchFullPatientFldIdChange",
             "designerId": "b18f79f7-cc8b-4a9d-8ddd-902d01e50938"
         },
         {
@@ -73,6 +75,7 @@
                     ""
                 ]
             },
+            "name": "searchFullPatient",
             "designerId": "ead4b7d2-328c-4cd2-916d-8528f9f2ff57"
         },
         {
@@ -83,6 +86,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "#delFullPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "onDelFullPatientBtnIdClick",
                 "implHandler": [
                     "var ctx = this;",
@@ -95,10 +100,9 @@
                     "});"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delFullPatientBtnId"
+                "scope": "me"
             },
+            "name": "onDelFullPatientBtnIdClick",
             "designerId": "a8e5cdfd-ae68-40f9-863a-bed03c101abd"
         },
         {
@@ -109,6 +113,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "#addFullPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "onAddFullPatientBtnIdClick",
                 "implHandler": [
                     "var grid = this.editPatientListView.down('#patientGridId');",
@@ -131,10 +137,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#addFullPatientBtnId"
+                "scope": "me"
             },
+            "name": "onAddFullPatientBtnIdClick",
             "designerId": "5478cb53-df0a-48e7-9177-46f93dfe1589"
         },
         {
@@ -145,6 +150,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "#saveFullPatientBtnId",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "onSaveFullPatientBtnIdClick",
                 "implHandler": [
                     "var store = Ext.getStore('PatientStore');",
@@ -153,10 +160,9 @@
                     ""
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#saveFullPatientBtnId"
+                "scope": "me"
             },
+            "name": "onSaveFullPatientBtnIdClick",
             "designerId": "c28bbf1a-6f72-4d90-a184-311e45a9f978"
         },
         {
@@ -184,6 +190,7 @@
                     "sm.select(store.getCount()-1);"
                 ]
             },
+            "name": "eraseSelectedPatient",
             "designerId": "6209b625-c61a-4194-b953-2ec9a55ccfa9"
         }
     ]

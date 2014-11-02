@@ -1,10 +1,6 @@
 {
     "expandedState": {
-        "data": true,
-        "model": true,
-        "component": true,
-        "controller": true,
-        "resource": true,
+        "view": true,
         "83456f2d-fb58-45e5-94ed-9c582501feec": {
             "id": "83456f2d-fb58-45e5-94ed-9c582501feec",
             "expanded": false,
@@ -556,6 +552,7 @@
                 }
             ]
         },
+        "store": true,
         "14ec701b-0941-438d-a214-6813e69f8ca0": {
             "id": "14ec701b-0941-438d-a214-6813e69f8ca0",
             "expanded": false,
@@ -618,6 +615,7 @@
                 }
             ]
         },
+        "model": true,
         "67d66cd3-452e-4f9e-8777-98d6b3b74421": {
             "id": "67d66cd3-452e-4f9e-8777-98d6b3b74421",
             "expanded": false,
@@ -714,6 +712,7 @@
                 }
             ]
         },
+        "controller": true,
         "87160d45-efef-45e0-a4f2-3e6c1fbf7f38": {
             "id": "87160d45-efef-45e0-a4f2-3e6c1fbf7f38",
             "cn": [
@@ -903,6 +902,7 @@
                 }
             ]
         },
+        "resource": true,
         "5767f3fe-8d6c-4947-b55d-25cbda35b5ec": {
             "id": "5767f3fe-8d6c-4947-b55d-25cbda35b5ec"
         },
@@ -914,24 +914,15 @@
         }
     },
     "tabState": {
-        "openTabs": [
-            "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b",
-            "38f78fe1-9db0-43f9-b2ed-05414303e82e",
-            "83456f2d-fb58-45e5-94ed-9c582501feec",
-            "0d93f7f8-a8ab-44c2-ad7a-448d1470db22",
-            "87160d45-efef-45e0-a4f2-3e6c1fbf7f38",
-            "54ce25c0-dfee-4617-abe1-eec199f63bea"
-        ]
+        "openTabs": []
     },
     "canvasState": {
         "topInstance": "83456f2d-fb58-45e5-94ed-9c582501feec"
     },
     "inspectorState": {
         "topInstance": "83456f2d-fb58-45e5-94ed-9c582501feec",
-        "selectedInstance": "9c0f6e15-b32a-4011-9fbb-645cf2dfd2b1"
+        "selectedInstance": "83456f2d-fb58-45e5-94ed-9c582501feec"
     },
-    "codeState": {
-        "topInstance": "83456f2d-fb58-45e5-94ed-9c582501feec"
-    },
-    "editMode": "design"
+    "editMode": "design",
+    "userSettings": {}
 }

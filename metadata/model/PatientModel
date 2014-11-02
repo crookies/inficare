@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "idp",
+        "designer|userAlias": "patientmodel",
         "designer|userClassName": "PatientModel",
-        "designer|userAlias": "patientmodel"
+        "idProperty": "idp"
     },
     "designerId": "0252f97f-8e39-4831-9899-a8882c429380",
     "cn": [
@@ -23,6 +23,7 @@
                 "name": "idp",
                 "type": "int"
             },
+            "name": "MyField4",
             "designerId": "372271b8-e901-4a41-b009-930f800944a8"
         },
         {
@@ -36,6 +37,7 @@
                 "name": "activep",
                 "type": "boolean"
             },
+            "name": "MyField5",
             "designerId": "58108869-7497-415e-82e9-8dddca7b1a19"
         },
         {
@@ -49,6 +51,7 @@
                 "name": "namep",
                 "type": "string"
             },
+            "name": "MyField6",
             "designerId": "4154d0bd-cbb5-427e-a453-328bb4a13ba5"
         },
         {
@@ -62,6 +65,7 @@
                 "name": "address",
                 "type": "string"
             },
+            "name": "MyField7",
             "designerId": "3ec40caf-6fdf-415a-9a75-b3db66c22973"
         },
         {
@@ -75,6 +79,7 @@
                 "name": "tel",
                 "type": "string"
             },
+            "name": "MyField8",
             "designerId": "938d3357-d1a2-497a-8427-51a4d05ddd1b"
         },
         {
@@ -88,6 +93,7 @@
                 "name": "infop",
                 "type": "string"
             },
+            "name": "MyField9",
             "designerId": "c7ebf011-56aa-4828-bcd9-1bae5966cdf8"
         },
         {
@@ -101,6 +107,7 @@
                 "name": "care",
                 "type": "string"
             },
+            "name": "MyField10",
             "designerId": "ded8c393-e828-44d0-a51a-37490bbf8c37"
         }
     ]

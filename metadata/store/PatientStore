@@ -8,9 +8,9 @@
     "userConfig": {
         "autoLoad": false,
         "autoSync": true,
+        "designer|userClassName": "PatientStore",
         "model": "PatientModel",
-        "storeId": "patientStoreId",
-        "designer|userClassName": "PatientStore"
+        "storeId": "patientStoreId"
     },
     "designerId": "a30455bf-b47b-40a6-aa35-486f532252ec",
     "cn": [
@@ -22,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "QueryPatientsDbProxy",
                 "api": [
                     "{",
                     "\tcreate: QueryPatientsDb.createRecord,",
@@ -32,9 +31,11 @@
                     "}",
                     ""
                 ],
-                "idParam": "idp",
-                "directFn": null
+                "designer|displayName": "QueryPatientsDbProxy",
+                "directFn": null,
+                "idParam": "idp"
             },
+            "name": "MyDirectProxy4",
             "designerId": "4d39b4e9-a0ce-485f-bb37-e3d7a67f5169"
         }
     ]

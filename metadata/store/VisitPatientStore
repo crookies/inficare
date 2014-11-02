@@ -7,9 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": false,
+        "designer|userClassName": "VisitPatientStore",
         "model": "VisitModel",
-        "storeId": "visitPatientStoreId",
-        "designer|userClassName": "VisitPatientStore"
+        "storeId": "visitPatientStoreId"
     },
     "designerId": "55c0d87c-c5c8-49aa-a2fb-e48605701ab2",
     "cn": [
@@ -22,9 +22,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|displayName": "QueryVisitDbProxy",
-                "idParam": "idv",
-                "directFn": "QueryVisitsDb.getVisitPatientsList"
+                "directFn": "QueryVisitsDb.getVisitPatientsList",
+                "idParam": "idv"
             },
+            "name": "MyDirectProxy2",
             "designerId": "a92e68f1-b4d9-4743-9491-e0665ceabd4e"
         }
     ]

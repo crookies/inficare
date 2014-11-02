@@ -7,10 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": false,
-        "model": "NurseModel",
-        "storeId": "nurseStoreId",
+        "designer|userAlias": null,
         "designer|userClassName": "NurseStore",
-        "designer|userAlias": null
+        "model": "NurseModel",
+        "storeId": "nurseStoreId"
     },
     "designerId": "23b8f5cf-6dd3-4961-92ab-dd49eb80341e",
     "cn": [
@@ -25,6 +25,7 @@
                 "designer|displayName": "QueryNurseDbProxy",
                 "directFn": "QueryNursesDb.getResults"
             },
+            "name": "MyDirectProxy1",
             "designerId": "18261e04-ed6d-4369-8181-4d50b17626d8"
         }
     ]
