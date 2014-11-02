@@ -123,6 +123,9 @@
             "codeClass": null,
             "userConfig": {
                 "designer|controlQuery": "#dayTreeViewId",
+                "designer|params": [
+                    "node, data, overModel, dropPosition, dropHandlers, eOpts"
+                ],
                 "designer|targetType": "Ext.tree.plugin.TreeViewDragDrop",
                 "fn": "onDayVisitTreeViewBeforeDrop",
                 "implHandler": [
@@ -157,6 +160,9 @@
             "codeClass": null,
             "userConfig": {
                 "designer|controlQuery": "#dayTreeViewId",
+                "designer|params": [
+                    "node, data, overModel, dropPosition, eOpts"
+                ],
                 "designer|targetType": "Ext.tree.plugin.TreeViewDragDrop",
                 "fn": "onDayVisitTreeViewDrop",
                 "implHandler": [

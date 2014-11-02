@@ -36,7 +36,7 @@ Ext.define('inficare.controller.DayRoundController', {
         alert('cancel');
     },
 
-    onDayVisitTreeViewBeforeDrop: function() {
+    onDayVisitTreeViewBeforeDrop: function(node, data, overModel, dropPosition, dropHandlers, eOpts) {
         console.log('BeforDrop:',data);
         console.log('BeforDrop overModel:',overModel);
         var record=data.records[0];
@@ -54,7 +54,7 @@ Ext.define('inficare.controller.DayRoundController', {
 
     },
 
-    onDayVisitTreeViewDrop: function() {
+    onDayVisitTreeViewDrop: function(node, data, overModel, dropPosition, eOpts) {
         console.log('drop',data);
 
         var record=data.records[0];
