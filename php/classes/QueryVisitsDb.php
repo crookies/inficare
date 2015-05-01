@@ -28,6 +28,35 @@ class QueryVisitsDb
 		return $this->_db;
 	}
 
+	public function deleteWholeDay($visitDate)
+	{
+		$this->log->info("deleteWholeDay:".$visitDate);
+		unset($errorText);
+		$results = array();
+		
+		$query = "DELETE".
+				" FROM visits WHERE datev='".$visitDate."'";
+		$this->log->info("Query: ".$query);
+
+		$_result = $this->_db->query($query);
+		if ($_result)
+		{
+           $this->log->info(var_export($_result,true));
+		}
+		else
+			$errorText =  'Query Error (' . $this->_db->connect_errno . ') ' . $this->_db->connect_error;
+		if (isset($errorText))
+		{
+			$results['success']=false;
+			$results['errors']=array(
+					'daycomment' => $errorText
+			);
+		}
+		$this->log->info(var_export($results,true));
+		
+		return $results;
+	}
+
 	private function createVisit($parentidv,
 			$roundid,
 			$datev,
