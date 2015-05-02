@@ -262,7 +262,7 @@
                             "userConfig": {
                                 "layout|flex": null,
                                 "style": "font-size:8pt;color:#A0A0A0;",
-                                "text": "v. 2.1"
+                                "text": "v. 2.2"
                             },
                             "name": "MyTextItem",
                             "configAlternates": {

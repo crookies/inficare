@@ -284,7 +284,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "glyph": "xe0014@fcrooks",
+                                "glyph": "xe014@fcrooks",
                                 "itemId": "copyAllRoundBtnId",
                                 "layout|flex": null,
                                 "text": "Copier tout"

@@ -924,7 +924,8 @@
             "38f78fe1-9db0-43f9-b2ed-05414303e82e",
             "8d5c35ce-eb5c-4e24-b83d-823876311cf8",
             "ef0ded6c-d66b-491c-b9d3-89bb3c7e351b",
-            "83456f2d-fb58-45e5-94ed-9c582501feec"
+            "83456f2d-fb58-45e5-94ed-9c582501feec",
+            "697142e5-da89-4a48-acef-cfefff56ffa6"
         ]
     },
     "canvasState": {
@@ -932,7 +933,7 @@
     },
     "inspectorState": {
         "topInstance": "83456f2d-fb58-45e5-94ed-9c582501feec",
-        "selectedInstance": "aeb7c88f-3827-40a1-a821-3ea260f02913"
+        "selectedInstance": "83456f2d-fb58-45e5-94ed-9c582501feec"
     },
     "editMode": "design",
     "userSettings": {}

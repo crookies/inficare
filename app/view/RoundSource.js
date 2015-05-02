@@ -148,7 +148,7 @@ Ext.define('inficare.view.RoundSource', {
                                 {
                                     xtype: 'button',
                                     itemId: 'copyAllRoundBtnId',
-                                    glyph: 'xe0014@fcrooks',
+                                    glyph: 'xe014@fcrooks',
                                     text: 'Copier tout'
                                 },
                                 {

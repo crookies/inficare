@@ -122,7 +122,7 @@ Ext.define('inficare.view.InfiMainView', {
                                 {
                                     xtype: 'tbtext',
                                     style: 'font-size:8pt;color:#A0A0A0;',
-                                    text: 'v. 2.1'
+                                    text: 'v. 2.2'
                                 }
                             ]
                         }
