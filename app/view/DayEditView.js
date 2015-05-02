@@ -83,6 +83,16 @@ Ext.define('inficare.view.DayEditView', {
                             xtype: 'tbfill'
                         },
                         {
+                            xtype: 'button',
+                            itemId: 'eraseWholeDayBtnId',
+                            glyph: 'xe005@fcrooks',
+                            text: 'Purge Journée !!'
+                        },
+                        {
+                            xtype: 'tbspacer',
+                            width: 30
+                        },
+                        {
                             xtype: 'datefield',
                             itemId: 'visitDateFieldId',
                             fieldLabel: 'Date tournée',

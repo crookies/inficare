@@ -157,7 +157,7 @@ Ext.define('inficare.controller.ReportController', {
     },
 
     setReportDate: function(date) {
-        var reportView = Ext.ComponentQuery.query('reportview')[0]
+        var reportView = Ext.ComponentQuery.query('reportview')[0];
         var dayRoundDateFld = reportView.down('#mainDateId');
         dayRoundDateFld.setValue(date);
     },

@@ -11,10 +11,12 @@
         "designer|userAlias": "loginview",
         "designer|userClassName": "LoginView",
         "height": 140,
+        "itemId": "loginWindowId",
         "layout": "fit",
         "title": "Connexion",
         "width": 400
     },
+    "name": "MyWindow",
     "designerId": "8d5c35ce-eb5c-4e24-b83d-823876311cf8",
     "cn": [
         {

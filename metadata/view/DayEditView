@@ -103,6 +103,37 @@
                     "designerId": "ccc556a7-dff0-4634-8014-9943f26b4ae2"
                 },
                 {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": "xe005@fcrooks",
+                        "itemId": "eraseWholeDayBtnId",
+                        "layout|flex": null,
+                        "layout|margins": null,
+                        "text": "Purge Journée !!"
+                    },
+                    "name": "MyButton17",
+                    "designerId": "3e198ac9-1374-4822-9408-7ed72012d772"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "width": 30
+                    },
+                    "name": "MySpacer4",
+                    "designerId": "1304b9d3-f7d7-4f98-a8d7-dff0f5c92356"
+                },
+                {
                     "type": "Ext.form.field.Date",
                     "reference": {
                         "name": "items",

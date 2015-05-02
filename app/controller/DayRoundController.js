@@ -116,18 +116,17 @@ Ext.define('inficare.controller.DayRoundController', {
             var root=treestore.getRootNode();
             var res;
 
-            if (root.firstChild == null)
+            if (root.firstChild === null)
             {
                 var dayEditView = Ext.ComponentQuery.query('dayeditview')[0];
                 var tree = dayEditView.down('#dayVisitTree');
                 var value = dayEditView.down('#visitDateFieldId').getValue();
                 var dateStr = Ext.Date.format(value, 'Y-m-d');
 
-                if (dateStr != "")
+                if (dateStr !== "")
                 {
                     res=Ext.MessageBox.confirm('Confirmez', 'Pas de tournée pour cette date, voulez vous la créer?', function(btn){
                         //The user has accepted to create a new round
-                        console.log(btn);
                         if (btn=='yes')
                         {
                             var treeStore = tree.getStore();
@@ -297,6 +296,26 @@ Ext.define('inficare.controller.DayRoundController', {
 
     },
 
+    onEraseWholeDayClick: function(button, e, eOpts) {
+        var ctx = this;
+        var dayEditView = Ext.ComponentQuery.query('dayeditview')[0];
+        var value = dayEditView.down('#visitDateFieldId').getValue();
+        var dateStr = Ext.Date.format(value, 'Y-m-d');
+
+        if (dateStr !== '')
+        {
+
+            res=Ext.MessageBox.confirm('Confirmez', 'Voulez vous vraiment effacer TOUTE cette journée? ('+Ext.Date.format(value, 'd-m-Y')+')', function(btn){
+                if (btn=='yes')
+                {
+                    //we must call eraseWholeDay with the valid 'this' context.
+                    ctx.eraseWholeDay.call(ctx, dateStr);
+                }
+            });
+        }
+
+    },
+
     editVisitInfo: function(editor, e) {
 
         var dialog = this.dayEditView.visitInfoEdit || (this.dayEditView.visitInfoEdit = Ext.create('widget.visitinfoedit')),
@@ -366,6 +385,39 @@ Ext.define('inficare.controller.DayRoundController', {
 
     },
 
+    eraseWholeDay: function(dateStr) {
+        console.log("Will erase:",dateStr);
+        Ext.Ajax.request({
+            url: 'php/eraseDay.php',
+            method: 'GET',
+            params: {
+                visitDate:dateStr,
+            },
+            success: function(response){
+                var res = Ext.JSON.decode(response.responseText, true);
+
+                if (res)
+                {
+                    if (res.success)
+                    {
+                    var dayEditView = Ext.ComponentQuery.query('dayeditview')[0];
+                    var tree = dayEditView.down('#dayVisitTree');
+                    var treeStore = tree.getStore();
+
+                        treeStore.getRootNode().removeAll();
+                    }
+                    else
+                        Ext.Msg.alert('ERREUR', Ext.String.htmlEncode(res.message));
+                }
+                else
+                {
+                    Ext.Msg.alert('Erreur', 'Echec d\'execution');
+                }
+            }
+        });
+
+    },
+
     init: function(application) {
         this.control({
             "#visitCommentEdit #saveId": {
@@ -415,6 +467,9 @@ Ext.define('inficare.controller.DayRoundController', {
             },
             "#copyAllRoundBtnId": {
                 click: this.onCopyAllRoundBtnIdClick
+            },
+            "#eraseWholeDayBtnId": {
+                click: this.onEraseWholeDayClick
             }
         });
     }

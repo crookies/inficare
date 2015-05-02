@@ -147,7 +147,7 @@
                 ],
                 "fn": "setReportDate",
                 "implHandler": [
-                    "var reportView = Ext.ComponentQuery.query('reportview')[0]",
+                    "var reportView = Ext.ComponentQuery.query('reportview')[0];",
                     "var dayRoundDateFld = reportView.down('#mainDateId');",
                     "dayRoundDateFld.setValue(date);"
                 ]

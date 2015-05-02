@@ -26,6 +26,7 @@ Ext.define('inficare.view.LoginView', {
     ],
 
     height: 140,
+    itemId: 'loginWindowId',
     width: 400,
     layout: 'fit',
     closable: false,

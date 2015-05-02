@@ -46,12 +46,10 @@ class QueryVisitsDb
 		else
 			$errorText =  'Query Error (' . $this->_db->connect_errno . ') ' . $this->_db->connect_error;
 		if (isset($errorText))
-		{
-			$results['success']=false;
-			$results['errors']=array(
-					'daycomment' => $errorText
-			);
-		}
+            $results = array( 'success' => false, 'message' => $errorText);
+        else
+			$results = array( 'success' => true, 'message' => 'Effacé');
+
 		$this->log->info(var_export($results,true));
 		
 		return $results;

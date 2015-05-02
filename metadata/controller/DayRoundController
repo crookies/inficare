@@ -131,7 +131,7 @@
                 "implHandler": [
                     "console.log('BeforDrop:',data);",
                     "console.log('BeforDrop overModel:',overModel);",
-                    "var record=data.records[0];  ",
+                    "var record=data.records[0];",
                     "data.copy=false;",
                     "if (record.get('rectype') == 31)",
                     "{",
@@ -326,20 +326,19 @@
                     "if (successful)",
                     "{",
                     "    var root=treestore.getRootNode();",
-                    "    var res;    ",
+                    "    var res;",
                     "",
-                    "    if (root.firstChild == null)",
+                    "    if (root.firstChild === null)",
                     "    {",
                     "        var dayEditView = Ext.ComponentQuery.query('dayeditview')[0];",
                     "        var tree = dayEditView.down('#dayVisitTree');",
                     "        var value = dayEditView.down('#visitDateFieldId').getValue();",
                     "        var dateStr = Ext.Date.format(value, 'Y-m-d');",
                     "",
-                    "        if (dateStr != \"\")",
+                    "        if (dateStr !== \"\")",
                     "        {",
                     "            res=Ext.MessageBox.confirm('Confirmez', 'Pas de tournée pour cette date, voulez vous la créer?', function(btn){",
                     "                //The user has accepted to create a new round",
-                    "                console.log(btn);",
                     "                if (btn=='yes')",
                     "                {",
                     "                    var treeStore = tree.getStore();",
@@ -738,6 +737,90 @@
             },
             "name": "onCopyAllRoundBtnIdClick",
             "designerId": "45d0c927-b856-4ee4-94c7-791a99be8719"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#eraseWholeDayBtnId",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEraseWholeDayClick",
+                "implHandler": [
+                    "var ctx = this;",
+                    "var dayEditView = Ext.ComponentQuery.query('dayeditview')[0];",
+                    "var value = dayEditView.down('#visitDateFieldId').getValue();",
+                    "var dateStr = Ext.Date.format(value, 'Y-m-d');",
+                    "",
+                    "if (dateStr !== '')",
+                    "{",
+                    "",
+                    "    res=Ext.MessageBox.confirm('Confirmez', 'Voulez vous vraiment effacer TOUTE cette journée? ('+Ext.Date.format(value, 'd-m-Y')+')', function(btn){",
+                    "        if (btn=='yes')",
+                    "        {",
+                    "            //we must call eraseWholeDay with the valid 'this' context.",
+                    "            ctx.eraseWholeDay.call(ctx, dateStr);",
+                    "        }",
+                    "    });",
+                    "}",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onEraseWholeDayClick",
+            "designerId": "09182ce4-70fd-4c53-bf94-08df2cdbbc5f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "dateStr"
+                ],
+                "fn": "eraseWholeDay",
+                "implHandler": [
+                    "console.log(\"Will erase:\",dateStr);",
+                    "Ext.Ajax.request({",
+                    "    url: 'php/eraseDay.php',",
+                    "    method: 'GET',",
+                    "    params: {",
+                    "        visitDate:dateStr,",
+                    "    },",
+                    "    success: function(response){",
+                    "        var res = Ext.JSON.decode(response.responseText, true);",
+                    "",
+                    "        if (res)",
+                    "        {",
+                    "            if (res.success)",
+                    "            {",
+                    "            var dayEditView = Ext.ComponentQuery.query('dayeditview')[0];",
+                    "            var tree = dayEditView.down('#dayVisitTree');",
+                    "            var treeStore = tree.getStore();",
+                    "",
+                    "                treeStore.getRootNode().removeAll();",
+                    "            }",
+                    "            else",
+                    "                Ext.Msg.alert('ERREUR', Ext.String.htmlEncode(res.message));",
+                    "        }",
+                    "        else",
+                    "        {",
+                    "            Ext.Msg.alert('Erreur', 'Echec d\\'execution');",
+                    "        }",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "name": "eraseWholeDay",
+            "designerId": "27c434bf-4eae-4f61-ba34-f23db68f5d30"
         }
     ]
 }

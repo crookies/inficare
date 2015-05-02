@@ -8,14 +8,11 @@ require_once (dirname(__FILE__).'/KLogger/KLogger.php');
 
 // Tell log4php to use our configuration file.
 Logger::configure(dirname(__FILE__).'/log_config.xml');
-
-header('Content-Type: text/plain');
-
-//LoginCls::checkHttps();
+LoginCls::checkHttps();
 
 
 $login = new LoginCls(ConfigCls::loggerFileName());
-//$login->checkUser();
+$login->checkUser();
 
 $queryVisitDb = new QueryVisitsDb();
 $result = $queryVisitDb->deleteWholeDay($_GET['visitDate']);
