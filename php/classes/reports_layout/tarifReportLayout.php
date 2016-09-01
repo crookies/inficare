@@ -15,7 +15,7 @@
 	style="width: 100%; text-align: center; font-size: 14px">
 	<tr>
 		<td style="text-align:left;width: 25%;"><img "src="classes/reports_layout/inftxt-ss.png" alt="Logo"></td>
-	   <td style="width: 50%;">Tarification: <?php echo $data['Date'] ?></td>
+	   <td style="width: 50%;">Tarification: <?php echo $data['Date'] ?>   (Page [[page_cu]]/[[page_nb]])</td>
 		<td style="text-align:right;width: 25%; color: #444444;"><img "src="classes/reports_layout/infsq-ss.png" alt="Logo">
 		</td>
 	</tr>

@@ -1,3 +1,10 @@
 SetEnv PHP_VER 5_4
 SetEnv REGISTER_GLOBALS 0
-Redirect permanent /inficare https://ssl15.ovh.net/~infidi/inficare/index.html
+#Redirect permanent /inficare https://ssl15.ovh.net/~infidi/inficare/index.html
+Redirect 301 /index.html /wp2/
+Redirect 301 /tarifs.htm /wp2/tarifs/
+Redirect 301 /prestations.htm /wp2/prestations/
+Redirect 301 /reseau_activites.htm /wp2/reseau/
+Redirect 301 /contacts.htm /wp2/contact/
+RedirectMatch ^/$ /wp2/
+

@@ -111,8 +111,11 @@ class TarifReportCls
 					}
 					else
 						$prefix = "<br>";
-						
-					$results[(int)($day)][(int)($row['patientid'])]['tblText'] .= $prefix.$nurseList[(int)($row['nurseid'])]['shortname'].'('.(($row['nurseid']==0)?"M":"A").$row['nurseid'].")"; 
+					if ($row['ap'] == 1)
+						$apTxt = "s";
+					else
+						$apTxt = "m";
+					$results[(int)($day)][(int)($row['patientid'])]['tblText'] .= $prefix.$nurseList[(int)($row['nurseid'])]['shortname'].'('.(($row['nurseid']==0)?"M":"A").$row['nurseid'].")".$apTxt; 
 					$aPatientList[$row['patientid']] = $row['namev'];
 				}
 		
