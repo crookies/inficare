@@ -165,7 +165,7 @@ class DayReportCls
 		}
 		else
 		{
-			$from = 'cathy@crookies.net';
+			$from = 'info@infidi.be';
 			$subject = 'Tournée du '.$this->_visitDate;
 			$message = $mailMessage;
 			
